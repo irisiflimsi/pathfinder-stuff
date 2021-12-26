@@ -48,16 +48,12 @@
             var td = el.parentElement;
             td.style.display = (locked && val(el) < 1) ? "none" : "table-cell";
             document.cookie = "id" + i + "=" + val(el);
+            // Always order ids in a row first previous, then next element.
             if (td.previousElementSibling) {
-              if (td.previousElementSibling.style.display == "none") {
-                td.parentElement.style.display = "none"
-              }
-              else {
-                td.parentElement.style.display = "table-row";
-              }
+              td.parentElement.style.display = (td.previousElementSibling.style.display == "none" && td.style.display == "none") ? "none" : "table-row";
             }
             else {
-              td.parentElement.style.display = "none";
+              td.parentElement.style.display = (td.style.display == "none") ? "none" : "table-row";
             }
           }
         }
