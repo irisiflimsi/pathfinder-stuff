@@ -45,8 +45,20 @@
         for (let i = 0; i <= 90; i++) {
           var el = document.getElementById(i);
           if (el) {
-            el.parentElement.style.display = (locked && val(el) < 1) ? "none" : "table-cell";
+            var td = el.parentElement;
+            td.style.display = (locked && val(el) < 1) ? "none" : "table-cell";
             document.cookie = "id" + i + "=" + val(el);
+            if (td.previousElementSibling) {
+              if (td.previousElementSibling.style.display == "none") {
+                td.parentElement.style.display = "none"
+              }
+              else {
+                td.parentElement.style.display = "table-row";
+              }
+            }
+            else {
+              td.parentElement.style.display = "none";
+            }
           }
         }
       }
