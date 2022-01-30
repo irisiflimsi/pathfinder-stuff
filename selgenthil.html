@@ -42,7 +42,7 @@
         redo();
       }
       function redo() {
-        for (let i = 0; i <= 98; i++) {
+        for (let i = 0; i <= 100; i++) {
           var el = document.getElementById(i);
           if (el) {
             var td = el.parentElement;
@@ -59,7 +59,7 @@
         }
       }
       function doload() {
-        for (let i = 0; i <= 86; i++) {
+        for (let i = 0; i <= 100; i++) {
           var el = document.getElementById(i);
           if (el) {
             var j = document.cookie.indexOf("id" + i + "=");
@@ -507,10 +507,10 @@
           </tr>
           <tr>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/LeichteWundenheilen">Trank: Leichte Wunden Heilen</a><span id="87" onclick="cycle(this)">1</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/LeichteWundenheilen">Trank: Leichte Wunden Heilen</a><span id="87" onclick="cycle(this)">2</span>
             </td>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Unsichtbarkeit">Trank: Unsichtbarkeit</a><span id="88" onclick="cycle(this)">1</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Unsichtbarkeit">Trank: Unsichtbarkeit</a><span id="88" onclick="cycle(this)">2</span>
             </td>
           </tr>
           <tr>
@@ -521,8 +521,16 @@
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Schild">Schriftrolle: Schild</a><span id="90" onclick="cycle(this)">1</span>
             </td>
           </tr>
+          <tr>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Säurepfeil">Zauberstab: Säurepfeil</a><span id="99" onclick="cycle(this)">25</span>
+            </td>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Geheimtuerenentdecken">Zauberstab: Geheim</a><span id="100" onclick="cycle(this)">11</span>
+            </td>
+          </tr>
       </table>
     </div>
-    <!-- Last Id: 98 -->
+    <!-- Last Id: 100 -->
   </body>
 </html>
