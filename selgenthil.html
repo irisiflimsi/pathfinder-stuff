@@ -42,7 +42,7 @@
         redo();
       }
       function redo() {
-        for (let i = 0; i <= 100; i++) {
+        for (let i = 0; i <= 102; i++) {
           var el = document.getElementById(i);
           if (el) {
             var td = el.parentElement;
@@ -59,7 +59,7 @@
         }
       }
       function doload() {
-        for (let i = 0; i <= 100; i++) {
+        for (let i = 0; i <= 102; i++) {
           var el = document.getElementById(i);
           if (el) {
             var j = document.cookie.indexOf("id" + i + "=");
@@ -74,7 +74,7 @@
   </head>
   <body onload="doload()">
     <div class="bg"></div>
-    <div class="fg">
+      <div class="fg">
         <table>
           <tr class="head" onclick="lock()">
             <th colspan="2">
@@ -181,7 +181,7 @@
           </tr>
           <tr class="head" onclick="lock()">
             <th colspan="2">
-              5 Zauber der Stufe 1 (33 Zauber = 33 Seiten, Σ 54 Seiten)
+              6 Zauber der Stufe 1 (33 Zauber = 33 Seiten, Σ 54 Seiten)
             </th>
           </tr>
           <tr>
@@ -321,6 +321,8 @@
           </tr>
           <!--
           Schwebende Scheibe
+          Unzerbrechliches Herz
+          Nachtwache
           -->
           <tr class="head" onclick="lock()">
             <th colspan="2">
@@ -463,7 +465,9 @@
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Fliegen">Fliegen</a><span id="81" onclick="cycle(this)">0</span>
             </td>
             <td>
-              <a href="http://prd.5footstep.de/AusbauregelnVIKlassen/Zauber/Metallmacht">Metallmacht</a><span id="82" onclick="cycle(this)">0</span>
+              <a href="http://prd.5footstep.de/AusbauregelnVIKlassen/Zauber/Metallmacht">Metallmacht</a>
+              <a style="font-size:18px;">(100 GM)</a>
+              <span id="82" onclick="cycle(this)">0</span>
             </td>
           </tr>
           <tr>
@@ -500,6 +504,67 @@
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Winzige Huette">Winzige Hütte</a><span id="92" onclick="cycle(this)">0</span>
             </td>
           </tr>
+          <!--
+          Arkaner Blick
+          Gasförmige Gestalt
+          Hast
+          Heldenmut
+          Hellhören/Hellsehen
+          Magie bannen
+          Mächtige magische Waffe
+          Person festhalten
+          Schutz vor Energien
+          Schutzkreis gegen Gutes
+          Schutzkreis gegen Ordnung
+          Schärfen
+          Sphäre der Unsichtbarkeit
+          Wut
+          Zungen
+          Schrotexplosion
+          Gemeinschaftliches Spinnenklettern
+          Gesinnungsblick
+          Silberpfeile
+          Ansteckender Eifer
+          Kutsche
+          Rudelempathie
+          -->
+          <tr class="head" onclick="lock()">
+            <th colspan="2">
+              2 Zauber der Stufe 4 (2 Zauber = 8 Seiten, Σ 152 Seiten)
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://prd.5footstep.de/Expertenregeln/Zauber/Blitzkugeln">Blitzkugeln</a><span id="101" onclick="cycle(this)">0</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/SchwarzeTentakel">Schwarze Tentakel</a><span id="102" onclick="cycle(this)">0</span>
+            </td>
+          </tr>
+          <!--
+          Arkanes Auge
+          Dimensionstür
+          Eissturm
+          Eiswand
+          Feuerschild
+          Feuerwand
+          Fluch
+          Massen-Person Vergrößern
+          Massen-Person Verkleinern
+          Monster bezaubern
+          Monster herbeizaubern IV
+          Mächtige Unsichtbarkeit
+          Schwächere Kugel der Unverwundbarkeit
+          Steinhaut
+          Herbeigezauberte Kreatur kontrollieren
+          Kind der Wellen
+          Schattige Zuflucht
+          Geisterwolf
+          Mächtige aggressive Donnerwolke
+          Kontrollierter Feuerball
+          -->
           <tr class="head" onclick="lock()">
             <th colspan="2">
               Magische Gegenstände
@@ -515,22 +580,20 @@
           </tr>
           <tr>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magierrüstung">Zauberstab: Magierrüstung</a><span id="89" onclick="cycle(this)">40</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Schild">Schriftrolle: Schild</a><span id="90" onclick="cycle(this)">1</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magierrüstung">Zauberstab: Magierrüstung</a><span id="89" onclick="cycle(this)">34</span>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Säurepfeil">Zauberstab: Säurepfeil</a><span id="99" onclick="cycle(this)">25</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Säurepfeil">Zauberstab: Säurepfeil</a><span id="99" onclick="cycle(this)">24</span>
             </td>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Geheimtuerenentdecken">Zauberstab: Geheimtüren entdecken</a><span id="100" onclick="cycle(this)">11</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Geheimtuerenentdecken">Zauberstab: Geheimtüren entdecken</a><span id="100" onclick="cycle(this)">10</span>
             </td>
           </tr>
-      </table>
+        </table>
+      </div>
     </div>
-    <!-- Last Id: 100 -->
+    <!-- Last Id: 102 -->
   </body>
 </html>
