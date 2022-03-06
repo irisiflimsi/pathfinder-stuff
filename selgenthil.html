@@ -42,7 +42,7 @@
         redo();
       }
       function redo() {
-        for (let i = 0; i <= 92; i++) {
+        for (let i = 0; i <= 102; i++) {
           var el = document.getElementById(i);
           if (el) {
             var td = el.parentElement;
@@ -59,7 +59,7 @@
         }
       }
       function doload() {
-        for (let i = 0; i <= 86; i++) {
+        for (let i = 0; i <= 102; i++) {
           var el = document.getElementById(i);
           if (el) {
             var j = document.cookie.indexOf("id" + i + "=");
@@ -74,7 +74,7 @@
   </head>
   <body onload="doload()">
     <div class="bg"></div>
-    <div class="fg">
+      <div class="fg">
         <table>
           <tr class="head" onclick="lock()">
             <th colspan="2">
@@ -89,7 +89,7 @@
               <a href="http://prd.5footstep.de/Grundregelwerk/Klassen/Magier#Arkane-Verbindung">Arkane Verbindung</a><span id="1" onclick="cycle(this)">0</span>
             </td>
           </tr>
-          <tr class="head">
+          <tr class="head" onclick="lock()">
             <th colspan="2">
               4 Zauber der Stufe 0 (21 Zauber = 21 Seiten, Σ 21 Seiten)
             </th>
@@ -179,9 +179,9 @@
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Zaubertrick">Zaubertrick</a><span id="22" onclick="cycle(this)">0</span>
             </td>
           </tr>
-          <tr class="head">
+          <tr class="head" onclick="lock()">
             <th colspan="2">
-              5 Zauber der Stufe 1 (31 Zauber = 31 Seiten, Σ 52 Seiten)
+              6 Zauber der Stufe 1 (33 Zauber = 33 Seiten, Σ 54 Seiten)
             </th>
           </tr>
           <tr>
@@ -234,55 +234,65 @@
           </tr>
           <tr>
             <td>
+              <a href="http://prd.5footstep.de/AusbauregelnMagie/Zauber/KalterHauch">Kalter Hauch</a><span id="93" onclick="cycle(this)">0</span>
+            </td>
+            <td>
               <a href="http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/Luftblase">Luftblase</a><span id="35" onclick="cycle(this)">0</span>
             </td>
+          </tr>
+          <tr>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magierrüstung">Magierrüstung</a><span id="36" onclick="cycle(this)">0</span>
             </td>
-          </tr>
-          <tr>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magische Waffe">Magische Waffe</a><span id="37" onclick="cycle(this)">0</span>
             </td>
+          </tr>
+          <tr>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magisches Geschoss">Magisches Geschoss</a><span id="38" onclick="cycle(this)">0</span>
             </td>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Monster herbeizaubern I">Monster herbeizaubern I</a>
+              <a href="best-monster.html" style="font-size:18px;">(Hilfe)</a>
+              <span id="39" onclick="cycle(this)">0</span>
+            </td>
           </tr>
           <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Monster herbeizaubern I">Monster herbeizaubern I</a><span id="39" onclick="cycle(this)">0</span>
-            </td>
             <td>
               <a href="http://prd.5footstep.de/AusbauregelnIIIVoelker/Zauber/Netzgeschoss">Netzgeschoss</a><span id="40" onclick="cycle(this)">0</span>
             </td>
-          </tr>
-          <tr>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Person bezaubern">Person bezaubern</a><span id="41" onclick="cycle(this)">0</span>
             </td>
+          </tr>
+          <tr>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Pforte zuhalten">Pforte zuhalten</a><span id="42" onclick="cycle(this)">0</span>
             </td>
-          </tr>
-          <tr>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Rascher Rückzug">Rascher Rückzug</a><span id="43" onclick="cycle(this)">0</span>
             </td>
+          </tr>
+          <tr>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Reittier">Reittier</a><span id="44" onclick="cycle(this)">0</span>
             </td>
-          </tr>
-          <tr>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Schild">Schild</a><span id="45" onclick="cycle(this)">0</span>
             </td>
+          </tr>
+          <tr>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Schlaf">Schlaf</a><span id="46" onclick="cycle(this)">0</span>
+            </td>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Schmieren">Schmieren</a><span id="47" onclick="cycle(this)">0</span>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Schmieren">Schmieren</a><span id="47" onclick="cycle(this)">0</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Schockgriff">Schockgriff</a><span id="94" onclick="cycle(this)">0</span>
             </td>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Unauffälliger Diener">Unauffälliger Diener</a><span id="48" onclick="cycle(this)">0</span>
@@ -311,10 +321,12 @@
           </tr>
           <!--
           Schwebende Scheibe
+          Unzerbrechliches Herz
+          Nachtwache
           -->
-          <tr class="head">
+          <tr class="head" onclick="lock()">
             <th colspan="2">
-              4 Zauber der Stufe 2 (25 Zauber = 50 Seiten, Σ 102 Seiten)
+              4 Zauber der Stufe 2 (27 Zauber = 54 Seiten, Σ 108 Seiten)
             </th>
           </tr>
           <tr>
@@ -323,6 +335,14 @@
             </td>
             <td>
               <a href="http://prd.5footstep.de/AusbauregelnVIKlassen/Zauber/Aggressive Gewitterwolke">Aggressive Gewitterwolke</a><span id="55" onclick="cycle(this)">0</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/AusdauerdesOchsen">Ausdauer des Ochsen</a><span id="95" onclick="cycle(this)">0</span>
+            </td>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Bärenstärke">Bärenstärke</a><span id="96" onclick="cycle(this)">0</span>
             </td>
           </tr>
           <tr>
@@ -354,7 +374,9 @@
               <a href="http://prd.5footstep.de/AusbauregelnMagie/Zauber/Meisterarbeit">Meisterarbeit</a><span id="62" onclick="cycle(this)">0</span>
             </td>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Monster herbeizaubern II">Monster herbeizaubern II</a><span id="63" onclick="cycle(this)">0</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Monster herbeizaubern II">Monster herbeizaubern II</a>
+              <a href="best-monster.html" style="font-size:18px;">(Hilfe)</a>
+              <span id="63" onclick="cycle(this)">0</span>
             </td>
           </tr>
           <tr>
@@ -425,9 +447,9 @@
           Katzenhafte Anmut
           Windgeflüster
           -->
-          <tr class="head">
+          <tr class="head" onclick="lock()">
             <th colspan="2">
-              3 Zauber der Stufe 3 (10 Zauber = 30 Seiten, Σ 132 Seiten)
+              3 Zauber der Stufe 3 (12 Zauber = 36 Seiten, Σ 144 Seiten)
             </th>
           </tr>
           <tr>
@@ -443,12 +465,16 @@
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Fliegen">Fliegen</a><span id="81" onclick="cycle(this)">0</span>
             </td>
             <td>
-              <a href="http://prd.5footstep.de/AusbauregelnVIKlassen/Zauber/Metallmacht">Metallmacht</a><span id="82" onclick="cycle(this)">0</span>
+              <a href="http://prd.5footstep.de/AusbauregelnVIKlassen/Zauber/Metallmacht">Metallmacht</a>
+              <a style="font-size:18px;">(100/20/20 GM)</a>
+              <span id="82" onclick="cycle(this)">0</span>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Monster herbeizaubern III">Monster herbeizaubern III</a><span id="83" onclick="cycle(this)">0</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Monster herbeizaubern III">Monster herbeizaubern III</a>
+              <a href="best-monster.html" style="font-size:18px;">(Hilfe)</a>
+              <span id="83" onclick="cycle(this)">0</span>
             </td>
             <td>
               <a href="http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/Gemeinschaftlicher Schutz vor Pfeilen">Schutz vor Pfeilen, Gemeinschaftlicher</a><span id="91" onclick="cycle(this)">0</span>
@@ -459,7 +485,15 @@
               <a href="http://prd.5footstep.de/Expertenregeln/Zauber/Schützendes Lagerfeuer">Schützendes Lagerfeuer</a><span id="84" onclick="cycle(this)">0</span>
             </td>
             <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Standortvortaeuschen">Standort vortäuschen</a><span id="97" onclick="cycle(this)">0</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <a href="http://prd.5footstep.de/Expertenregeln/Zauber/Vielseitige Waffe">Vielseitige Waffe</a><span id="85" onclick="cycle(this)">0</span>
+            </td>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Vampirgriff">Vampirgriff</a><span id="98" onclick="cycle(this)">0</span>
             </td>
           </tr>
           <tr>
@@ -470,29 +504,94 @@
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Winzige Huette">Winzige Hütte</a><span id="92" onclick="cycle(this)">0</span>
             </td>
           </tr>
-          <tr class="head">
+          <!--
+          Arkaner Blick
+          Gasförmige Gestalt
+          Hast
+          Heldenmut
+          Hellhören/Hellsehen
+          Magie bannen
+          Mächtige magische Waffe
+          Person festhalten
+          Schutz vor Energien
+          Schutzkreis gegen Gutes
+          Schutzkreis gegen Ordnung
+          Schärfen
+          Sphäre der Unsichtbarkeit
+          Wut
+          Zungen
+          Schrotexplosion
+          Gemeinschaftliches Spinnenklettern
+          Gesinnungsblick
+          Silberpfeile
+          Ansteckender Eifer
+          Kutsche
+          Rudelempathie
+          -->
+          <tr class="head" onclick="lock()">
+            <th colspan="2">
+              2 Zauber der Stufe 4 (2 Zauber = 8 Seiten, Σ 152 Seiten)
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://prd.5footstep.de/Expertenregeln/Zauber/Blitzkugeln">Blitzkugeln</a><span id="101" onclick="cycle(this)">0</span>
+            </td>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Dimensionstuer">Dimensionstür</a><span id="102" onclick="cycle(this)">0</span>
+            </td>
+          </tr>
+          <!--
+          Arkanes Auge
+          Eissturm
+          Eiswand
+          Feuerschild
+          Feuerwand
+          Fluch
+          Massen-Person Vergrößern
+          Massen-Person Verkleinern
+          Monster bezaubern
+          Monster herbeizaubern IV
+          Mächtige Unsichtbarkeit
+          Schwächere Kugel der Unverwundbarkeit
+          Steinhaut
+          Herbeigezauberte Kreatur kontrollieren
+          Kind der Wellen
+          Schattige Zuflucht
+          Geisterwolf
+          Mächtige aggressive Donnerwolke
+          Kontrollierter Feuerball
+          Schwarze Tentakel
+          -->
+          <tr class="head" onclick="lock()">
             <th colspan="2">
               Magische Gegenstände
             </th>
           </tr>
           <tr>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/LeichteWundenheilen">Trank: Leichte Wunden Heilen</a><span id="87" onclick="cycle(this)">1</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/LeichteWundenheilen">Trank: Leichte Wunden Heilen</a><span id="87" onclick="cycle(this)">2</span>
             </td>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Unsichtbarkeit">Trank: Unsichtbarkeit</a><span id="88" onclick="cycle(this)">1</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Unsichtbarkeit">Trank: Unsichtbarkeit</a><span id="88" onclick="cycle(this)">2</span>
             </td>
           </tr>
           <tr>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magierrüstung">Zauberstab: Magierrüstung</a><span id="89" onclick="cycle(this)">40</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magierrüstung">Zauberstab: Magierrüstung</a><span id="89" onclick="cycle(this)">34</span>
             </td>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Schild">Schriftrolle: Schild</a><span id="90" onclick="cycle(this)">1</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Säurepfeil">Zauberstab: Säurepfeil</a><span id="99" onclick="cycle(this)">24</span>
             </td>
           </tr>
-      </table>
+          <tr>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Geheimtuerenentdecken">Zauberstab: Geheimtüren entdecken</a><span id="100" onclick="cycle(this)">10</span>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
-    <!-- Last Id: 92 -->
+    <!-- Last Id: 102 -->
   </body>
 </html>
