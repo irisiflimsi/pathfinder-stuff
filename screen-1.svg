@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210" id="svg2" version="1.1">
+  <image x="0" y="0" height="210" width="297" preserveAspectRatio="none" href="dragon_sw.jpg"/>
+  <rect id="1" style="fill:none;stroke:none;" width="101" height="190" x="5" y="5" />
+  <foreignObject y="0" x="0" width="505" height="950" transform="translate(5,5) scale(0.2)">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <link href="https://fonts.googleapis.com/css?family=Smythe" style="text/css" rel="stylesheet"/>
+        <style type="text/css">
+          body { padding: 0; margin: 0; font-family: "Smythe"; }
+          table { border-collapse: separate; border-spacing: 0px; font-size: 16px; }
+          td, th { background-color: white; text-align:center; padding: 3px 6px; border: 1px solid black; }
+          td:first-child { text-align: left; }
+          tr.head { padding: 6px; color: white; text-align: center; }
+          tr.head th { background-color: black; }
+        </style>
+      </head>
+      <body>
+        <table style="width:500px;">
+          <tr class="head">
+            <th colspan="2">
+              Akrobatik
+            </th>
+          </tr>
+          <tr>
+            <td style="width:280px;">
+              mehr als 1 m breit
+            </td>
+            <td style="width:220px;">
+              0
+            </td>
+          </tr>
+          <tr>
+            <td>
+              31 cm bis 1 m breit
+            </td>
+            <td>
+              5
+            </td>
+          </tr>
+          <tr>
+            <td>
+              16 cm bis 30 cm breit
+            </td>
+            <td>
+              10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              5 cm bis 15 cm breit
+            </td>
+            <td>
+              15
+            </td>
+          </tr>
+          <tr>
+            <td>
+              weniger als 5 cm breit
+            </td>
+            <td>
+              20
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Bewegung durch bedrohtes Feld
+            </td>
+            <td>
+              KMV dessen, der keinen GA haben soll
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Bewegung durch besetztes Feld
+            </td>
+            <td>
+              5 + KMV desen, der keinen GA haben soll
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Weitsprung pro 1,50 m
+            </td>
+            <td>
+              +5
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Hochsprung pro 30 cm
+            </td>
+            <td>
+              +4
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Leichte Behinderung (Schotter, Sand)
+            </td>
+            <td>
+              +2
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Leichte Glätte (nass)
+            </td>
+            <td>
+              +2
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Leichter Abhang (&lt;45°)
+            </td>
+            <td>
+              +2
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Etwas instabil (Boot in aufgewühltem Wasser)
+            </td>
+            <td>
+              +2
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Schwere Behinderung (Höhle, Geröll)
+            </td>
+            <td>
+              +5
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Steiler Abhang (&gt; 45°)
+            </td>
+            <td>
+              +5
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Instabil (Boot in einem Sturm)
+            </td>
+            <td>
+              +5
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sehr instabil (Erdbeben)
+            </td>
+            <td>
+              +10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Enger Raum oder unebene Oberflächen
+            </td>
+            <td>
+              +5
+            </td>
+          </tr>
+          <tr class="head">
+            <th colspan="2">
+              Heilkunde
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Erste Hilfe
+            </td>
+            <td>
+              15
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Langzeitbehandlung
+            </td>
+            <td>
+              15
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Tödliche Wunden
+            </td>
+            <td>
+              20
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gift, Krankheit
+            </td>
+            <td>
+              SG des RWs
+            </td>
+          </tr>
+          <tr class="head">
+            <th colspan="2">
+              Klettern
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Knotenseil an Wand zum Gegenstemmen
+            </td>
+            <td>
+              0
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Seil an Wand zum Gegenstemmen oder Seil mit Knoten
+            </td>
+            <td>
+              5
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sehr unebene Mauer oder Takelage
+            </td>
+            <td>
+              10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sehr unebene natürliche Felswand, Baum, Seil
+            </td>
+            <td>
+              15
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Typische Mauer in Gewölbe
+            </td>
+            <td>
+              20
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Natürliche Felswand oder Ziegelsteinmauer
+            </td>
+            <td>
+              25
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Überhang
+            </td>
+            <td>
+              30
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gegenüberliegende Wände zum Gegenstemmen
+            </td>
+            <td>
+              -10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Wände im rechten Winkel zum Gegenstemmen
+            </td>
+            <td>
+              -5
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Glatte Oberflächen
+            </td>
+            <td>
+              +5
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>
+  </foreignObject>
+  <rect id="2" style="fill:none;stroke:none;" width="95" height="101" x="110.5" y="5" />
+  <foreignObject y="0" x="0" width="475" height="505" transform="translate(110.5,5) scale(0.2)">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <link href="https://fonts.googleapis.com/css?family=Smythe" style="text/css" rel="stylesheet"/>
+        <style type="text/css">
+          body { padding: 0; margin: 0; font-family: "Smythe"; }
+          table { border-collapse: separate; border-spacing: 0px; font-size: 16px; }
+          td, th { text-align:center; padding: 3px 6px; border: 1px solid black; }
+          td:first-child { text-align: left; }
+          tr.head { padding: 6px; color: white; text-align: center; }
+          tr.head th { background-color: black; }
+        </style>
+      </head>
+      <body>
+        <table style="width:470px">
+          <tr class="head">
+            <th colspan="2">
+              Magischen Gegenstand benutzen
+            </th>
+          </tr>
+          <tr>
+            <td style="width:280px;">
+              Blinde Aktivierung
+            </td>
+            <td style="width:190px;">
+              25
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Niedergeschriebenen Zauber entschlüsseln
+            </td>
+            <td>
+              25 + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Schriftrolle benutzen
+            </td>
+            <td>
+              20 + ZS
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Zauberstab benutzen
+            </td>
+            <td>
+              20
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Klassenfähigkeit nachahmen
+            </td>
+            <td>
+              20
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Volkszugehörigkeit nachahmen
+            </td>
+            <td>
+              25
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Gesinnung nachahmen
+            </td>
+            <td>
+              30
+            </td>
+          </tr>
+          <tr class="head">
+            <th colspan="2">
+              Schwimmen
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Ruhiges Wasser
+            </td>
+            <td>
+              10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Aufgewühltes Wasser
+            </td>
+            <td>
+              15
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Stürmisches Wasser
+            </td>
+            <td>
+              20
+            </td>
+          </tr>
+          <tr class="head">
+            <th colspan="2">
+              Zauberkunde
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Gewirkten Zauber identifizieren
+            </td>
+            <td>
+              15 + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Zauber aus Zauberbuch oder Schriftrolle lernen
+            </td>
+            <td>
+              15 + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Zauber aus geliehenem Zauberbuch vorbereiten
+            </td>
+            <td>
+              15 + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Eigenschaften magischen Gegenstands mit Magie entdecken
+              identifizieren
+            </td>
+            <td>
+              15 + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Eine Schriftrolle entschlüsseln
+            </td>
+            <td>
+              20 + ZG
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>
+  </foreignObject>
+  <rect id="3" style="fill:none;stroke:none;" width="73" height="190" x="210" y="5" />
+  <foreignObject y="0" x="0" width="365" height="950" transform="translate(210,5) scale(0.2)">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <link href="https://fonts.googleapis.com/css?family=Smythe" style="text/css" rel="stylesheet"/>
+        <style type="text/css">
+          body { padding: 0; margin: 0; font-family: "Smythe"; }
+          table { border-collapse: separate; border-spacing: 0px; font-size: 16px; }
+          td, th { text-align:center; padding: 3px 6px; border: 1px solid black; }
+          td:first-child { text-align: left; }
+          tr.head { padding: 6px; color: white; text-align: center; }
+          tr.head th { background-color: black; }
+          .tl tr td:nth-child(4n+1) { text-align:center; width:30px; }
+          .tl td:nth-child(4n+2) { text-align:center; width:110px; }
+          .tl td:nth-child(4n+3) { text-align:center; width:110px; }
+          .tl td:nth-child(4n+4) { text-align:center; width:110px; }
+        </style>
+      </head>
+      <body>
+        <table class="tl" style="width:360px;">
+          <tr class="head">
+            <th colspan="4">
+              Tragelast
+            </th>
+          </tr>
+          <tr class="head">
+            <th>
+              ST
+            </th>
+            <th>
+              Leichte Last
+            </th>
+            <th>
+              Mittlere Last
+            </th>
+            <th>
+              Schwere Last
+            </th>
+          </tr>
+          <tr>
+            <td>
+              1
+            </td>
+            <td>
+              ≤ 3 Pfund
+            </td>
+            <td>
+              4 - 6 Pfund
+            </td>
+            <td>
+              7 - 10 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2
+            </td>
+            <td>
+              ≤ 6 Pfund
+            </td>
+            <td>
+              7 - 13 Pfund
+            </td>
+            <td>
+              14 - 20 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              3
+            </td>
+            <td>
+              ≤ 10 Pfund
+            </td>
+            <td>
+              11 - 20 Pfund
+            </td>
+            <td>
+              21 - 30 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              4
+            </td>
+            <td>
+              ≤ 13 Pfund
+            </td>
+            <td>
+              14 - 26 Pfund
+            </td>
+            <td>
+              27 - 40 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              5
+            </td>
+            <td>
+              ≤ 16 Pfund
+            </td>
+            <td>
+              17 - 33 Pfund
+            </td>
+            <td>
+              34 - 50 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              6
+            </td>
+            <td>
+              ≤ 20 Pfund
+            </td>
+            <td>
+              21 - 40 Pfund
+            </td>
+            <td>
+              41 - 60 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              7
+            </td>
+            <td>
+              ≤ 23 Pfund
+            </td>
+            <td>
+              24 - 46 Pfund
+            </td>
+            <td>
+              47 - 70 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              8
+            </td>
+            <td>
+              ≤ 26 Pfund
+            </td>
+            <td>
+              27 - 53 Pfund
+            </td>
+            <td>
+              57 - 80 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              9
+            </td>
+            <td>
+              ≤ 30 Pfund
+            </td>
+            <td>
+              31 - 60 Pfund
+            </td>
+            <td>
+              61 - 90 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              10
+            </td>
+            <td>
+              ≤ 33 Pfund
+            </td>
+            <td>
+              34 - 66 Pfund
+            </td>
+            <td>
+              67 - 100 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              11
+            </td>
+            <td>
+              ≤ 38 Pfund
+            </td>
+            <td>
+              39 - 76 Pfund
+            </td>
+            <td>
+              77 - 115 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              12
+            </td>
+            <td>
+              ≤ 43 Pfund
+            </td>
+            <td>
+              44 - 86 Pfund
+            </td>
+            <td>
+              87 - 130 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              13
+            </td>
+            <td>
+              ≤ 50 Pfund
+            </td>
+            <td>
+              51 - 100 Pfund
+            </td>
+            <td>
+              101 - 150 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              14
+            </td>
+            <td>
+              ≤ 58 Pfund
+            </td>
+            <td>
+              59 - 116 Pfund
+            </td>
+            <td>
+              117 - 175 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              15
+            </td>
+            <td>
+              ≤ 66 Pfund
+            </td>
+            <td>
+              67 - 133 Pfund
+            </td>
+            <td>
+              134 - 200 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              16
+            </td>
+            <td>
+              ≤ 76 Pfund
+            </td>
+            <td>
+              77 - 153 Pfund
+            </td>
+            <td>
+              154 - 230 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              17
+            </td>
+            <td>
+              ≤ 86 Pfund
+            </td>
+            <td>
+              87 - 173 Pfund
+            </td>
+            <td>
+              174 - 260 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              18
+            </td>
+            <td>
+              ≤ 100 Pfund
+            </td>
+            <td>
+              101 - 200 Pfund
+            </td>
+            <td>
+              201 - 300 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              19
+            </td>
+            <td>
+              ≤ 116 Pfund
+            </td>
+            <td>
+              117 - 233 Pfund
+            </td>
+            <td>
+              234 - 350 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              20
+            </td>
+            <td>
+              ≤ 133 Pfund
+            </td>
+            <td>
+              134 - 266 Pfund
+            </td>
+            <td>
+              267 - 400 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              21
+            </td>
+            <td>
+              ≤ 153 Pfund
+            </td>
+            <td>
+              154 - 306 Pfund
+            </td>
+            <td>
+              307 - 460 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              22
+            </td>
+            <td>
+              ≤ 173 Pfund
+            </td>
+            <td>
+              174 - 346 Pfund
+            </td>
+            <td>
+              347 - 520 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              23
+            </td>
+            <td>
+              ≤ 200 Pfund
+            </td>
+            <td>
+              201 - 400 Pfund
+            </td>
+            <td>
+              401 - 600 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              24
+            </td>
+            <td>
+              ≤ 233 Pfund
+            </td>
+            <td>
+              233 - 466 Pfund
+            </td>
+            <td>
+              467 - 700 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              25
+            </td>
+            <td>
+              ≤ 266 Pfund
+            </td>
+            <td>
+              267 - 533 Pfund
+            </td>
+            <td>
+              534 - 800 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              26
+            </td>
+            <td>
+              ≤ 306 Pfund
+            </td>
+            <td>
+              307 - 613 Pfund
+            </td>
+            <td>
+              614 - 920 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              27
+            </td>
+            <td>
+              ≤ 346 Pfund
+            </td>
+            <td>
+              347 - 693 Pfund
+            </td>
+            <td>
+              694 - 1.040 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              28
+            </td>
+            <td>
+              ≤ 400 Pfund
+            </td>
+            <td>
+              401 - 800 Pfund
+            </td>
+            <td>
+              801 - 1.200 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              29
+            </td>
+            <td>
+              ≤ 466 Pfund
+            </td>
+            <td>
+              467 - 933 Pfund
+            </td>
+            <td>
+              934 - 1.400 Pfund
+            </td>
+          </tr>
+          <tr>
+            <td>
+              +10
+            </td>
+            <td>
+              x4
+            </td>
+            <td>
+              x4
+            </td>
+            <td>
+              x4
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>
+  </foreignObject>
+  <rect id="1" style="fill:none;stroke:none;" width="73" height="99" x="210" y="178" />
+  <foreignObject y="0" x="0" width="365" height="495" transform="translate(210,178) scale(0.2)">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <link href="https://fonts.googleapis.com/css?family=Smythe" style="text/css" rel="stylesheet"/>
+        <style type="text/css">
+          body { padding: 0; margin: 0; font-family: "Smythe"; }
+          table { border-collapse: separate; border-spacing: 0px; font-size: 16px; }
+          td, th { text-align:center; padding: 3px 6px; border: 1px solid black; }
+          td:first-child { text-align: left; }
+          tr.head { padding: 6px; color: white; text-align: center; }
+          tr.head th { background-color: black; }
+        </style>
+      </head>
+      <body>
+        <table style="width:360px;">
+          <tr class="head">
+            <th>
+              Last
+            </th>
+            <th>
+              Max. GE-Bonus
+            </th>
+            <th>
+              Lastmalus
+            </th>
+            <th>
+              (9 m)
+            </th>
+            <th>
+              (6 m)
+            </th>
+            <th>
+              Rennen
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Mittlere
+            </td>
+            <td>
+              +3
+            </td>
+            <td style="text-akign:center;">
+              -3
+            </td>
+            <td>
+              6m
+            </td>
+            <td style="text-akign:center;">
+              4,50m
+            </td>
+            <td>
+              x4
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Schwere
+            </td>
+            <td>
+              +1
+            </td>
+            <td style="text-akign:center;">
+              -6
+            </td>
+            <td>
+              6m
+            </td>
+            <td style="text-akign:center;">
+              4,50m
+            </td>
+            <td>
+              x3
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>
+  </foreignObject>
+  <rect id="1" style="fill:none;stroke:none;" width="95" height="99" x="110.5" y="108" />
+  <foreignObject y="0" x="0" width="475" height="495" transform="translate(110.5,108) scale(0.2)">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <link href="https://fonts.googleapis.com/css?family=Smythe" style="text/css" rel="stylesheet"/>
+        <style type="text/css">
+          body { padding: 0; margin: 0; font-family: "Smythe"; }
+          table { border-collapse: separate; border-spacing: 0px; font-size: 16px; }
+          td, th { text-align:center; padding: 3px 6px; border: 1px solid black; }
+          td:first-child { text-align: left; }
+          tr.head { padding: 6px; color: white; text-align: center; }
+          tr.head th { background-color: black; }
+        </style>
+      </head>
+      <body>
+        <table style="width:470px">
+          <tr class="head">
+            <th colspan="2">
+              Kosten von magischen Gegenständen
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Schriftrolle
+            </td>
+            <td>
+              ZG x ZS x 25 GM
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Trank
+            </td>
+            <td>
+              ZG x ZS x 50 GM
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Zauberstab [50]
+            </td>
+            <td>
+              ZG x ZS x 750 GM
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>
+  </foreignObject>
+</svg>

@@ -1,0 +1,953 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210" id="svg2" version="1.1">
+  <image x="0" y="0" height="210" width="297" preserveAspectRatio="none" href="dragon_sw.jpg"/>
+  <rect id="1" style="fill:none;stroke:none;" width="99" height="190" x="5" y="5" />
+  <foreignObject y="0" x="0" width="495" height="950" transform="translate(5,5) scale(0.2)">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <link href="https://fonts.googleapis.com/css?family=Smythe" style="text/css" rel="stylesheet"/>
+        <style type="text/css">
+          body { padding: 0; margin: 0; font-family: "Smythe"; }
+          table { border-collapse: separate; border-spacing: 0px; font-size: 16px; }
+          td, th { background-color: white; text-align:center; padding: 3px 6px; border: 1px solid black; }
+          td:first-child { text-align: left; }
+          tr.head { padding: 6px; color: white; text-align: center; }
+          tr.head th { background-color: black; }
+          .hts tr td:nth-child(4n+1) { text-align:left; width:230px; }
+          .hts td:nth-child(4n+2) { width:85px; }
+          .hts td:nth-child(4n+3) { width:85px; }
+          .hts td:nth-child(4n+4) { width:85px; }
+        </style>
+      </head>
+      <body>
+        <table class="hts" style="width:495px;">
+          <tr class="head">
+            <th>
+              Substanz / Gegenstand
+            </th>
+            <th>
+              Härte
+            </th>
+            <th>
+              TP
+            </th>
+            <th>
+              SG
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Glas
+            </td>
+            <td>
+              1
+            </td>
+            <td>
+              1 / 2,5 cm
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Papier oder Stoff
+            </td>
+            <td>
+              0
+            </td>
+            <td>
+              2 / 2,5 cm
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Seil
+            </td>
+            <td>
+              0
+            </td>
+            <td>
+              2 / 2,5 cm
+            </td>
+            <td>
+              23
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Eis
+            </td>
+            <td>
+              0
+            </td>
+            <td>
+              3 / 2,5 cm
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Leder oder Fell
+            </td>
+            <td>
+              2
+            </td>
+            <td>
+              5 / 2,5 cm
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Holz
+            </td>
+            <td>
+              5
+            </td>
+            <td>
+              10 / 2,5 cm
+            </td>
+            <td>
+              13 + 10 / 2,5 cm
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Stein
+            </td>
+            <td>
+              8
+            </td>
+            <td>
+              15 / 2,5 cm
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Eisen oder Stahl
+            </td>
+            <td>
+              10
+            </td>
+            <td>
+              20 / 2,5 cm
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Mithral
+            </td>
+            <td>
+              15
+            </td>
+            <td>
+              30 / 2,5 cm
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Adamant
+            </td>
+            <td>
+              20
+            </td>
+            <td>
+              40 / 2,5 cm
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Kleine Truhe
+            </td>
+            <td>
+              5
+            </td>
+            <td>
+              1
+            </td>
+            <td>
+              17
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Schatztruhe
+            </td>
+            <td>
+              5
+            </td>
+            <td>
+              15
+            </td>
+            <td>
+              23
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Mauerwand (30 cm)
+            </td>
+            <td>
+              8
+            </td>
+            <td>
+              90
+            </td>
+            <td>
+              35
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Steinwand (90 cm)
+            </td>
+            <td>
+              8
+            </td>
+            <td>
+              540
+            </td>
+            <td>
+              50
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Kette
+            </td>
+            <td>
+              10
+            </td>
+            <td>
+              5
+            </td>
+            <td>
+              26
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Handschellen
+            </td>
+            <td>
+              10
+            </td>
+            <td>
+              10
+            </td>
+            <td>
+              26 + 2 für [M]
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Eisentür (5 cm)
+            </td>
+            <td>
+              10
+            </td>
+            <td>
+              60
+            </td>
+            <td>
+              28
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verriegelte Tür
+            </td>
+            <td colspan="2">
+            </td>
+            <td>
+              25
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Pforte zuhalten
+            </td>
+            <td colspan="2">
+            </td>
+            <td>
+              +5
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Arkanes Schloss
+            </td>
+            <td colspan="2">
+            </td>
+            <td>
+              +10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Leichte Klinge
+            </td>
+            <td>
+              10 + 2 / +1
+            </td>
+            <td>
+              2 + 10 / +1
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Klinge (1-Handwaffe), Tartsche
+            </td>
+            <td>
+              10 + 2 / +1
+            </td>
+            <td>
+              5 + 10 / +1
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Klinge (2-Handwaffe)
+            </td>
+            <td>
+              10 + 2 / +1
+            </td>
+            <td>
+              10 + 10 / +1
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Leichte Waffe mit Metallschaft
+            </td>
+            <td>
+              10 + 2 / +1
+            </td>
+            <td>
+              10 + 10 / +1
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              1-Handwaffe mit Metallschaft
+            </td>
+            <td>
+              10 + 2 / +1
+            </td>
+            <td>
+              20 + 10 / +1
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Leichte Waffe mit Schaft
+            </td>
+            <td>
+              5 + 2 / +1
+            </td>
+            <td>
+              2 + 10 / +1
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              1-Handwaffe mit Schaft, Projektilwaffe
+            </td>
+            <td>
+              5 + 2 / +1
+            </td>
+            <td>
+              5 + 10 / +1
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2-Handwaffe mit Schaft
+            </td>
+            <td>
+              5 + 2 / +1
+            </td>
+            <td>
+              10 + 10 / +1
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Rüstung
+            </td>
+            <td>
+              speziell
+            </td>
+            <td>
+              RB x 5
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Leichter Holzschild
+            </td>
+            <td>
+              5 + 2 / +1
+            </td>
+            <td>
+              7 + 10 / +1
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Schwerer Holzschild
+            </td>
+            <td>
+              5 + 2 / +1
+            </td>
+            <td>
+              15 + 10 / +1
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Leichter Stahlschild
+            </td>
+            <td>
+              10 + 2 / +1
+            </td>
+            <td>
+              10 + 10 / +1
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Schwerer Stahlschild
+            </td>
+            <td>
+              10
+            </td>
+            <td>
+              20
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Turmschild
+            </td>
+            <td>
+              5
+            </td>
+            <td>
+              20
+            </td>
+            <td>
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>
+  </foreignObject>
+  <rect id="2" style="fill:none;stroke:none;" width="96" height="138" x="109.5" y="5" />
+  <foreignObject y="0" x="0" width="480" height="690" transform="translate(109.5,5) scale(0.2)">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <link href="https://fonts.googleapis.com/css?family=Smythe" style="text/css" rel="stylesheet"/>
+        <style type="text/css">
+          body { padding: 0; margin: 0; font-family: "Smythe"; }
+          table { border-collapse: separate; border-spacing: 0px; font-size: 16px; }
+          td, th { text-align:center; padding: 3px 6px; border: 1px solid black; }
+          td:first-child { text-align: left; }
+          tr.head { padding: 6px; color: white; text-align: center; }
+          tr.head th { background-color: black; }
+        </style>
+      </head>
+      <body>
+        <table style="width:480px;">
+          <tr class="head">
+            <th style="width:230px;">
+              Situation
+            </th>
+            <th style="width:100px;">
+              Nahkampf
+            </th>
+            <th style="width:150px;">
+              Fernkampf
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Angreifer ist geblendet
+            </td>
+            <td>
+              -1
+            </td>
+            <td>
+              -1
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Angreifer ist verstrickt
+            </td>
+            <td>
+              -2 (und -4 GE)
+            </td>
+            <td>
+              -2 (und -4 GE)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Angreifer nimmt Verteidiger in die Zange
+            </td>
+            <td>
+              +2
+            </td>
+            <td>
+              - 
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Angreifer ist unsichtbar
+            </td>
+            <td>
+              +2
+            </td>
+            <td>
+              +2
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Angreifer steht höher
+            </td>
+            <td>
+              +1
+            </td>
+            <td>
+              +0
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Angreifer liegt
+            </td>
+            <td>
+              -4
+            </td>
+            <td>
+              Nur Armbrust oder Shuriken können eingesetzt werden
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Angreifer ist erschüttert oder verängstigt
+            </td>
+            <td>
+              -2
+            </td>
+            <td>
+              -2
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Angreifer zwängt sich durch einen Bereich
+            </td>
+            <td>
+              -4
+            </td>
+            <td>
+              -4
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger hat Deckung
+            </td>
+            <td>
+              +4
+            </td>
+            <td>
+              +4
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger ist blind
+            </td>
+            <td>
+              -2 (kein GE-Bonus)
+            </td>
+            <td>
+              -2 (kein GE-Bonus)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger ist kauernd
+            </td>
+            <td>
+              -2 (kein GE-Bonus)
+            </td>
+            <td>
+              -2 (kein GE-Bonus)
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger ist verstrickt
+            </td>
+            <td>
+              -4 GE
+            </td>
+            <td>
+              -4 GE
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger ist auf dem falschen Fuß oder Angreifer ist
+              unsichtbar
+            </td>
+            <td>
+              kein GE-Bonus
+            </td>
+            <td>
+              kein GE-Bonus
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger ist im Ringkampf (der Angreifer aber nicht)
+            </td>
+            <td>
+              +0
+            </td>
+            <td>
+              +0
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger ist hilflos
+            </td>
+            <td>
+              kein GE-Bonus
+            </td>
+            <td>
+              kein GE-Bonus
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger kniet oder sitzt
+            </td>
+            <td>
+              -2
+            </td>
+            <td>
+              +2
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger ist in einem Haltegriff
+            </td>
+            <td>
+              -4 (kein GE-Bonus)
+            </td>
+            <td>
+              kein GE-Bonus
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger liegt
+            </td>
+            <td>
+              -4
+            </td>
+            <td>
+              +4
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger zwängt sich durch einen Bereich
+            </td>
+            <td>
+              -4
+            </td>
+            <td>
+              -4
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verteidiger ist betäubt
+            </td>
+            <td>
+              -2 (kein GE-Bonus)
+            </td>
+            <td>
+              -2 (kein GE-Bonus)
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>
+  </foreignObject>
+  <rect id="3" style="fill:none;stroke:none;" width="82" height="190" x="210" y="5" />
+  <foreignObject y="0" x="0" width="410" height="950" transform="translate(210,5) scale(0.2)">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+      <head>
+        <link href="https://fonts.googleapis.com/css?family=Smythe" style="text/css" rel="stylesheet"/>
+        <style type="text/css">
+          body { padding: 0; margin: 0; font-family: "Smythe"; }
+          table { border-collapse: separate; border-spacing: 0px; font-size: 16px; }
+          td, th { text-align:center; padding: 3px 6px; border: 1px solid black; }
+          td:first-child { text-align: left; }
+          tr.head { padding: 6px; color: white; text-align: center; }
+          tr.head th { background-color: black; }
+        </style>
+      </head>
+      <body>
+        <table style="width:410px">
+          <tr class="head">
+            <th colspan="2">
+              Zaubererwerte
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Zauber SG
+            </td>
+            <td>
+              10 + ZG + Attr-Bonus
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Zauberresistenz
+            </td>
+            <td>
+              10 + ZS
+            </td>
+          </tr>
+          <tr class="head">
+            <th>
+              Situation
+            </th>
+            <th>
+              Konzentrations-SG
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Defensiv zaubern
+            </td>
+            <td>
+              15 + doppelter ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verletzt werden
+            </td>
+            <td>
+              10 + Schaden + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Dauerschaden
+            </td>
+            <td>
+              10 + halber Schaden + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Von einem Zauber ohne Schaden betroffen
+            </td>
+            <td>
+              SG für RW des Zaubers + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Im Ringkampf oder Haltegriff
+            </td>
+            <td>
+              10 + KMB des Gegners + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Starke Bewegung
+            </td>
+            <td>
+              10 + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Sehr starke Bewegung
+            </td>
+            <td>
+              15 + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Extrem heftige Bewegung
+            </td>
+            <td>
+              20 + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Wind mit Regen oder Schnee
+            </td>
+            <td>
+              5 + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Wind mit Hagel, Staub oder Schutt
+            </td>
+            <td>
+              10 + ZG
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Verstrickt sein
+            </td>
+            <td>
+              15 + ZG
+            </td>
+          </tr>
+          <tr class="head">
+            <th>
+              Der Unsichtbare...
+            </th>
+            <th>
+              Wahrnehmungs-SG-Modifikator
+            </th>
+          </tr>
+          <tr>
+            <td>
+              kämpft oder spricht
+            </td>
+            <td>
+              -20
+            </td>
+          </tr>
+          <tr>
+            <td>
+              bewegt sich mit halber Bewegungsrate
+            </td>
+            <td>
+              -5
+            </td>
+          </tr>
+          <tr>
+            <td>
+              bewegt sich mit voller Bewegungsrate
+            </td>
+            <td>
+              -10
+            </td>
+          </tr>
+          <tr>
+            <td>
+              rennt oder führt einen Sturmangriff aus
+            </td>
+            <td>
+              -20
+            </td>
+          </tr>
+          <tr>
+            <td>
+              bewegt sich nicht
+            </td>
+            <td>
+              +40
+            </td>
+          </tr>
+          <tr>
+            <td>
+              benutzt Heimlichkeit
+            </td>
+            <td>
+              Heimlichkeitswurf + 20
+            </td>
+          </tr>
+          <tr>
+            <td>
+              befindet sich in Entfernung
+            </td>
+            <td>
+              +1 pro 3m
+            </td>
+          </tr>
+          <tr>
+            <td>
+              befindet sich hinter Hindernis (Tür)
+            </td>
+            <td>
+              +5
+            </td>
+          </tr>
+          <tr>
+            <td>
+              befindet sich hinter Hindernis (Steinmauer)
+            </td>
+            <td>
+              +15
+            </td>
+          </tr>
+        </table>
+      </body>
+    </html>
+  </foreignObject>
+</svg>
