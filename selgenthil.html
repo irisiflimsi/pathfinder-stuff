@@ -42,7 +42,7 @@
         redo();
       }
       function redo() {
-        for (let i = 0; i <= 163; i++) {
+        for (let i = 0; i <= 165; i++) {
           var el = document.getElementById(i);
           if (el) {
             var td = el.parentElement;
@@ -61,7 +61,7 @@
         }
       }
       function doload() {
-        for (let i = 0; i <= 163; i++) {
+        for (let i = 0; i <= 165; i++) {
           var el = document.getElementById(i);
           if (el) {
             var j = document.cookie.indexOf("id" + i + "=");
@@ -346,6 +346,7 @@
             </td>
           </tr>
 <!--
+Person vergrößern
 -->
           <tr class="head" onclick="lock()">
             <th colspan="2">
@@ -744,13 +745,29 @@
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Verwirrung">Verwirrung</a><span id="121" onclick="cycle(this)">0</span>
             </td>
           </tr>
-          <!--
-          Feuerschild
-          Feuerwand
-          Fluch
-          Massen-Person Vergrößern
-          Schattige Zuflucht
-          -->
+<!--
+Feuerschild
+Feuerwand
+Fluch
+Massen-Person Vergrößern
+Schattige Zuflucht
+-->
+          <tr class="head" onclick="lock()">
+            <th colspan="2">
+              0 Zauber der Stufe 5 (2 Zauber = 10 Seiten, Σ 330 Seiten)
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Energiewand">Energiewand</a><span id="164" onclick="cycle(this)">0</span>
+            </td>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Telekinese">Telekinese</a><span id="165" onclick="cycle(this)">0</span>
+            </td>
+          </tr>
+<!--
+Monster herbeizaubern V
+-->
           <tr class="head" onclick="lock()">
             <th colspan="2">
               Magische Gegenstände
@@ -791,6 +808,6 @@
         </table>
       </div>
     </div>
-    <!-- Last Id: 163 -->
+    <!-- Last Id: 165 -->
   </body>
 </html>
