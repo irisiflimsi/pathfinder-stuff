@@ -42,7 +42,7 @@
         redo();
       }
       function redo() {
-        for (let i = 0; i <= 169; i++) {
+        for (let i = 0; i <= 172; i++) {
           var el = document.getElementById(i);
           if (el) {
             var td = el.parentElement;
@@ -61,7 +61,7 @@
         }
       }
       function doload() {
-        for (let i = 0; i <= 169; i++) {
+        for (let i = 0; i <= 172; i++) {
           var el = document.getElementById(i);
           if (el) {
             var j = document.cookie.indexOf("id" + i + "=");
@@ -765,7 +765,7 @@ Schattige Zuflucht
 -->
           <tr class="head" onclick="lock()">
             <th colspan="2">
-              2 Zauber der Stufe 5 (3 Zauber = 15 Seiten, Σ 342 Seiten)
+              2 Zauber der Stufe 5 (6 Zauber = 30 Seiten, Σ 357 Seiten)
             </th>
           </tr>
           <tr>
@@ -773,12 +773,23 @@ Schattige Zuflucht
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Energiewand">Energiewand</a><span id="164" onclick="cycle(this)">0</span>
             </td>
             <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Gedankennebel">Gedankennebel</a><span id="170" onclick="cycle(this)">0</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Personbeherrschen">Person beherrschen</a><span id="168" onclick="cycle(this)">0</span>
+            </td>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Symboldesschlafs">Symbol des Schlafs</a><span id="171" onclick="cycle(this)">0</span>
             </td>
           </tr>
           <tr>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Telekinese">Telekinese</a><span id="165" onclick="cycle(this)">0</span>
+            </td>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Traum">Traum</a><span id="172" onclick="cycle(this)">0</span>
             </td>
           </tr>
 <!--
@@ -824,6 +835,6 @@ Monster herbeizaubern V
         </table>
       </div>
     </div>
-    <!-- Last Id: 169 -->
+    <!-- Last Id: 172 -->
   </body>
 </html>
