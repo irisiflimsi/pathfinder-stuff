@@ -1,0 +1,112 @@
+[
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/ArkanesAuge",
+        "name":"Arkanes Auge",
+        "id":"500"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Ausspaehung",
+        "name":"Ausspähung",
+        "id":"501"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Expertenregeln/Zauber/Blitzkugeln",
+        "name":"Blitzkugeln",
+        "id":"502"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Dimensionstuer",
+        "name":"Dimensionstür",
+        "id":"503"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Eissturm",
+        "name":"Eissturm",
+        "id":"504"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Eiswand",
+        "name":"Eiswand",
+        "id":"505"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIIVoelker/Zauber/Geisterwolf",
+        "name":"Geisterwolf",
+        "id":"506"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnMagie/Zauber/HerbeigezauberteKreaturkontrollieren",
+        "name":"Herbeigezauberte Kreatur kontrollieren",
+        "id":"507"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnMagie/Zauber/KindderWellen",
+        "name":"Kind der Wellen",
+        "id":"508"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnVIIIIntrigen/Zauber/KontrollierterFeuerball",
+        "name":"Kontrollierter Feuerball",
+        "id":"509"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnVIKlassen/Zauber/AggressiveDonnerwolkeMaechtige",
+        "name":"Mächtige aggressive Donnerwolke",
+        "id":"510"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/MaechtigeUnsichtbarkeit",
+        "name":"Mächtige Unsichtbarkeit",
+        "id":"511"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/MassenPersonverkleinern",
+        "name":"Massen-Person Verkleinern",
+        "id":"512"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Monsterbezaubern",
+        "name":"Monster bezaubern",
+        "id":"513"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/MonsterherbeizaubernIV",
+        "name":"Monster herbeizaubern IV",
+        "id":"514"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/SchwaechereKugelderUnverwundbarkeit",
+        "name":"Schwächere Kugel der Unverwundbarkeit",
+        "id":"515"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/SchwaechererGeas",
+        "name":"Schwächerer Geas",
+        "id":"516"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/SchwarzeTentakel",
+        "name":"Schwarze Tentakel",
+        "id":"517"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Steinhaut",
+        "name":"Steinhaut",
+        "id":"518"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/ToedlichesPhantom",
+        "name":"Tödliches Phantom",
+        "id":"519"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/TiefeVerzweiflung",
+        "name":"Tiefe Verzweiflung",
+        "id":"520"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Verwirrung",
+        "name":"Verwirrung",
+        "id":"521"
+    }
+]

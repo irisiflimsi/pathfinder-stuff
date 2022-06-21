@@ -1,0 +1,202 @@
+[
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnVIKlassen/Zauber/Affenfisch",
+        "name":"Affenfisch",
+        "id":"200"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Alarm",
+        "name":"Alarm",
+        "id":"201"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/Befreiender_Befehl",
+        "name":"Befreiender Befehl",
+        "id":"202"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Brennende_Hände",
+        "name":"Brennende Hände",
+        "id":"203"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/Dringlicher_Schritt",
+        "name":"Dringlicher Schritt",
+        "id":"204"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Elementen_trotzen",
+        "name":"Elementen trotzen",
+        "id":"205"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnMagie/Zauber/Erzwungene_Stille",
+        "name":"Erzwungene Stille",
+        "id":"206"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Federfall",
+        "name":"Federfall",
+        "id":"207"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Furcht_auslösen",
+        "name":"Furcht auslösen",
+        "id":"208"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIIVoelker/Zauber/Gewispertes_Wissen",
+        "name":"Gewispertes Wissen",
+        "id":"209"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Expertenregeln/Zauber/Hauch_der_See",
+        "name":"Hauch der See",
+        "id":"210"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Hypnose",
+        "name":"Hypnose",
+        "id":"211"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Identifizieren",
+        "name":"Identifizieren",
+        "id":"212"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnMagie/Zauber/KalterHauch",
+        "name":"Kalter Hauch",
+        "id":"213"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/Luftblase",
+        "name":"Luftblase",
+        "id":"214"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Magierrüstung",
+        "name":"Magierrüstung",
+        "id":"215"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Magische_Waffe",
+        "name":"Magische Waffe",
+        "id":"216"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Magisches_Geschoss",
+        "name":"Magisches Geschoss",
+        "id":"217"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/MonsterherbeizaubernI",
+        "name":"Monster herbeizaubern I",
+        "id":"218"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AndereBaende/Zauber/Nachtwache",
+        "name":"Nachtwache",
+        "id":"219"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIIVoelker/Zauber/Netzgeschoss",
+        "name":"Netzgeschoss",
+        "id":"220"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Person_bezaubern",
+        "name":"Person bezaubern",
+        "id":"221"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Personverkleinern",
+        "name":"Person verkleinern",
+        "id":"222"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Pforte_zuhalten",
+        "name":"Pforte zuhalten",
+        "id":"223"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Rascher_Rückzug",
+        "name":"Rascher Rückzug",
+        "id":"224"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Reittier",
+        "name":"Reittier",
+        "id":"225"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Schild",
+        "name":"Schild",
+        "id":"226"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Schlaf",
+        "name":"Schlaf",
+        "id":"227"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Schmieren",
+        "name":"Schmieren",
+        "id":"228"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Schockgriff",
+        "name":"Schockgriff",
+        "id":"229"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/SchwebendeScheibe",
+        "name":"Schwebende Scheibe",
+        "id":"230"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Sprachenverstehen",
+        "name":"Sprachen verstehen",
+        "id":"231"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Unauffälliger_Diener",
+        "name":"Unauffälliger Diener",
+        "id":"232"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AndereBaende/Zauber/UnzerbrechlichesHerz",
+        "name":"Unzerbrechliches Herz",
+        "id":"233"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Verhüllender_Nebel",
+        "name":"Verhüllender Nebel",
+        "id":"234"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnMagie/Zauber/Verlangen",
+        "name":"Verlangen",
+        "id":"235"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Expertenregeln/Zauber/Verschwinden",
+        "name":"Verschwinden",
+        "id":"236"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/Weiter_Schuss",
+        "name":"Weiter Schuss",
+        "id":"237"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnVIIIIntrigen/Zauber/Wurfhaken",
+        "name":"Wurfhaken",
+        "id":"238"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Zielsicherer_Schlag",
+        "name":"Zielsicherer Schlag",
+        "id":"239"
+    }
+]

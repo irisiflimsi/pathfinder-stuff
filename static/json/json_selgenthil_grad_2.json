@@ -1,0 +1,192 @@
+[
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIIVoelker/Zauber/Abolethen-Lunge",
+        "name":"Abolethen-Lunge",
+        "id":"300"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnVIKlassen/Zauber/Aggressive_Gewitterwolke",
+        "name":"Aggressive Gewitterwolke",
+        "id":"301"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/ArkanesSchloss",
+        "name":"Arkanes Schloss",
+        "id":"302"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/AusdauerdesOchsen",
+        "name":"Ausdauer des Ochsen",
+        "id":"303"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Bärenstärke",
+        "name":"Bärenstärke",
+        "id":"304"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Dunkelsicht",
+        "name":"Dunkelsicht",
+        "id":"305"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Flammenkugel",
+        "name":"Flammenkugel",
+        "id":"306"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/FuerchterlicherLachanfall",
+        "name":"Fürchterlicher Lachanfall",
+        "id":"307"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Gedankenwahrnehmen",
+        "name":"Gedanken wahrnehmen",
+        "id":"308"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Geisterhand",
+        "name":"Geisterhand",
+        "id":"309"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnVIKlassen/Zauber/Geschmolzene_Metallkugel",
+        "name":"Geschmolzene Metallkugel",
+        "id":"310"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Glitzerstaub",
+        "name":"Glitzerstaub",
+        "id":"311"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/HauchdesStumpfsinns",
+        "name":"Hauch des Stumpfsinns",
+        "id":"312"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Klopfen",
+        "name":"Klopfen",
+        "id":"313"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnMagie/Zauber/Meisterarbeit",
+        "name":"Meisterarbeit",
+        "id":"314"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Monsterbenommenheit",
+        "name":"Monsterbenommenheit",
+        "id":"315"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/MonsterherbeizaubernII",
+        "name":"Monster herbeizaubern II",
+        "id":"316"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/Gemeinschaftliches_Reittier",
+        "name":"Reittier, Gemeinschaftliches",
+        "id":"317"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Expertenregeln/Zauber/Gleiten",
+        "name":"Gleiten",
+        "id":"318"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/KatzenhafteAnmut",
+        "name":"Katzenhafte Anmut",
+        "id":"319"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Reparieren",
+        "name":"Reparieren",
+        "id":"320"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/SchlaeuedesFuchses",
+        "name":"Schläue des Fuchses",
+        "id":"321"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Schutz vor Pfeilen",
+        "name":"Schutz vor Pfeilen",
+        "id":"322"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/Schützende Waffe",
+        "name":"Schützende Waffe",
+        "id":"323"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Schwarm herbeizaubern",
+        "name":"Schwarm herbeizaubern",
+        "id":"324"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Schweben",
+        "name":"Schweben",
+        "id":"325"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Seiltrick",
+        "name":"Seiltrick",
+        "id":"326"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Sengender Strahl",
+        "name":"Sengender Strahl",
+        "id":"327"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Spiegelbilder",
+        "name":"Spiegelbilder",
+        "id":"328"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Spinnenklettern",
+        "name":"Spinnenklettern",
+        "id":"329"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Spinnennetz",
+        "name":"Spinnennetz",
+        "id":"330"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Säurepfeil",
+        "name":"Säurepfeil",
+        "id":"331"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Unsichtbares_sehen",
+        "name":"Unsichtbares sehen",
+        "id":"332"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Unsichtbarkeit",
+        "name":"Unsichtbarkeit",
+        "id":"333"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnMagie/Zauber/Vernarrtheit",
+        "name":"Vernarrtheit",
+        "id":"334"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Verschwimmen",
+        "name":"Verschwimmen",
+        "id":"335"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnMagie/Zauber/Wildheit_des_Dachses",
+        "name":"Wildheit des Dachses",
+        "id":"336"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Windgefluester",
+        "name":"Windgeflüster",
+        "id":"337"
+    }
+]

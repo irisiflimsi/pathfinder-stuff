@@ -1,0 +1,42 @@
+[
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Energiewand",
+        "name":"Energiewand",
+        "id":"600"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Gedankennebel",
+        "name":"Gedankennebel",
+        "id":"601"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/MonsterherbeizaubernV",
+        "name":"Monster herbeizaubern V",
+        "id":"602"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Personbeherrschen",
+        "name":"Person beherrschen",
+        "id":"603"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Symboldesschlafs",
+        "name":"Symbol des Schlafs",
+        "id":"604"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Telekinese",
+        "name":"Telekinese",
+        "id":"605"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Teleportieren",
+        "name":"Teleportieren",
+        "id":"606"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Traum",
+        "name":"Traum",
+        "id":"607"
+    }
+]

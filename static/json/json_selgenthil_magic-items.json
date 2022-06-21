@@ -1,0 +1,44 @@
+[
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/LeichteWundenheilen",
+        "name":"Trank: Leichte Wunden Heilen",
+        "id":"050",
+        "vorrat":"2"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/MittelschwereWundenheilen",
+        "name":"Trank: Mittelschwere Wunden Heilen",
+        "id":"051",
+        "vorrat":"2"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Unsichtbarkeit",
+        "name":"Trank: Unsichtbarkeit",
+        "id":"052",
+        "vorrat":"2"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Magierrüstung",
+        "name":"Zauberstab: Magierrüstung",
+        "id":"053",
+        "vorrat":"23"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Säurepfeil",
+        "name":"Zauberstab: Säurepfeil",
+        "id":"054",
+        "vorrat":"23"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Dimensionstuer",
+        "name":"Zauberstab: Dimensionstür",
+        "id":"055",
+        "vorrat":"13"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Geheimtuerenentdecken",
+        "name":"Zauberstab: Geheimtüren entdecken",
+        "id":"056",
+        "vorrat":"10"
+    }
+]

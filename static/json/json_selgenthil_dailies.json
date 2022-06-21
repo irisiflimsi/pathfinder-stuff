@@ -1,0 +1,12 @@
+[
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Klassen/Magier/ArkaneSchulen/AllgemeineSchule#Hand-des-Lehrlings",
+        "name":"Hand des Lehrlings",
+        "id":"000"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Klassen/Magier#Arkane-Verbindung",
+        "name":"Arkane Verbindung",
+        "id":"001"
+    }
+]

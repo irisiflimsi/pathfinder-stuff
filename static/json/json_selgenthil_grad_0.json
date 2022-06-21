@@ -1,0 +1,107 @@
+[
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Arkanes Siegel",
+        "name":"Arkanes Siegel",
+        "id":"100"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Aufblitzen",
+        "name":"Aufblitzen",
+        "id":"101"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Ausbessern",
+        "name":"Ausbessern",
+        "id":"102"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Ausbluten",
+        "name":"Ausbluten",
+        "id":"103"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Benommenheit",
+        "name":"Benommenheit",
+        "id":"104"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Botschaft",
+        "name":"Botschaft",
+        "id":"105"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Erschöpfende Berührung",
+        "name":"Erschöpfende Berührung",
+        "id":"106"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Geisterhaftes Geräusch",
+        "name":"Geisterhaftes Geräusch",
+        "id":"107"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Gift entdecken",
+        "name":"Gift entdecken",
+        "id":"108"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Kältestrahl",
+        "name":"Kältestrahl",
+        "id":"109"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Licht",
+        "name":"Licht",
+        "id":"110"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Magie entdecken",
+        "name":"Magie entdecken",
+        "id":"111"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Magie lesen",
+        "name":"Magie lesen",
+        "id":"112"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Magierhand",
+        "name":"Magierhand",
+        "id":"113"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/ÖffnenSchließen",
+        "name":"Öffnen/Schließen",
+        "id":"114"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Resistenz",
+        "name":"Resistenz",
+        "id":"115"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Säurespritzer",
+        "name":"Säurespritzer",
+        "id":"116"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Tanzende Lichter",
+        "name":"Tanzende Lichter",
+        "id":"117"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Untote schwächen",
+        "name":"Untote schwächen",
+        "id":"118"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/VerstoerendeFeenerscheinung",
+        "name":"Verstörende Feenerscheinung",
+        "id":"119"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Zaubertrick",
+        "name":"Zaubertrick",
+        "id":"120"
+    }
+]

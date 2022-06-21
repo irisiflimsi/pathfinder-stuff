@@ -1,0 +1,172 @@
+[
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnVIIOkkultes/Zauber/AnsteckenderEifer",
+        "name":"Ansteckender Eifer",
+        "id":"400"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/ArkanerBlick",
+        "name":"Arkaner Blick",
+        "id":"401"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Blitz",
+        "name":"Blitz",
+        "id":"402"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Einfluesterung",
+        "name":"Einfluesterung",
+        "id":"403"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Feuerball",
+        "name":"Feuerball",
+        "id":"404"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Fliegen",
+        "name":"Fliegen",
+        "id":"405"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/GasfoermigeGestalt",
+        "name":"Gasfoermige Gestalt",
+        "id":"406"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/GemeinschaftlichesSpinnenklettern",
+        "name":"Gemeinschaftliches Spinnenklettern",
+        "id":"407"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Hast",
+        "name":"Hast",
+        "id":"408"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Heldenmut",
+        "name":"Heldenmut",
+        "id":"409"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/HellhoerenHellsehen",
+        "name":"Hellhoeren/Hellsehen",
+        "id":"410"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnVIIIIntrigen/Zauber/Kutsche",
+        "name":"Kutsche",
+        "id":"411"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Magiebannen",
+        "name":"Magie bannen",
+        "id":"412"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/MaechtigeMagischeWaffe",
+        "name":"Mächtige Magische Waffe",
+        "id":"413"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnVIKlassen/Zauber/Metallmacht",
+        "name":"Metallmacht",
+        "id":"414"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/MonsterherbeizaubernIII",
+        "name":"Monster herbeizaubern III",
+        "id":"415"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Personfesthalten",
+        "name":"Person festhalten",
+        "id":"416"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnVIIIIntrigen/Zauber/Rudelempathie",
+        "name":"Rudelempathie",
+        "id":"417"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Schaerfen",
+        "name":"Schärfen",
+        "id":"418"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/Schrotexplosion",
+        "name":"Schrotexplosion",
+        "id":"419"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/SchutzkreisgegenOrdnung",
+        "name":"Schutzkreis gegen Ordnung",
+        "id":"420"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/SchutzvorEnergien",
+        "name":"Schutz vor Energien",
+        "id":"421"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/Gemeinschaftlicher_Schutz_vor_Pfeilen",
+        "name":"Gemeinschaftlicher Schutz vor Pfeilen",
+        "id":"422"
+    },
+    {
+        "reference":"http://prd.5footstep.de/AusbauregelnVIKlassen/Zauber/Silberpfeile",
+        "name":"Silberpfeile",
+        "id":"423"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/SphaerederUnsichtbarkeit",
+        "name":"Sphäre der Unsichtbarkeit",
+        "id":"424"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Expertenregeln/Zauber/Schützendes_Lagerfeuer",
+        "name":"Schützendes Lagerfeuer",
+        "id":"425"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Standortvortaeuschen",
+        "name":"Standort vortäuschen",
+        "id":"426"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Tiefschlaf",
+        "name":"Tiefschlaf",
+        "id":"427"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Expertenregeln/Zauber/Vielseitige_Waffe",
+        "name":"Vielseitige Waffe",
+        "id":"428"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Vampirgriff",
+        "name":"Vampirgriff",
+        "id":"429"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Wasser_atmen",
+        "name":"Wasser atmen",
+        "id":"430"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Winzige_Huette",
+        "name":"Winzige Hütte",
+        "id":"431"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Wut",
+        "name":"Wut",
+        "id":"432"
+    },
+    {
+        "reference":"http://prd.5footstep.de/Grundregelwerk/Zauber/Zungen",
+        "name":"Zungen",
+        "id":"433"
+    }
+]
