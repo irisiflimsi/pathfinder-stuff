@@ -42,7 +42,7 @@
         redo();
       }
       function redo() {
-        for (let i = 0; i <= 198; i++) {
+        for (let i = 0; i <= 202; i++) {
           var el = document.getElementById(i);
           if (el) {
             var td = el.parentElement;
@@ -61,7 +61,7 @@
         }
       }
       function doload() {
-        for (let i = 0; i <= 198; i++) {
+        for (let i = 0; i <= 202; i++) {
           var el = document.getElementById(i);
           if (el) {
             var j = document.cookie.indexOf("id" + i + "=");
@@ -528,7 +528,7 @@
 -->
           <tr class="head" onclick="lock()">
             <th colspan="2">
-              5 Zauber der Stufe 3 (34 Zauber = 102 Seiten, Σ 242 Seiten)
+              6 Zauber der Stufe 3 (34 Zauber = 102 Seiten, Σ 242 Seiten)
             </th>
           </tr>
           <tr>
@@ -914,21 +914,42 @@ Des Magiers Privates Heiligtum
 -->
           <tr class="head" onclick="lock()">
             <th colspan="2">
+              2 Zauber der Stufe 6 (2 Zauber = 12 Seiten, Σ 470 Seiten)
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Kugelblitz">Kugelblitz</a><span id="201" onclick="cycle(this)">0</span>
+            </td>
+            <td>
+              <a href="http://prd.5footstep.de/AusbauregelnIIIVoelker/Zauber/Feuerkette">Feuerkette</a><span id="202" onclick="cycle(this)">0</span>
+            </td>
+          </tr>
+<!--
+...
+-->
+          <tr class="head" onclick="lock()">
+            <th colspan="2">
               Magische Gegenstände
             </th>
           </tr>
           <tr>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/LeichteWundenheilen">Trank: Leichte Wunden Heilen</a><span id="87" onclick="cycle(this)">1</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/LeichteWundenheilen">Trank: 1w8+1 heilen</a><span id="87" onclick="cycle(this)">1</span>
             </td>
             <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magierrüstung">Zauberstab: Magierrüstung</a><span id="89" onclick="cycle(this)">21</span>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/LeichteWundenheilen">Trank: 3w8+5 heilen</a><span id="199" onclick="cycle(this)">1</span>
             </td>
           </tr>
           <tr>
             <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magierrüstung">Zauberstab: Magierrüstung</a><span id="89" onclick="cycle(this)">21</span>
+            </td>
+            <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Dimensionstuer">Zauberstab: Dimensionstür</a><span id="104" onclick="cycle(this)">11</span>
             </td>
+          </tr>
+          <tr>
             <td>
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Geheimtuerenentdecken">Zauberstab: Geheimtüren entdecken</a><span id="100" onclick="cycle(this)">9</span>
             </td>
@@ -936,6 +957,6 @@ Des Magiers Privates Heiligtum
         </table>
       </div>
     </div>
-    <!-- Last Id: 198 -->
+    <!-- Last Id: 202 -->
   </body>
 </html>
