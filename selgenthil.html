@@ -47,7 +47,7 @@
           if (el) {
             var td = el.parentElement;
             td.style.display = (locked && val(el) < 1) ? "none" : "table-cell";
-            document.cookie = "id" + i + "=" + val(el);
+            localStorage["id" + i] = val(el);
             if (td.previousElementSibling) {
               td.parentElement.style.display = (td.previousElementSibling.style.display == "none" && td.style.display == "none") ? "none" : "table-row";
             }
@@ -64,9 +64,9 @@
         for (let i = 0; i <= 202; i++) {
           var el = document.getElementById(i);
           if (el) {
-            var j = document.cookie.indexOf("id" + i + "=");
-            if (j != -1) {
-              el.innerHTML = document.cookie.substr(j + ("id" + i + "=").length).replace(/[^\d]+.*/,'');
+            var j = localStorage["id" + i];
+            if (j !== undefined && !isNaN(j)) {
+              el.innerHTML = localStorage["id" + i];
             }
           }
         }
