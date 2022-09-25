@@ -32,27 +32,28 @@
       }
     </style>
     <script type="text/javascript">
-      var locked = [false, false, false, false, false, false, false, false, false, false, false, false];
       function cycle(o) {
         var tr = o.parentElement.parentElement;
-        var i = Array.from(el.parentElement.children).indexOf(tr)
-        o.innerHTML = Math.max(0, val(o) + (locked[i] ? -1 : 1));
+        o.innerHTML = Math.max(0, val(o) + (tr.locked ? -1 : 1));
         redo();
       }
       function lock(el) {
-        var tr = el.parentElement.parentElement;
-        var i = Array.from(el.parentElement.children).indexOf(tr)
-        locked[i] = !locked[i];
+        el.locked = !el.locked;
         redo();
+      }
+      function getPrevHead(el) {
+        var sib = el.parentElement.previousElementSibling;
+        while (sib) {
+          if (sib.firstElementChild.tagName === "TH") return sib;
+          sib = sib.previousElementSibling;
+        }
       }
       function redo() {
         for (let i = 0; i <= 202; i++) {
           var el = document.getElementById(i);
           if (el) {
             var td = el.parentElement;
-            var tr = td.parentElement;
-            var j = Array.from(tr.parentElement.children).indexOf(tr)
-            td.style.display = (locked[j] && val(el) < 1) ? "none" : "table-cell";
+            td.style.display = (getPrevHead(td).locked && val(el) < 1) ? "none" : "table-cell";
             localStorage["id" + i] = val(el);
             if (td.previousElementSibling) {
               td.parentElement.style.display = (td.previousElementSibling.style.display == "none" && td.style.display == "none") ? "none" : "table-row";
