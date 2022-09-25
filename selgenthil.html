@@ -33,8 +33,7 @@
     </style>
     <script type="text/javascript">
       function cycle(o) {
-        var tr = o.parentElement.parentElement;
-        o.innerHTML = Math.max(0, val(o) + (tr.locked ? -1 : 1));
+        o.innerHTML = Math.max(0, val(o) + (getPrevHead(o.parentElement).locked ? -1 : 1));
         redo();
       }
       function lock(el) {
