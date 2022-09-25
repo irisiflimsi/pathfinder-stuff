@@ -32,13 +32,17 @@
       }
     </style>
     <script type="text/javascript">
-      var locked = false;
+      var locked = [false, false, false, false, false, false, false, false, false, false, false, false];
       function cycle(o) {
-        o.innerHTML = Math.max(0, val(o) + (locked ? -1 : 1));
+        var tr = o.parentElement.parentElement;
+        var i = Array.from(el.parentElement.children).indexOf(tr)
+        o.innerHTML = Math.max(0, val(o) + (locked[i] ? -1 : 1));
         redo();
       }
-      function lock() {
-        locked = !locked;
+      function lock(el) {
+        var tr = el.parentElement.parentElement;
+        var i = Array.from(el.parentElement.children).indexOf(tr)
+        locked[i] = !locked[i];
         redo();
       }
       function redo() {
@@ -46,7 +50,9 @@
           var el = document.getElementById(i);
           if (el) {
             var td = el.parentElement;
-            td.style.display = (locked && val(el) < 1) ? "none" : "table-cell";
+            var tr = td.parentElement;
+            var i = Array.from(tr.parentElement.children).indexOf(tr)
+            td.style.display = (locked[i] && val(el) < 1) ? "none" : "table-cell";
             localStorage["id" + i] = val(el);
             if (td.previousElementSibling) {
               td.parentElement.style.display = (td.previousElementSibling.style.display == "none" && td.style.display == "none") ? "none" : "table-row";
@@ -77,21 +83,8 @@
   <body onload="doload()">
     <div class="bg"></div>
       <div class="fg">
-        <table>
-          <tr class="head" onclick="lock()">
-            <th colspan="2">
-              9 Dailies / 1 Fokus
-            </th>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Klassen/Magier/ArkaneSchulen/AllgemeineSchule#Hand-des-Lehrlings">Hand des Lehrlings</a><span id="0" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Klassen/Magier#Arkane-Verbindung">Arkane Verbindung</a><span id="1" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr class="head" onclick="lock()">
+        <table id="table">
+          <tr class="head" onclick="lock(this)">
             <th colspan="2">
               4 Zauber der Stufe 0 (21 Zauber = 21 Seiten, Σ 21 Seiten)
             </th>
@@ -183,7 +176,7 @@
           </tr>
 <!--
 -->
-          <tr class="head" onclick="lock()">
+          <tr class="head" onclick="lock(this)">
             <th colspan="2">
               6 Zauber der Stufe 1 (42 Zauber = 42 Seiten, Σ 63 Seiten)
             </th>
@@ -360,7 +353,7 @@
           </tr>
 <!--
 -->
-          <tr class="head" onclick="lock()">
+          <tr class="head" onclick="lock(this)">
             <th colspan="2">
               6 Zauber der Stufe 2 (39 Zauber = 78 Seiten, Σ 140 Seiten)
             </th>
@@ -526,7 +519,7 @@
           </tr>
 <!--
 -->
-          <tr class="head" onclick="lock()">
+          <tr class="head" onclick="lock(this)">
             <th colspan="2">
               6 Zauber der Stufe 3 (34 Zauber = 102 Seiten, Σ 242 Seiten)
             </th>
@@ -673,7 +666,7 @@
           </tr>
 <!--
 -->
-          <tr class="head" onclick="lock()">
+          <tr class="head" onclick="lock(this)">
             <th colspan="2">
               4 Zauber der Stufe 4 (29 Zauber = 116 Seiten, Σ 358 Seiten)
             </th>
@@ -803,7 +796,7 @@
           </tr>
 <!--
 -->
-          <tr class="head" onclick="lock()">
+          <tr class="head" onclick="lock(this)">
             <th colspan="2">
               3 Zauber der Stufe 5 (20 Zauber = 100 Seiten, Σ 458 Seiten)
             </th>
@@ -912,7 +905,7 @@ x Pergamentschwarm
 x Klingenkranz
 Des Magiers Privates Heiligtum
 -->
-          <tr class="head" onclick="lock()">
+          <tr class="head" onclick="lock(this)">
             <th colspan="2">
               2 Zauber der Stufe 6 (2 Zauber = 12 Seiten, Σ 470 Seiten)
             </th>
@@ -928,7 +921,20 @@ Des Magiers Privates Heiligtum
 <!--
 ...
 -->
-          <tr class="head" onclick="lock()">
+          <tr class="head" onclick="lock(this)">
+            <th colspan="2">
+              9 Dailies / 1 Fokus
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Klassen/Magier/ArkaneSchulen/AllgemeineSchule#Hand-des-Lehrlings">Hand des Lehrlings</a><span id="0" onclick="cycle(this)">0</span>
+            </td>
+            <td>
+              <a href="http://prd.5footstep.de/Grundregelwerk/Klassen/Magier#Arkane-Verbindung">Arkane Verbindung</a><span id="1" onclick="cycle(this)">0</span>
+            </td>
+          </tr>
+          <tr class="head" onclick="lock(this)">
             <th colspan="2">
               Magische Gegenstände
             </th>
