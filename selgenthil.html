@@ -51,8 +51,8 @@
           if (el) {
             var td = el.parentElement;
             var tr = td.parentElement;
-            var i = Array.from(tr.parentElement.children).indexOf(tr)
-            td.style.display = (locked[i] && val(el) < 1) ? "none" : "table-cell";
+            var j = Array.from(tr.parentElement.children).indexOf(tr)
+            td.style.display = (locked[j] && val(el) < 1) ? "none" : "table-cell";
             localStorage["id" + i] = val(el);
             if (td.previousElementSibling) {
               td.parentElement.style.display = (td.previousElementSibling.style.display == "none" && td.style.display == "none") ? "none" : "table-row";
