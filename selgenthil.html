@@ -88,7 +88,7 @@
 	          idx++;
             if (idx%2 == 0) {
               var tr = document.createElement("tr");
-              parent.parentElement.appendChild(tr);
+              parent.parentElement.insertBefore(tr, parent.nextSibling);
               parent = tr;
             }
           }
@@ -108,11 +108,16 @@
 
       var content = {
         "magicItems" : [
-          { "id": "87", "value": "1", "link": "Grundregelwerk/Zauber/LeichteWundenheilen", "text": "Trank: 1w8+1 heilen" },
-          { "id": "199", "value": "1", "link": "Grundregelwerk/Zauber/LeichteWundenheilen", "text": "Trank: 3w8+5 heilen" },
-          { "id": "89", "value": "21", "link": "Grundregelwerk/Zauber/Magierrüstung", "text": "Zauberstab: Magierrüstung" },
-          { "id": "104", "value": "11", "link": "Grundregelwerk/Zauber/Dimensionstuer", "text": "Zauberstab: Dimensionstür" },
-          { "id": "100", "value": "9", "link": "Grundregelwerk/Zauber/Geheimtuerenentdecken", "text": "Zauberstab: Geheimtüren entdecken" }
+          { "id": 87, "value": 1, "link": "Grundregelwerk/Zauber/LeichteWundenheilen", "text": "Trank: 1w8+1 heilen" },
+          { "id": 199, "value": 1, "link": "Grundregelwerk/Zauber/LeichteWundenheilen", "text": "Trank: 3w8+5 heilen" },
+          { "id": 89, "value": 21, "link": "Grundregelwerk/Zauber/Magierrüstung", "text": "Zauberstab: Magierrüstung" },
+          { "id": 104, "value": 11, "link": "Grundregelwerk/Zauber/Dimensionstuer", "text": "Zauberstab: Dimensionstür" },
+          { "id": 100, "value": 9, "link": "Grundregelwerk/Zauber/Geheimtuerenentdecken", "text": "Zauberstab: Geheimtüren entdecken" }
+        ],
+        "special" : [
+          { "id": 0, "value": 0, "link": "Grundregelwerk/Klassen/Magier/ArkaneSchulen/AllgemeineSchule#Hand-des-Lehrlings", "text": "Hand des Lehrlings" },
+          { "id": 1, "value": 0, "link": "Grundregelwerk/Klassen/Magier#Arkane-Verbindung", "text": "Arkane Verbindung" },
+          { "id": 203, "value": 0, "link": "Grundregelwerk/Klassen/Magier/ArkaneSchulen/AllgemeineSchule", "text": "Metamagische Meisterschaft" }
         ]
       };
     </script>
@@ -963,18 +968,7 @@ Des Magiers Privates Heiligtum
               9 Dailies / 1 Fokus
             </th>
           </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Klassen/Magier/ArkaneSchulen/AllgemeineSchule#Hand-des-Lehrlings">Hand des Lehrlings</a><span id="0" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Klassen/Magier#Arkane-Verbindung">Arkane Verbindung</a><span id="1" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Klassen/Magier/ArkaneSchulen/AllgemeineSchule">Metamagische Meisterschaft</a><span id="203" onclick="cycle(this)">0</span>
-            </td>
+          <tr id="special">
           </tr>
           <tr class="head" onclick="lock(this)">
             <th colspan="2">
