@@ -67,7 +67,7 @@
         }
       }
       function doload() {
-        var header = ["magicItems", "special"];
+        var header = Object.keys(content);
         for (var p in header) {
           var list = content[header[p]];
           var parent = document.getElementById(header[p]);
@@ -118,6 +118,29 @@
           { "id": 0, "value": 0, "link": "Grundregelwerk/Klassen/Magier/ArkaneSchulen/AllgemeineSchule#Hand-des-Lehrlings", "text": "Hand des Lehrlings" },
           { "id": 1, "value": 0, "link": "Grundregelwerk/Klassen/Magier#Arkane-Verbindung", "text": "Arkane Verbindung" },
           { "id": 203, "value": 0, "link": "Grundregelwerk/Klassen/Magier/ArkaneSchulen/AllgemeineSchule", "text": "Metamagische Meisterschaft" }
+        ],
+        "level0" : [
+          { "id": 2, "value": 0, "link": "Grundregelwerk/Zauber/Arkanes Siegel", "text": "Arkanes Siegel" },
+          { "id": 3, "value": 0, "link": "Grundregelwerk/Zauber/Aufblitzen", "text": "Aufblitzen" },
+          { "id": 4, "value": 0, "link": "Grundregelwerk/Zauber/Ausbessern", "text": "Ausbessern" },
+          { "id": 5, "value": 0, "link": "Grundregelwerk/Zauber/Ausbluten", "text": "Ausbluten" },
+          { "id": 6, "value": 0, "link": "Grundregelwerk/Zauber/Benommenheit", "text": "Benommenheit" },
+          { "id": 7, "value": 0, "link": "Grundregelwerk/Zauber/Botschaft", "text": "Botschaft" },
+          { "id": 8, "value": 0, "link": "Grundregelwerk/Zauber/Erschöpfende Berührung", "text": "Erschöpfende Berührung" },
+          { "id": 9, "value": 0, "link": "Grundregelwerk/Zauber/Geisterhaftes Geräusch", "text": "Geisterhaftes Geräusch" },
+          { "id": 10, "value": 0, "link": "Grundregelwerk/Zauber/Gift entdecken", "text": "Gift entdecken" },
+          { "id": 11, "value": 0, "link": "Grundregelwerk/Zauber/Kältestrahl", "text": "Kältestrahl" },
+          { "id": 12, "value": 0, "link": "Grundregelwerk/Zauber/Licht", "text": "Licht" },
+          { "id": 13, "value": 0, "link": "Grundregelwerk/Zauber/Magie entdecken", "text": "Magie entdecken" },
+          { "id": 14, "value": 0, "link": "Grundregelwerk/Zauber/Magie lesen", "text": "Magie lesen" },
+          { "id": 15, "value": 0, "link": "Grundregelwerk/Zauber/Magierhand", "text": "Magierhand" },
+          { "id": 16, "value": 0, "link": "Grundregelwerk/Zauber/ÖffnenSchließen", "text": "Öffnen/Schließen" },
+          { "id": 17, "value": 0, "link": "Grundregelwerk/Zauber/Resistenz", "text": "Resistenz" },
+          { "id": 18, "value": 0, "link": "Grundregelwerk/Zauber/Säurespritzer", "text": "Säurespritzer" },
+          { "id": 19, "value": 0, "link": "Grundregelwerk/Zauber/Tanzende Lichter", "text": "Tanzende Lichter" },
+          { "id": 20, "value": 0, "link": "Grundregelwerk/Zauber/Untote schwächen", "text": "Untote schwächen" },
+          { "id": 21, "value": 0, "link": "AusbauregelnIIKampf/Zauber/VerstoerendeFeenerscheinung", "text": "Verstörende Feenerscheinung" },
+          { "id": 22, "value": 0, "link": "Grundregelwerk/Zauber/Zaubertrick", "text": "Zaubertrick" }
         ]
       };
     </script>
@@ -131,90 +154,7 @@
               4 Zauber der Stufe 0 (21 Zauber = 21 Seiten, Σ 21 Seiten)
             </th>
           </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Arkanes Siegel">Arkanes Siegel</a><span id="2" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Aufblitzen">Aufblitzen</a><span id="3" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Ausbessern">Ausbessern</a><span id="4" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Ausbluten">Ausbluten</a><span id="5" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Benommenheit">Benommenheit</a><span id="6" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Botschaft">Botschaft</a><span id="7" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Erschöpfende Berührung">Erschöpfende Berührung</a><span id="8" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Geisterhaftes Geräusch">Geisterhaftes Geräusch</a><span id="9" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Gift entdecken">Gift entdecken</a><span id="10" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Kältestrahl">Kältestrahl</a><span id="11" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Licht">Licht</a><span id="12" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magie entdecken">Magie entdecken</a><span id="13" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magie lesen">Magie lesen</a><span id="14" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magierhand">Magierhand</a><span id="15" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/ÖffnenSchließen">Öffnen/Schließen</a><span id="16" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Resistenz">Resistenz</a><span id="17" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Säurespritzer">Säurespritzer</a><span id="18" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Tanzende Lichter">Tanzende Lichter</a><span id="19" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Untote schwächen">Untote schwächen</a><span id="20" onclick="cycle(this)">0</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/AusbauregelnIIKampf/Zauber/VerstoerendeFeenerscheinung">Verstörende Feenerscheinung</a><span id="21" onclick="cycle(this)">0</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Zaubertrick">Zaubertrick</a><span id="22" onclick="cycle(this)">0</span>
-            </td>
+          <tr id="level0">
           </tr>
 <!--
 -->
