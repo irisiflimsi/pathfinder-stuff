@@ -71,19 +71,26 @@
         for (var p in header) {
           var list = content[header[p]];
           var parent = document.getElementById(header[p]);
+          var idx = 0;
           for (var i in list) {
             var obj = list[i];
             var td = document.createElement("td");
             var a = document.createElement("a");
             var span = document.createElement("span");
             span.id = obj["id"];
-            span.onclick = function() { cycle(span); };
+            span.onclick = function() { cycle(this); };
             span.innerHTML = obj["value"];
             a.href = "http://prd.5footstep.de/" + obj["link"];
             a.innerHTML = obj["text"];
             td.appendChild(a);
             td.appendChild(span);
             parent.appendChild(td);
+	          idx++;
+            if (idx%2 == 0) {
+              var tr = document.createElement("tr");
+              parent.parentElement.appendChild(tr);
+              parent = tr;
+            }
           }
         }
 
@@ -101,9 +108,11 @@
 
       var content = {
         "magicItems" : [
-          {
-            "id": "100", "value": "9", "link": "Grundregelwerk/Zauber/Geheimtuerenentdecken", "text": "Zauberstab: Geheimtüren entdecken"
-          }
+          { "id": "87", "value": "1", "link": "Grundregelwerk/Zauber/LeichteWundenheilen", "text": "Trank: 1w8+1 heilen" },
+          { "id": "199", "value": "1", "link": "Grundregelwerk/Zauber/LeichteWundenheilen", "text": "Trank: 3w8+5 heilen" },
+          { "id": "89", "value": "21", "link": "Grundregelwerk/Zauber/Magierrüstung", "text": "Zauberstab: Magierrüstung" },
+          { "id": "104", "value": "11", "link": "Grundregelwerk/Zauber/Dimensionstuer", "text": "Zauberstab: Dimensionstür" },
+          { "id": "100", "value": "9", "link": "Grundregelwerk/Zauber/Geheimtuerenentdecken", "text": "Zauberstab: Geheimtüren entdecken" }
         ]
       };
     </script>
@@ -971,22 +980,6 @@ Des Magiers Privates Heiligtum
             <th colspan="2">
               Magische Gegenstände
             </th>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/LeichteWundenheilen">Trank: 1w8+1 heilen</a><span id="87" onclick="cycle(this)">1</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/LeichteWundenheilen">Trank: 3w8+5 heilen</a><span id="199" onclick="cycle(this)">1</span>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Magierrüstung">Zauberstab: Magierrüstung</a><span id="89" onclick="cycle(this)">21</span>
-            </td>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Dimensionstuer">Zauberstab: Dimensionstür</a><span id="104" onclick="cycle(this)">11</span>
-            </td>
           </tr>
           <tr id="magicItems">
           </tr>
