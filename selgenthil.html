@@ -67,6 +67,26 @@
         }
       }
       function doload() {
+        var header = ["magicItems"];
+        for (var p in header) {
+          var list = content[header[p]];
+          var parent = document.getElementById(header[p]);
+          for (var i in list) {
+            var obj = list[i];
+            var td = document.createElement("td");
+            var a = document.createElement("a");
+            var span = document.createElement("span");
+            span.id = obj["id"];
+            span.onclick = function() { cycle(span); };
+            span.innerHTML = obj["value"];
+            a.href = "http://prd.5footstep.de/" + obj["link"];
+            a.innerHTML = obj["text"];
+            td.appendChild(a);
+            td.appendChild(span);
+            parent.appendChild(td);
+          }
+        }
+
         for (let i = 0; i <= 203; i++) {
           var el = document.getElementById(i);
           if (el) {
@@ -78,6 +98,14 @@
         }
       }
       function val(o) { return parseInt(o.innerHTML); }
+
+      var content = {
+        "magicItems" : [
+          {
+            "id": "100", "value": "9", "link": "Grundregelwerk/Zauber/Geheimtuerenentdecken", "text": "Zauberstab: Geheimtüren entdecken"
+          }
+        ]
+      };
     </script>
   </head>
   <body onload="doload()">
@@ -960,10 +988,7 @@ Des Magiers Privates Heiligtum
               <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Dimensionstuer">Zauberstab: Dimensionstür</a><span id="104" onclick="cycle(this)">11</span>
             </td>
           </tr>
-          <tr>
-            <td>
-              <a href="http://prd.5footstep.de/Grundregelwerk/Zauber/Geheimtuerenentdecken">Zauberstab: Geheimtüren entdecken</a><span id="100" onclick="cycle(this)">9</span>
-            </td>
+          <tr id="magicItems">
           </tr>
         </table>
       </div>
