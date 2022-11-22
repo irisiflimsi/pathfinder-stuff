@@ -30,6 +30,9 @@
       span {
         padding: 0 6px; float: right;
       }
+      span.prop {
+        text-align: center; width: 2em;
+      }
     </style>
     <script type="text/javascript">
       function cycle(o) {
@@ -81,6 +84,7 @@
             span1.onclick = function() { cycle(this); };
             span1.innerHTML = obj["value"];
             span2 = document.createElement("span");
+            span2.className = "prop";
             d = obj["duration"] ? obj["duration"] : "";
             span2.innerHTML = (d.length < 3) ? d : eval("Math.floor(" + d.substring(2) + ")") + " " + d.substring(0,2);
             a.href = "http://prd.5footstep.de/" + obj["link"];
@@ -90,7 +94,7 @@
             td.appendChild(span2);
             parent.appendChild(td);
             idx++;
-            if (idx%2 == 0) {
+            if (idx % 2 == 0) {
               var tr = document.createElement("tr");
               parent.parentElement.insertBefore(tr, parent.nextSibling);
               parent = tr;
@@ -233,40 +237,40 @@
           { "id": 131, "value": 0, "link": "Grundregelwerk/Zauber/Windgefluester", "text": "Windgeflüster", "duration": "h 1*lvl" }
         ],
         "level3" : [
-          { "id": 145, "value": 0, "link": "AusbauregelnVIIOkkultes/Zauber/AnsteckenderEifer", "text": "Ansteckender Eifer" },
-          { "id": 132, "value": 0, "link": "Grundregelwerk/Zauber/ArkanerBlick", "text": "Arkaner Blick" },
-          { "id": 79, "value": 0, "link": "Grundregelwerk/Zauber/Blitz", "text": "Blitz" },
-          { "id": 116, "value": 0, "link": "Grundregelwerk/Zauber/Einfluesterung", "text": "Einflüsterung" },
-          { "id": 80, "value": 0, "link": "Grundregelwerk/Zauber/Feuerball", "text": "Feuerball" },
-          { "id": 81, "value": 0, "link": "Grundregelwerk/Zauber/Fliegen", "text": "Fliegen" },
-          { "id": 133, "value": 0, "link": "Grundregelwerk/Zauber/GasfoermigeGestalt", "text": "Gasförmige Gestalt" },
-          { "id": 134, "value": 0, "link": "Grundregelwerk/Zauber/Hast", "text": "Hast" },
-          { "id": 111, "value": 0, "link": "Grundregelwerk/Zauber/Heldenmut", "text": "Heldenmut" },
-          { "id": 135, "value": 0, "link": "Grundregelwerk/Zauber/HellhoerenHellsehen", "text": "Hellhören/Hellsehen" },
-          { "id": 146, "value": 0, "link": "AusbauregelnVIIIIntrigen/Zauber/Kutsche", "text": "Kutsche" },
-          { "id": 112, "value": 0, "link": "Grundregelwerk/Zauber/Magiebannen", "text": "Magie bannen" },
-          { "id": 136, "value": 0, "link": "Grundregelwerk/Zauber/MaechtigeMagischeWaffe", "text": "Mächtige magische Waffe" },
-          { "id": 82, "value": 0, "link": "AusbauregelnVIKlassen/Zauber/Metallmacht", "text": "Metallmacht (100/20/20 GM)" },
-          { "id": 83, "value": 0, "link": "Grundregelwerk/Zauber/MonsterherbeizaubernIII", "text": "Monster herbeizaubern III" },
-          { "id": 113, "value": 0, "link": "Grundregelwerk/Zauber/Personfesthalten", "text": "Person festhalten" },
-          { "id": 147, "value": 0, "link": "AusbauregelnVIIIIntrigen/Zauber/Rudelempathie", "text": "Rudelempathie" },
-          { "id": 138, "value": 0, "link": "Grundregelwerk/Zauber/Schaerfen", "text": "Schärfen" },
-          { "id": 142, "value": 0, "link": "AusbauregelnIIKampf/Zauber/Schrotexplosion", "text": "Schrotexplosion" },
-          { "id": 139, "value": 0, "link": "Grundregelwerk/Zauber/SchutzkreisgegenOrdnung", "text": "Schutzkreis gegen Ordnung" },
-          { "id": 137, "value": 0, "link": "Grundregelwerk/Zauber/SchutzvorEnergien", "text": "Schutz vor Energien" },
-          { "id": 91, "value": 0, "link": "AusbauregelnIIKampf/Zauber/Gemeinschaftlicher Schutz vor Pfeilen", "text": "Schutz vor Pfeilen, Gemeinschaftlicher" },
-          { "id": 144, "value": 0, "link": "AusbauregelnVIKlassen/Zauber/Silberpfeile", "text": "Silberpfeile" },
-          { "id": 140, "value": 0, "link": "Grundregelwerk/Zauber/SphaerederUnsichtbarkeit", "text": "Sphäre der Unsichtbarkeit" },
-          { "id": 84, "value": 0, "link": "Expertenregeln/Zauber/Schützendes Lagerfeuer", "text": "Schützendes Lagerfeuer" },
-          { "id": 143, "value": 0, "link": "AusbauregelnIIKampf/Zauber/GemeinschaftlichesSpinnenklettern", "text": "Spinnenklettern, Gemeinschaftliches" },
-          { "id": 97, "value": 0, "link": "Grundregelwerk/Zauber/Standortvortaeuschen", "text": "Standort vortäuschen" },
-          { "id": 148, "value": 0, "link": "Grundregelwerk/Zauber/Tiefschlaf", "text": "Tiefschlaf" },
-          { "id": 85, "value": 0, "link": "Expertenregeln/Zauber/Vielseitige Waffe", "text": "Vielseitige Waffe" },
-          { "id": 98, "value": 0, "link": "Grundregelwerk/Zauber/Vampirgriff", "text": "Vampirgriff" },
-          { "id": 86, "value": 0, "link": "Grundregelwerk/Zauber/Wasser atmen", "text": "Wasser atmen" },
-          { "id": 92, "value": 0, "link": "Grundregelwerk/Zauber/Winzige Huette", "text": "Winzige Hütte" },
-          { "id": 114, "value": 0, "link": "Grundregelwerk/Zauber/Wut", "text": "Wut" },
-          { "id": 141, "value": 0, "link": "Grundregelwerk/Zauber/Zungen", "text": "Zungen" }
+          { "id": 145, "value": 0, "link": "AusbauregelnVIIOkkultes/Zauber/AnsteckenderEifer", "text": "Ansteckender Eifer", "duration": "rd1*lvl" },
+          { "id": 132, "value": 0, "link": "Grundregelwerk/Zauber/ArkanerBlick", "text": "Arkaner Blick", "duration": "m 1*lvl" },
+          { "id": 79, "value": 0, "link": "Grundregelwerk/Zauber/Blitz", "text": "Blitz", "duration": "-" },
+          { "id": 116, "value": 0, "link": "Grundregelwerk/Zauber/Einfluesterung", "text": "Einflüsterung", "duration": "h 1*lvl" },
+          { "id": 80, "value": 0, "link": "Grundregelwerk/Zauber/Feuerball", "text": "Feuerball", "duration": "-" },
+          { "id": 81, "value": 0, "link": "Grundregelwerk/Zauber/Fliegen", "text": "Fliegen", "duration": "m 1*lvl" },
+          { "id": 133, "value": 0, "link": "Grundregelwerk/Zauber/GasfoermigeGestalt", "text": "Gasförmige Gestalt", "duration": "m 2*lvl" },
+          { "id": 134, "value": 0, "link": "Grundregelwerk/Zauber/Hast", "text": "Hast", "duration": "rd1*lvl" },
+          { "id": 111, "value": 0, "link": "Grundregelwerk/Zauber/Heldenmut", "text": "Heldenmut", "duration": "m 10*lvl" },
+          { "id": 135, "value": 0, "link": "Grundregelwerk/Zauber/HellhoerenHellsehen", "text": "Hellhören/Hellsehen", "duration": "m 1*lvl" },
+          { "id": 146, "value": 0, "link": "AusbauregelnVIIIIntrigen/Zauber/Kutsche", "text": "Kutsche", "duration": "h 1*lvl" },
+          { "id": 112, "value": 0, "link": "Grundregelwerk/Zauber/Magiebannen", "text": "Magie bannen", "duration": "-" },
+          { "id": 136, "value": 0, "link": "Grundregelwerk/Zauber/MaechtigeMagischeWaffe", "text": "Mächtige magische Waffe", "duration": "h 1*lvl" },
+          { "id": 82, "value": 0, "link": "AusbauregelnVIKlassen/Zauber/Metallmacht", "text": "Metallmacht (100/20/20 GM)", "duration": "m 1*lvl" },
+          { "id": 83, "value": 0, "link": "Grundregelwerk/Zauber/MonsterherbeizaubernIII", "text": "Monster herbeizaubern III", "duration": "rd1*lvl" },
+          { "id": 113, "value": 0, "link": "Grundregelwerk/Zauber/Personfesthalten", "text": "Person festhalten", "duration": "rd1*lvl" },
+          { "id": 147, "value": 0, "link": "AusbauregelnVIIIIntrigen/Zauber/Rudelempathie", "text": "Rudelempathie", "duration": "h 1*lvl" },
+          { "id": 138, "value": 0, "link": "Grundregelwerk/Zauber/Schaerfen", "text": "Schärfen", "duration": "m 10*lvl" },
+          { "id": 142, "value": 0, "link": "AusbauregelnIIKampf/Zauber/Schrotexplosion", "text": "Schrotexplosion", "duration": "-" },
+          { "id": 139, "value": 0, "link": "Grundregelwerk/Zauber/SchutzkreisgegenOrdnung", "text": "Schutzkreis gegen Ordnung", "duration": "m 10*lvl" },
+          { "id": 137, "value": 0, "link": "Grundregelwerk/Zauber/SchutzvorEnergien", "text": "Schutz vor Energien", "duration": "m 10*lvl" },
+          { "id": 91, "value": 0, "link": "AusbauregelnIIKampf/Zauber/Gemeinschaftlicher Schutz vor Pfeilen", "text": "Schutz vor Pfeilen, Gemeinschaftlicher", "duration": "h 1*lvl" },
+          { "id": 144, "value": 0, "link": "AusbauregelnVIKlassen/Zauber/Silberpfeile", "text": "Silberpfeile", "duration": "-" },
+          { "id": 140, "value": 0, "link": "Grundregelwerk/Zauber/SphaerederUnsichtbarkeit", "text": "Sphäre der Unsichtbarkeit", "duration": "m 1*lvl" },
+          { "id": 84, "value": 0, "link": "Expertenregeln/Zauber/Schützendes Lagerfeuer", "text": "Schützendes Lagerfeuer", "duration": "h 2*lvl" },
+          { "id": 143, "value": 0, "link": "AusbauregelnIIKampf/Zauber/GemeinschaftlichesSpinnenklettern", "text": "Spinnenklettern, Gemeinschaftliches", "duration": "m 10*lvl" },
+          { "id": 97, "value": 0, "link": "Grundregelwerk/Zauber/Standortvortaeuschen", "text": "Standort vortäuschen", "duration": "rd1*lvl" },
+          { "id": 148, "value": 0, "link": "Grundregelwerk/Zauber/Tiefschlaf", "text": "Tiefschlaf", "duration": "m 1*lvl" },
+          { "id": 85, "value": 0, "link": "Expertenregeln/Zauber/Vielseitige Waffe", "text": "Vielseitige Waffe", "duration": "m 1*lvl" },
+          { "id": 98, "value": 0, "link": "Grundregelwerk/Zauber/Vampirgriff", "text": "Vampirgriff", "duration": "sp" },
+          { "id": 86, "value": 0, "link": "Grundregelwerk/Zauber/Wasser atmen", "text": "Wasser atmen", "duration": "h 2*lvl" },
+          { "id": 92, "value": 0, "link": "Grundregelwerk/Zauber/Winzige Huette", "text": "Winzige Hütte", "duration": "h 2*lvl" },
+          { "id": 114, "value": 0, "link": "Grundregelwerk/Zauber/Wut", "text": "Wut", "duration": "m 10*lvl" },
+          { "id": 141, "value": 0, "link": "Grundregelwerk/Zauber/Zungen", "text": "Zungen", "duration": "m 10*lvl" }
         ],
         "level4" : [
           { "id": 122, "value": 0, "link": "Grundregelwerk/Zauber/ArkanesAuge", "text": "Arkanes Auge" },
