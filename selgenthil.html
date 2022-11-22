@@ -31,7 +31,7 @@
         padding: 0 6px; float: right;
       }
       span.prop {
-        text-align: center; width: 2em;
+        padding: 0 3px; float: left; text-align: center; width: 2em; border-right: 1px dotted #888;
       }
     </style>
     <script type="text/javascript">
@@ -85,13 +85,18 @@
             span1.innerHTML = obj["value"];
             span2 = document.createElement("span");
             span2.className = "prop";
-            d = obj["duration"] ? obj["duration"] : "";
+            var d = obj["duration"] ? obj["duration"] : "";
             span2.innerHTML = (d.length < 3) ? d : eval("Math.floor(" + d.substring(2) + ")") + " " + d.substring(0,2);
+            span3 = document.createElement("span");
+            span3.className = "prop";
+            var r = obj["range"] ? obj["range"] : "";
+            span3.innerHTML = (r.length < 3) ? r : eval("Math.floor(" + r.substring(2) + ")*1.5") + " " + r.substring(0,2);
             a.href = "http://prd.5footstep.de/" + obj["link"];
             a.innerHTML = obj["text"];
             td.appendChild(a);
             td.appendChild(span1);
             td.appendChild(span2);
+            td.appendChild(span3);
             parent.appendChild(td);
             idx++;
             if (idx % 2 == 0) {
@@ -128,27 +133,27 @@
           { "id": 203, "value": 0, "link": "Grundregelwerk/Klassen/Magier/ArkaneSchulen/AllgemeineSchule", "text": "Metamagische Meisterschaft" }
         ],
         "level0" : [
-          { "id": 2, "value": 0, "link": "Grundregelwerk/Zauber/Arkanes Siegel", "text": "Arkanes Siegel", "duration": "∞" },
-          { "id": 3, "value": 0, "link": "Grundregelwerk/Zauber/Aufblitzen", "text": "Aufblitzen", "duration": "-" },
-          { "id": 4, "value": 0, "link": "Grundregelwerk/Zauber/Ausbessern", "text": "Ausbessern", "duration": "-" },
-          { "id": 5, "value": 0, "link": "Grundregelwerk/Zauber/Ausbluten", "text": "Ausbluten", "duration": "-" },
-          { "id": 6, "value": 0, "link": "Grundregelwerk/Zauber/Benommenheit", "text": "Benommenheit", "duration": "rd1" },
-          { "id": 7, "value": 0, "link": "Grundregelwerk/Zauber/Botschaft", "text": "Botschaft", "duration": "m 10*lvl" },
-          { "id": 8, "value": 0, "link": "Grundregelwerk/Zauber/Erschöpfende Berührung", "text": "Erschöpfende Berührung", "duration": "rd10*lvl" },
-          { "id": 9, "value": 0, "link": "Grundregelwerk/Zauber/Geisterhaftes Geräusch", "text": "Geisterhaftes Geräusch", "duration": "rd10*lvl" },
-          { "id": 10, "value": 0, "link": "Grundregelwerk/Zauber/Gift entdecken", "text": "Gift entdecken", "duration": "-" },
-          { "id": 11, "value": 0, "link": "Grundregelwerk/Zauber/Kältestrahl", "text": "Kältestrahl", "duration": "-" },
-          { "id": 12, "value": 0, "link": "Grundregelwerk/Zauber/Licht", "text": "Licht", "duration": "m 10*lvl" },
-          { "id": 13, "value": 0, "link": "Grundregelwerk/Zauber/Magie entdecken", "text": "Magie entdecken", "duration": "mc1*lvl" },
-          { "id": 14, "value": 0, "link": "Grundregelwerk/Zauber/Magie lesen", "text": "Magie lesen", "duration": "m 10*lvl" },
-          { "id": 15, "value": 0, "link": "Grundregelwerk/Zauber/Magierhand", "text": "Magierhand", "duration": "c" },
-          { "id": 16, "value": 0, "link": "Grundregelwerk/Zauber/ÖffnenSchließen", "text": "Öffnen/Schließen", "duration": "-" },
-          { "id": 17, "value": 0, "link": "Grundregelwerk/Zauber/Resistenz", "text": "Resistenz", "duration": "m 1" },
-          { "id": 18, "value": 0, "link": "Grundregelwerk/Zauber/Säurespritzer", "text": "Säurespritzer", "duration": "-" },
-          { "id": 19, "value": 0, "link": "Grundregelwerk/Zauber/Tanzende Lichter", "text": "Tanzende Lichter", "duration": "m 1" },
-          { "id": 20, "value": 0, "link": "Grundregelwerk/Zauber/Untote schwächen", "text": "Untote schwächen", "duration": "-" },
-          { "id": 21, "value": 0, "link": "AusbauregelnIIKampf/Zauber/VerstoerendeFeenerscheinung", "text": "Verstörende Feenerscheinung", "duration": "rd1*lvl" },
-          { "id": 22, "value": 0, "link": "Grundregelwerk/Zauber/Zaubertrick", "text": "Zaubertrick", "duration": "h 1" }
+          { "id": 2, "value": 0, "link": "Grundregelwerk/Zauber/Arkanes Siegel", "text": "Arkanes Siegel", "duration": "∞", "range": "B" },
+          { "id": 3, "value": 0, "link": "Grundregelwerk/Zauber/Aufblitzen", "text": "Aufblitzen", "duration": "-", "range": "m 5+lvl/2" },
+          { "id": 4, "value": 0, "link": "Grundregelwerk/Zauber/Ausbessern", "text": "Ausbessern", "duration": "-", "range": "m 2" },
+          { "id": 5, "value": 0, "link": "Grundregelwerk/Zauber/Ausbluten", "text": "Ausbluten", "duration": "-", "range": "m 5+lvl/2" },
+          { "id": 6, "value": 0, "link": "Grundregelwerk/Zauber/Benommenheit", "text": "Benommenheit", "duration": "rd1", "range": "m 5+lvl/2" },
+          { "id": 7, "value": 0, "link": "Grundregelwerk/Zauber/Botschaft", "text": "Botschaft", "duration": "m 10*lvl", "range": "m 20+2*lvl" },
+          { "id": 8, "value": 0, "link": "Grundregelwerk/Zauber/Erschöpfende Berührung", "text": "Erschöpfende Berührung", "duration": "rd10*lvl", "range": "B" },
+          { "id": 9, "value": 0, "link": "Grundregelwerk/Zauber/Geisterhaftes Geräusch", "text": "Geisterhaftes Geräusch", "duration": "rd10*lvl", "range": "m 5+lvl/2" },
+          { "id": 10, "value": 0, "link": "Grundregelwerk/Zauber/Gift entdecken", "text": "Gift entdecken", "duration": "-", "range": "m 5+lvl/2" },
+          { "id": 11, "value": 0, "link": "Grundregelwerk/Zauber/Kältestrahl", "text": "Kältestrahl", "duration": "-", "range": "m 5+lvl/2" },
+          { "id": 12, "value": 0, "link": "Grundregelwerk/Zauber/Licht", "text": "Licht", "duration": "m 10*lvl", "range": "B" },
+          { "id": 13, "value": 0, "link": "Grundregelwerk/Zauber/Magie entdecken", "text": "Magie entdecken", "duration": "mc1*lvl", "range": "m 12" },
+          { "id": 14, "value": 0, "link": "Grundregelwerk/Zauber/Magie lesen", "text": "Magie lesen", "duration": "m 10*lvl", "range": "P" },
+          { "id": 15, "value": 0, "link": "Grundregelwerk/Zauber/Magierhand", "text": "Magierhand", "duration": "c", "range": "m 5+lvl/2" },
+          { "id": 16, "value": 0, "link": "Grundregelwerk/Zauber/ÖffnenSchließen", "text": "Öffnen/Schließen", "duration": "-", "range": "m 5+lvl/2" },
+          { "id": 17, "value": 0, "link": "Grundregelwerk/Zauber/Resistenz", "text": "Resistenz", "duration": "m 1", "range": "B" },
+          { "id": 18, "value": 0, "link": "Grundregelwerk/Zauber/Säurespritzer", "text": "Säurespritzer", "duration": "-", "range": "m 5+lvl/2" },
+          { "id": 19, "value": 0, "link": "Grundregelwerk/Zauber/Tanzende Lichter", "text": "Tanzende Lichter", "duration": "m 1", "range": "m 20+2*lvl" },
+          { "id": 20, "value": 0, "link": "Grundregelwerk/Zauber/Untote schwächen", "text": "Untote schwächen", "duration": "-", "range": "m 5+lvl/2" },
+          { "id": 21, "value": 0, "link": "AusbauregelnIIKampf/Zauber/VerstoerendeFeenerscheinung", "text": "Verstörende Feenerscheinung", "duration": "rd1*lvl", "range": "P" },
+          { "id": 22, "value": 0, "link": "Grundregelwerk/Zauber/Zaubertrick", "text": "Zaubertrick", "duration": "h 1", "range": "m 2" }
         ],
         "level1" : [
           { "id": 23, "value": 0, "link": "AusbauregelnVIKlassen/Zauber/Affenfisch", "text": "Affenfisch", "duration": "m 1*lvl" },
