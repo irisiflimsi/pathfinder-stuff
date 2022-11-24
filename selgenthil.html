@@ -39,7 +39,14 @@
     </style>
     <script type="text/javascript">
       function cycle(o) {
-        o.innerHTML = Math.max(0, val(o) + (getPrevHead(o.parentElement).locked ? -1 : 1));
+        if (getPrevHead(o.parentElement).locked) {
+          o.avail = Math.max(0, o.avail - 1);
+        }
+        else {
+          o.avail = Math.max(0, o.avail + 1);
+          o.maxavail = o.avail;
+        }
+        o.innerHTML = o.avail + "/" + o.maxavail;
         redo();
       }
       function lock(el) {
@@ -48,13 +55,9 @@
       }
       function drtoggle() {
         dr = !dr;
-        var el = document.querySelectorAll('.duration');
+        var el = document.querySelectorAll('.duration, .range');
         for (var i = 0; i < el.length; i++) {
-          el[i].style.display = dr ? "none" : "initial";
-        }
-        el = document.querySelectorAll('.range');
-        for (var i = 0; i < el.length; i++) {
-          el[i].style.display = dr ? "initial" : "none";
+          el[i].style.display = (dr && el.className === "duration" ) ? "none" : "initial";
         }
       }
       function getPrevHead(el) {
@@ -69,8 +72,8 @@
           var el = document.getElementById(i);
           if (el) {
             var td = el.parentElement;
-            td.style.display = (getPrevHead(td).locked && val(el) < 1) ? "none" : "table-cell";
-            localStorage["id" + i] = val(el);
+            td.style.display = (getPrevHead(td).locked && el.maxavail < 1) ? "none" : "table-cell";
+            localStorage["id" + i] = el.avail;
             if (td.previousElementSibling) {
               td.parentElement.style.display = (td.previousElementSibling.style.display == "none" && td.style.display == "none") ? "none" : "table-row";
             }
@@ -95,18 +98,20 @@
             var a = document.createElement("a");
             var span1 = document.createElement("span");
             span1.id = obj["id"];
-            span1.onclick = function() { cycle(this); };
-            span1.innerHTML = 0;
-            span2 = document.createElement("span");
-            span2.className = "duration";
-            span2.onclick = function() { drtoggle(); };
-            var d = obj["duration"] ? obj["duration"] : "";
-            span2.innerHTML = (d.length < 3) ? d : eval("Math.floor(" + d.substring(2) + ")") + " " + d.substring(0,2);
-            span3 = document.createElement("span");
-            span3.className = "range";
-            span3.onclick = function() { drtoggle(); };
-            var r = obj["range"] ? obj["range"] : "";
-            span3.innerHTML = (r.length < 3) ? r : eval("Math.floor(" + r.substring(2) + ")*1.5") + " " + r.substring(0,2);
+             span1.onclick = function() { cycle(this); };
+             span1.avail = 0;
+             span1.maxavail = 0;
+             span1.innerHTML = "0/0";
+            var span2 = document.createElement("span");
+             span2.onclick = function() { drtoggle(); };
+             span2.className = "duration";
+             var d = obj["duration"] ? obj["duration"] : "";
+             span2.innerHTML = (d.length < 3) ? d : eval("Math.floor(" + d.substring(2) + ")") + " " + d.substring(0,2);
+            var span3 = document.createElement("span");
+             span3.onclick = function() { drtoggle(); };
+             span3.className = "range";
+             var r = obj["range"] ? obj["range"] : "";
+             span3.innerHTML = (r.length < 3) ? r : eval("Math.floor(" + r.substring(2) + ")*1.5") + " " + r.substring(0,2);
             a.href = "http://prd.5footstep.de/" + obj["link"];
             a.innerHTML = obj["text"];
             td.appendChild(a);
@@ -128,12 +133,12 @@
           if (el) {
             var j = localStorage["id" + i];
             if (j !== undefined && !isNaN(j)) {
-              el.innerHTML = localStorage["id" + i];
+              el.avail = el.maxavail = j;
+              el.innerHTML = j + "/" + j;
             }
           }
         }
       }
-      function val(o) { return parseInt(o.innerHTML); }
 
       var lvl = 12;
       var dr = false;
