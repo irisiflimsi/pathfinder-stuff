@@ -57,7 +57,7 @@
         dr = !dr;
         var el = document.querySelectorAll('.duration, .range');
         for (var i = 0; i < el.length; i++) {
-          el[i].style.display = (dr && el.className === "duration" ) ? "none" : "initial";
+          el[i].style.display = (dr && el.className === "duration" || !dr && el.className !== "duration") ? "none" : "initial";
         }
       }
       function getPrevHead(el) {
