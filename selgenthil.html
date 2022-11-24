@@ -30,8 +30,11 @@
       span {
         padding: 0 6px; float: right;
       }
-      span.prop {
-        font-size: 85%; padding: 0 3px; float: left; text-align: center; width: 2em; border-right: 1px dotted #888;
+      span.range {
+        display: none; font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2em; border-right: 1px dotted #888;
+      }
+      span.duration {
+        font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2em; border-right: 1px dotted #888;
       }
     </style>
     <script type="text/javascript">
@@ -42,6 +45,17 @@
       function lock(el) {
         el.locked = !el.locked;
         redo();
+      }
+      function drtoggle() {
+        dr = !dr;
+        var el = document.querySelectorAll('.duration');
+        for (var i = 0; i < el.length; i++) {
+          el[i].style.display = dr ? "none" : "initial";
+        }
+        el = document.querySelectorAll('.range');
+        for (var i = 0; i < el.length; i++) {
+          el[i].style.display = dr ? "initial" : "none";
+        }
       }
       function getPrevHead(el) {
         var sib = el.parentElement.previousElementSibling;
@@ -84,11 +98,13 @@
             span1.onclick = function() { cycle(this); };
             span1.innerHTML = 0;
             span2 = document.createElement("span");
-            span2.className = "prop";
+            span2.className = "duration";
+            span2.onclick = function() { drtoggle(); };
             var d = obj["duration"] ? obj["duration"] : "";
             span2.innerHTML = (d.length < 3) ? d : eval("Math.floor(" + d.substring(2) + ")") + " " + d.substring(0,2);
             span3 = document.createElement("span");
-            span3.className = "prop";
+            span3.className = "range";
+            span3.onclick = function() { drtoggle(); };
             var r = obj["range"] ? obj["range"] : "";
             span3.innerHTML = (r.length < 3) ? r : eval("Math.floor(" + r.substring(2) + ")*1.5") + " " + r.substring(0,2);
             a.href = "http://prd.5footstep.de/" + obj["link"];
