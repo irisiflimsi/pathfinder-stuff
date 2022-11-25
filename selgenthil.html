@@ -43,7 +43,7 @@
           o.avail = Math.max(0, o.avail - 1);
         }
         else {
-          o.avail = Math.max(0, o.avail + 1);
+          o.avail = (o.maxavail != o.avail) ? 0 : Math.max(0, o.avail + 1);
           o.maxavail = o.avail;
         }
         o.innerHTML = o.avail + "/" + o.maxavail;
