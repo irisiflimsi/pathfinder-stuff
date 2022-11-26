@@ -38,19 +38,20 @@
       }
     </style>
     <script type="text/javascript">
+      /* Show with locked: 0 all, 1 max > 0, 2 avail > 0 */
       function cycle(o) {
-        if (getPrevHead(o.parentElement).locked) {
-          o.avail = Math.max(0, o.avail - 1);
-        }
-        else {
-          o.avail = (o.maxavail != o.avail) ? 0 : Math.max(0, o.avail + 1);
-          o.maxavail = o.avail;
+        switch (getPrevHead(o.parentElement).locked) {
+          case 1: case 2:
+            o.avail = Math.max(0, o.avail - 1); break;
+          default:
+            o.avail = o.maxavail = o.maxavail != o.avail ? 0 : (parseInt(o.maxavail) + 1);
         }
         o.innerHTML = o.avail + "/" + o.maxavail;
         redo();
       }
       function lock(el) {
-        el.locked = !el.locked;
+        if (el.locked === undefined) el.locked = 0;
+        el.locked = (el.locked + 2) % 3;
         redo();
       }
       function drtoggle() {
@@ -72,8 +73,12 @@
           var el = document.getElementById(i);
           if (el) {
             var td = el.parentElement;
-            td.style.display = (getPrevHead(td).locked && el.maxavail < 1) ? "none" : "table-cell";
-            localStorage["id" + i] = el.avail;
+            switch (getPrevHead(td).locked) {
+              case 2: td.style.display = el.avail == 0 ? "none": "table-cell"; break;
+              case 1: td.style.display = el.maxavail == 0 ? "none": "table-cell"; break;
+              default: td.style.display = "table-cell";
+            }
+            localStorage["id" + i] = el.avail + 100 * el.maxavail;
             if (td.previousElementSibling) {
               td.parentElement.style.display = (td.previousElementSibling.style.display == "none" && td.style.display == "none") ? "none" : "table-row";
             }
@@ -99,8 +104,7 @@
             var span1 = document.createElement("span");
             span1.id = obj["id"];
              span1.onclick = function() { cycle(this); };
-             span1.avail = 0;
-             span1.maxavail = 0;
+             span1.avail = span1.maxavail = 0;
              span1.innerHTML = "0/0";
             var span2 = document.createElement("span");
              span2.onclick = function() { drtoggle(); };
@@ -133,8 +137,9 @@
           if (el) {
             var j = localStorage["id" + i];
             if (j !== undefined && !isNaN(j)) {
-              el.avail = el.maxavail = j;
-              el.innerHTML = j + "/" + j;
+              el.avail = j % 100;
+              el.maxavail = Math.max(el.avail, Math.round(j / 100));
+              el.innerHTML = el.avail + "/" + el.maxavail;
             }
           }
         }
