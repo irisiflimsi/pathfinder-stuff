@@ -62,7 +62,7 @@
         }
       }
       function getPrevHead(el) {
-        var sib = el.parentElement.previousElementSibling;
+        var sib = el.parentElement;
         while (sib) {
           if (sib.firstElementChild.tagName === "TH") return sib;
           sib = sib.previousElementSibling;
@@ -98,6 +98,11 @@
           var parent = document.getElementById(header[p]);
           var idx = 0;
           for (var i in list) {
+            if (idx % 2 == 0) {
+              var tr = document.createElement("tr");
+              parent.parentElement.insertBefore(tr, parent.nextSibling);
+              parent = tr;
+            }
             var obj = list[i];
             var td = document.createElement("td");
             var a = document.createElement("a");
@@ -124,11 +129,6 @@
             td.appendChild(span3);
             parent.appendChild(td);
             idx++;
-            if (idx % 2 == 0) {
-              var tr = document.createElement("tr");
-              parent.parentElement.insertBefore(tr, parent.nextSibling);
-              parent = tr;
-            }
           }
         }
 
@@ -371,50 +371,38 @@
     <div class="bg"></div>
       <div class="fg">
         <table id="table">
-          <tr class="head" onclick="lock(this)">
+          <tr id="level0" class="head" onclick="lock(this)">
             <th colspan="2">
               4 Zauber der Stufe 0 (21 Zauber = 21 Seiten, Σ 21 Seiten)
             </th>
           </tr>
-          <tr id="level0">
-          </tr>
-          <tr class="head" onclick="lock(this)">
+          <tr id="level1" class="head" onclick="lock(this)">
             <th colspan="2">
               6 Zauber der Stufe 1 (38 Zauber = 38 Seiten, Σ 59 Seiten)
             </th>
           </tr>
-          <tr id="level1">
-          </tr>
-          <tr class="head" onclick="lock(this)">
+          <tr id="level2" class="head" onclick="lock(this)">
             <th colspan="2">
               6 Zauber der Stufe 2 (41 Zauber = 82 Seiten, Σ 141 Seiten)
             </th>
           </tr>
-          <tr id="level2">
-          </tr>
-          <tr class="head" onclick="lock(this)">
+          <tr id="level3" class="head" onclick="lock(this)">
             <th colspan="2">
               6 Zauber der Stufe 3 (35 Zauber = 105 Seiten, Σ 246 Seiten)
             </th>
           </tr>
-          <tr id="level3">
-          </tr>
-          <tr class="head" onclick="lock(this)">
+          <tr id="level4" class="head" onclick="lock(this)">
             <th colspan="2">
               4 Zauber der Stufe 4 (29 Zauber = 116 Seiten, Σ 362 Seiten)
             </th>
           </tr>
-          <tr id="level4">
-          </tr>
 <!--
 x B Unverwüstliche Sphäre
 -->
-          <tr class="head" onclick="lock(this)">
+          <tr id="level5" class="head" onclick="lock(this)">
             <th colspan="2">
               4 Zauber der Stufe 5 (22 Zauber = 110 Seiten, Σ 472 Seiten)
             </th>
-          </tr>
-          <tr id="level5">
           </tr>
 <!--
 x E Feuerschlange
@@ -428,12 +416,10 @@ x 7 Pergamentschwarm
 x 2 Klingenkranz
   B Des Magiers Privates Heiligtum
 -->
-          <tr class="head" onclick="lock(this)">
+          <tr id="level6" class="head" onclick="lock(this)">
             <th colspan="2">
               3 Zauber der Stufe 6 (5 Zauber = 30 Seiten, Σ 502 Seiten)
             </th>
-          </tr>
-          <tr id="level6">
           </tr>
 <!--
 B Abstoßung
@@ -456,19 +442,15 @@ E Unwilliger Schild
 8 Des Magiers Mitteilung
 8 Tückisches Teleportieren
 -->
-          <tr class="head" onclick="lock(this)">
+          <tr id="special" class="head" onclick="lock(this)">
             <th colspan="2">
               9 Dailies / 1 Fokus
             </th>
           </tr>
-          <tr id="special">
-          </tr>
-          <tr class="head" onclick="lock(this)">
+          <tr id="magicItems" class="head" onclick="lock(this)">
             <th colspan="2">
               Magische Gegenstände
             </th>
-          </tr>
-          <tr id="magicItems">
           </tr>
         </table>
       </div>
