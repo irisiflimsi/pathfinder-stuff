@@ -100,8 +100,8 @@
           var idx = 0;
           if (header[p].startsWith("level")) {
             var th = parent.firstElementChild;
-			      var ll = parseInt(header[p].slice(-1));
-			      th.innerHTML += " " + ll + " (" + list.length + " Zauber = " + (list.length * Math.max(ll,1)) + " Seiten, Σ " + sum(ll) + " Seiten)";
+            var ll = parseInt(header[p].slice(-1));
+            th.innerHTML += " " + ll + " (" + list.length + " Zauber = " + (list.length * Math.max(ll,1)) + " Seiten, Σ " + sum(ll) + " Seiten)";
           }
           for (var i in list) {
             if (idx % 2 == 0) {
