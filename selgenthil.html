@@ -91,12 +91,18 @@
           }
         }
       }
+      function sum(i) { return (i == -1 ? 0 : sum(i - 1) + Math.max(i,1) * content["level" + i].length); }
       function doload() {
         var header = Object.keys(content);
         for (var p in header) {
           var list = content[header[p]];
           var parent = document.getElementById(header[p]);
           var idx = 0;
+          if (header[p].startsWith("level")) {
+            var th = parent.firstElementChild;
+			      var ll = parseInt(header[p].slice(-1));
+			      th.innerHTML += " " + ll + " (" + list.length + " Zauber = " + (list.length * Math.max(ll,1)) + " Seiten, Σ " + sum(ll) + " Seiten)";
+          }
           for (var i in list) {
             if (idx % 2 == 0) {
               var tr = document.createElement("tr");
@@ -131,7 +137,6 @@
             idx++;
           }
         }
-
         for (let i = 0; i <= 207; i++) {
           var el = document.getElementById(i);
           if (el) {
@@ -144,7 +149,6 @@
           }
         }
       }
-
       var lvl = 12;
       var dr = false;
       var content = {
@@ -373,34 +377,22 @@
       <div class="fg">
         <table id="table">
           <tr id="level0" class="head" onclick="lock(this)">
-            <th colspan="2">
-              4 Zauber der Stufe 0 (21 Zauber = 21 Seiten, Σ 21 Seiten)
-            </th>
+            <th colspan="2">4 Zauber der Stufe</th>
           </tr>
           <tr id="level1" class="head" onclick="lock(this)">
-            <th colspan="2">
-              6 Zauber der Stufe 1 (38 Zauber = 38 Seiten, Σ 59 Seiten)
-            </th>
+            <th colspan="2">6 Zauber der Stufe</th>
           </tr>
           <tr id="level2" class="head" onclick="lock(this)">
-            <th colspan="2">
-              6 Zauber der Stufe 2 (41 Zauber = 82 Seiten, Σ 141 Seiten)
-            </th>
+            <th colspan="2">6 Zauber der Stufe</th>
           </tr>
           <tr id="level3" class="head" onclick="lock(this)">
-            <th colspan="2">
-              6 Zauber der Stufe 3 (35 Zauber = 105 Seiten, Σ 246 Seiten)
-            </th>
+            <th colspan="2">6 Zauber der Stufe</th>
           </tr>
           <tr id="level4" class="head" onclick="lock(this)">
-            <th colspan="2">
-              4 Zauber der Stufe 4 (30 Zauber = 120 Seiten, Σ 366 Seiten)
-            </th>
+            <th colspan="2">4 Zauber der Stufe</th>
           </tr>
           <tr id="level5" class="head" onclick="lock(this)">
-            <th colspan="2">
-              4 Zauber der Stufe 5 (22 Zauber = 110 Seiten, Σ 476 Seiten)
-            </th>
+            <th colspan="2">4 Zauber der Stufe</th>
           </tr>
 <!--
 x E Feuerschlange
@@ -415,9 +407,7 @@ x 2 Klingenkranz
   B Des Magiers Privates Heiligtum
 -->
           <tr id="level6" class="head" onclick="lock(this)">
-            <th colspan="2">
-              3 Zauber der Stufe 6 (5 Zauber = 30 Seiten, Σ 506 Seiten)
-            </th>
+            <th colspan="2">3 Zauber der Stufe</th>
           </tr>
 <!--
 B Abstoßung
