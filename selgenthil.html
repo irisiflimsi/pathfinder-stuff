@@ -91,7 +91,9 @@
           }
         }
       }
-      function sum(i) { return (i == -1 ? 0 : sum(i - 1) + Math.max(i,1) * content["level" + i].length); }
+      function sum(i) {
+        return (i == -1 ? 0 : sum(i - 1) + Math.max(i,1) * content["level" + i].length);
+      }
       function doload() {
         var header = Object.keys(content);
         for (var p in header) {
@@ -101,7 +103,7 @@
           if (header[p].startsWith("level")) {
             var th = parent.firstElementChild;
             var ll = parseInt(header[p].slice(-1));
-            th.innerHTML += " " + ll + " (" + list.length + " Zauber = " + (list.length * Math.max(ll,1)) + " Seiten, Σ " + sum(ll) + " Seiten)";
+            th.innerHTML += " Zauber der Stufe " + ll + " (" + list.length + " Zauber = " + (list.length * Math.max(ll,1)) + " Seiten, Σ " + sum(ll) + " Seiten)";
           }
           for (var i in list) {
             if (idx % 2 == 0) {
@@ -376,24 +378,12 @@
     <div class="bg"></div>
       <div class="fg">
         <table id="table">
-          <tr id="level0" class="head" onclick="lock(this)">
-            <th colspan="2">4 Zauber der Stufe</th>
-          </tr>
-          <tr id="level1" class="head" onclick="lock(this)">
-            <th colspan="2">6 Zauber der Stufe</th>
-          </tr>
-          <tr id="level2" class="head" onclick="lock(this)">
-            <th colspan="2">6 Zauber der Stufe</th>
-          </tr>
-          <tr id="level3" class="head" onclick="lock(this)">
-            <th colspan="2">6 Zauber der Stufe</th>
-          </tr>
-          <tr id="level4" class="head" onclick="lock(this)">
-            <th colspan="2">4 Zauber der Stufe</th>
-          </tr>
-          <tr id="level5" class="head" onclick="lock(this)">
-            <th colspan="2">4 Zauber der Stufe</th>
-          </tr>
+          <tr id="level0" class="head" onclick="lock(this)"><th colspan="2">4</th></tr>
+          <tr id="level1" class="head" onclick="lock(this)"><th colspan="2">6</th></tr>
+          <tr id="level2" class="head" onclick="lock(this)"><th colspan="2">6</th></tr>
+          <tr id="level3" class="head" onclick="lock(this)"><th colspan="2">6</th></tr>
+          <tr id="level4" class="head" onclick="lock(this)"><th colspan="2">4</th></tr>
+          <tr id="level5" class="head" onclick="lock(this)"><th colspan="2">4</th></tr>
 <!--
 x E Feuerschlange
 x 1 Blitzbogen
@@ -406,9 +396,7 @@ x 7 Pergamentschwarm
 x 2 Klingenkranz
   B Des Magiers Privates Heiligtum
 -->
-          <tr id="level6" class="head" onclick="lock(this)">
-            <th colspan="2">3 Zauber der Stufe</th>
-          </tr>
+          <tr id="level6" class="head" onclick="lock(this)"><th colspan="2">3</th></tr>
 <!--
 B Abstoßung
 B Mächtige Magie bannen
@@ -430,16 +418,8 @@ E Unwilliger Schild
 8 Des Magiers Mitteilung
 8 Tückisches Teleportieren
 -->
-          <tr id="special" class="head" onclick="lock(this)">
-            <th colspan="2">
-              9 Dailies / 1 Fokus
-            </th>
-          </tr>
-          <tr id="magicItems" class="head" onclick="lock(this)">
-            <th colspan="2">
-              Magische Gegenstände
-            </th>
-          </tr>
+          <tr id="special" class="head" onclick="lock(this)"><th colspan="2">9 Dailies / 1 Fokus</th></tr>
+          <tr id="magicItems" class="head" onclick="lock(this)"><th colspan="2">Magische Gegenstände</th></tr>
         </table>
       </div>
     </div>
