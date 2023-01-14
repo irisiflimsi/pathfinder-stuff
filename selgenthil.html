@@ -69,7 +69,7 @@
         }
       }
       function redo() {
-        for (let i = 0; i <= 207; i++) {
+        for (let i = 0; i <= 208; i++) {
           var el = document.getElementById(i);
           if (el) {
             var td = el.parentElement;
@@ -139,7 +139,7 @@
             idx++;
           }
         }
-        for (let i = 0; i <= 207; i++) {
+        for (let i = 0; i <= 208; i++) {
           var el = document.getElementById(i);
           if (el) {
             var j = localStorage["id" + i];
@@ -151,7 +151,7 @@
           }
         }
       }
-      var lvl = 12;
+      var lvl = 13;
       var dr = false;
       var content = {
         "magicItems" : [
@@ -370,6 +370,9 @@
           { "id": 201, "link": "Grundregelwerk/Zauber/Kugelblitz", "text": "Kugelblitz", "duration": "-", "range": "m 80+8*lvl" },
           { "id": 207, "link": "Grundregelwerk/Zauber/MonsterherbeizaubernVI", "text": "Monster herbeizaubern VI", "duration": "rd1*lvl", "range": "m 5+lvl/2" },
           { "id": 205, "link": "Grundregelwerk/Zauber/SteinzuFleisch", "text": "Stein zu Fleisch", "duration": "-", "range": "m 20+2*lvl" }
+        ],
+        "level7" : [
+          { "id": 208, "link": "Grundregelwerk/Zauber/SpätzündenderFeuerball", "text": "Spätzündender Feuerball", "duration": "rd5", "range": "m 80+8*lvl" }
         ]
       };
     </script>
@@ -387,13 +390,14 @@ x B Explosive Runen - Fremdkosten
 x B Illusionsschrift - Fremdkosten
 x B Flammenpfeil - Fremdkosten
 -->
-          <tr id="level4" class="head" onclick="lock(this)"><th colspan="2">4</th></tr>
+          <tr id="level4" class="head" onclick="lock(this)"><th colspan="2">5</th></tr>
 <!--
 x B Dimensionsanker
 -->
           <tr id="level5" class="head" onclick="lock(this)"><th colspan="2">4</th></tr>
 <!--
 x E Feuerschlange
+  E Planare Anpassung
 x 1 Blitzbogen
 x B Des Magiers Treuer Hund
 x B Monster festhalten
@@ -428,11 +432,36 @@ E Unwilliger Schild
 8 Des Magiers Mitteilung
 8 Tückisches Teleportieren
 -->
+          <tr id="level7" class="head" onclick="lock(this)"><th colspan="2">2</th></tr>
+<!--
+B Begrenzter Wunsch
+B Des Magiers herrliches Herrenhaus
+B Des Magiers Schwert
+B Ebenenwechsel
+B Energiekäfig
+B Gegenstand teleportieren
+B Monster herbeizaubern VII
+B Mächtige Ausspähung
+B Mächtiger Arkaner Blick
+B Mächtiges Teleportieren
+B Verbannung
+B Wetterkontrolle
+B Zauber zurückwerfen
+B Ätherischer Ausflug
+B Äthertor
+E Angriff zurückwerfen
+E Massen-Planare Anpassung
+E Massen-Fliegen
+1 Konstrukt kontrollieren
+1 Schutzkreis der Klarheit
+1 Säureeruption
+6 Stehende Dimensionstür
+-->
           <tr id="special" class="head" onclick="lock(this)"><th colspan="2">9 Dailies / 1 Fokus</th></tr>
           <tr id="magicItems" class="head" onclick="lock(this)"><th colspan="2">Magische Gegenstände</th></tr>
         </table>
       </div>
     </div>
-    <!-- Last Id: 207 -->
+    <!-- Last Id: 208 -->
   </body>
 </html>
