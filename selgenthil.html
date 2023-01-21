@@ -306,7 +306,10 @@
           { "id": 86, "link": "Grundregelwerk/Zauber/Wasser atmen", "text": "Wasser atmen", "duration": "h 2*lvl", "range": "B" },
           { "id": 92, "link": "Grundregelwerk/Zauber/Winzige Huette", "text": "Winzige Hütte", "duration": "h 2*lvl", "range": "m 4" },
           { "id": 114, "link": "Grundregelwerk/Zauber/Wut", "text": "Wut", "duration": "sp", "range": "m 20+2*lvl" },
-          { "id": 141, "link": "Grundregelwerk/Zauber/Zungen", "text": "Zungen", "duration": "m 10*lvl", "range": "B" }
+          { "id": 141, "link": "Grundregelwerk/Zauber/Zungen", "text": "Zungen", "duration": "m 10*lvl", "range": "B" },
+          { "id": 209, "link": "Grundregelwerk/Zauber/ExplosiveRunen", "text": "Explosive Runen", "duration": "∞", "range": "B" },
+          { "id": 210, "link": "Grundregelwerk/Zauber/Illusionsschrift", "text": "Illusionsschrift", "duration": "d 1*lvl", "range": "B" },
+          { "id": 211, "link": "Grundregelwerk/Zauber/Flammenpfeil", "text": "Flammenpfeil", "duration": "m 10*lvl", "range": "5+lvl/2" }
         ],
         "level4" : [
           { "id": 122, "link": "Grundregelwerk/Zauber/ArkanesAuge", "text": "Arkanes Auge", "duration": "m 1*lvl", "range": "∞" },
@@ -338,7 +341,9 @@
           { "id": 119, "link": "Grundregelwerk/Zauber/ToedlichesPhantom", "text": "Tödliches Phantom", "duration": "-", "range": "m 20+2*lvl" },
           { "id": 120, "link": "Grundregelwerk/Zauber/TiefeVerzweiflung", "text": "Tiefe Verzweiflung", "duration": "m 1*lvl", "range": "m 6" },
           { "id": 32, "link": "Grundregelwerk/Zauber/UnverwüstlicheSphäre", "text": "Unverwüstl. Sphäre", "duration": "m 1*lvl", "range": "m 5+lvl/2" },
-          { "id": 121, "link": "Grundregelwerk/Zauber/Verwirrung", "text": "Verwirrung", "duration": "rd1*lvl", "range": "m 20+2*lvl" }
+          { "id": 121, "link": "Grundregelwerk/Zauber/Verwirrung", "text": "Verwirrung", "duration": "rd1*lvl", "range": "m 20+2*lvl" },
+          { "id": 212, "link": "Grundregelwerk/Zauber/Dimensionsanker", "text": "Dimensionsanker", "duration": "m 1*lvl", "range": "m 20+2*lvl" }
+          { "id": 219, "link": "Grundregelwerk/Zauber/Feuerfalle", "text": "Feuerfalle", "duration": "∞", "range": "B" },
         ],
         "level5" : [
           { "id": 185, "link": "Grundregelwerk/Zauber/AusspaehendeAugen", "text": "Ausspähende Augen", "duration": "h 1*lvl", "range": "km1" },
@@ -362,17 +367,45 @@
           { "id": 195, "link": "AusbauregelnVIKlassen/Zauber/VampirischeSchattenbarriere", "text": "Vampir. Schattenbarriere", "duration": "rd1*lvl", "range": "P" },
           { "id": 196, "link": "Grundregelwerk/Zauber/Verstaendigung", "text": "Verständigung", "duration": "rd1", "range": "∞" },
           { "id": 197, "link": "Grundregelwerk/Zauber/Waendepassieren", "text": "Wände passieren", "duration": "h 1*lvl", "range": "B" },
-          { "id": 198, "link": "AusbauregelnIIIVoelker/Zauber/Windklingen", "text": "Windklingen", "duration": "rd1*lvl", "range": "B" }
+          { "id": 198, "link": "AusbauregelnIIIVoelker/Zauber/Windklingen", "text": "Windklingen", "duration": "rd1*lvl", "range": "B" },
+          { "id": 213, "link": "Expertenregeln/Zauber/Feuerschlange", "text": "Feuerschlange", "duration": "-", "range": "m 18" },
+          { "id": 214, "link": "Expertenregeln/Zauber/PlanareAnpassung", "text": "Planare Anpassung", "duration": "h 1*lvl", "range": "P" },
+          { "id": 215, "link": "AusbauerregelnMagie/Zauber/Blitzbogen", "text": "Blitzbogen", "duration": "-", "range": "m 80+8*lvl" },
+          { "id": 216, "link": "Grundregelwerk/Zauber/DesMagiersTreuerHund", "text": "Des Magiers Treuer Hund", "duration": "h 1*lvl", "range": "5+lvl/2" },
+          { "id": 217, "link": "Grundregelwerk/Zauber/Monsterfesthalten", "text": "Monster festhalten", "duration": "rd1*lvl", "range": "20+2*lvl" },
+          { "id": 218, "link": "AusbauerregelnMagie/Zauber/Säuresprühregen", "text": "Säuresprühregen", "duration": "-", "range": "m 18" },
+          { "id": 220, "link": "AusbauregelnIIKampf/Zauber/FeindseligerAustausch", "text": "Feindseliger Austausch", "duration": "rd1*lvl", "range": "5+lvl/2" },
+          { "id": 221, "link": "AusbauregelnIIIVoelker/Zauber/Höllenpforte", "text": "Höllenpforte", "duration": "-", "range": "sp" },
+          { "id": 222, "link": "AusbauregelnVIIOkkultes/Zauber/Pergamentschwarm", "text": "Pergamentschwarm", "duration": "-", "range": "5+lvl/2" },
+          { "id": 223, "link": "AusbauregelnIIKampf/Zauber/Klingenkranz", "text": "Klingenkranz", "duration": "rd1*lvl", "range": "P" },
+          { "id": 224, "link": "Grundregelwerk/Zauber/Überlandflug", "text": "Überlandflug", "duration": "h 1*lvl", "range": "P" },
+          { "id": 225, "link": "Grundregelwerk/Zauber/DesMagiersPrivatesHeiligtum", "text": "Des Magiers Privates Heiligtum", "duration": "h 24", "range": "5+lvl/2" }
         ],
         "level6" : [
           { "id": 206, "link": "Grundregelwerk/Zauber/AntimagischesFeld", "text": "Antimagisches Feld", "duration": "m 10*lvl", "range": "m 2" },
           { "id": 202, "link": "AusbauregelnIIIVoelker/Zauber/Feuerkette", "text": "Feuerkette", "duration": "-", "range": "m 80+8*lvl" },
           { "id": 201, "link": "Grundregelwerk/Zauber/Kugelblitz", "text": "Kugelblitz", "duration": "-", "range": "m 80+8*lvl" },
           { "id": 207, "link": "Grundregelwerk/Zauber/MonsterherbeizaubernVI", "text": "Monster herbeizaubern VI", "duration": "rd1*lvl", "range": "m 5+lvl/2" },
-          { "id": 205, "link": "Grundregelwerk/Zauber/SteinzuFleisch", "text": "Stein zu Fleisch", "duration": "-", "range": "m 20+2*lvl" }
+          { "id": 205, "link": "Grundregelwerk/Zauber/SteinzuFleisch", "text": "Stein zu Fleisch", "duration": "-", "range": "m 20+2*lvl" },
+          { "id": 226, "link": "Grundregelwerk/Zauber/MächtigeMagieBannen", "text": "Mächtige Magie bannen", "duration": "-", "range": "m 20+2*lvl" },
+          { "id": 227, "link": "AusbauregelnVIIOkkultes/Zauber/Telepathie", "text": "Telepathie", "duration": "m 1*lvl", "range": "P" },
+          { "id": 228, "link": "AusbauregelnVIIIIntrigen/Zauber/DesMagiersMitteilung", "text": "Des Magiers Mitteilung", "duration": "-", "range": "km 1*lvl" },
+          { "id": 229, "link": "Grundregelwerk/Zauber/Umwandlung", "text": "Umwandlung", "duration": "rd1*lvl", "range": "P" },
+          { "id": 230, "link": "Grundregelwerk/Zauber/Geas", "text": "Geas", "duration": "d 1*lvl", "range": "m 5+lvl/2" },
+          { "id": 231, "link": "Grundregelwerk/Zauber/KugelderUnverwundbarkeit", "text": "Kugel der Unverwundbarkeit", "duration": "rd1*lvl", "range": "m 3" },
+          { "id": 232, "link": "Grundregelwerk/Zauber/Abstossung", "text": "Abstoßung", "duration": "rd1*lvl", "range": "m 3*lvl" },
+          { "id": 233, "link": "Grundregelwerk/Zauber/Notfall", "text": "Notfall", "duration": "d 1*lvl", "range": "P" },
+          { "id": 234, "link": "Grundregelwerk/Zauber/Schattenreise", "text": "Schattenreise", "duration": "h 1*lvl", "range": "B" },
+          { "id": 235, "link": "Grundregelwerk/Zauber/Todeskreis", "text": "Todeskreis", "duration": "-", "range": "m 20+2*lvl" }
         ],
         "level7" : [
-          { "id": 208, "link": "AusbauerregelnMagie/Zauber/Verbannung", "text": "Verbannung", "duration": "rd5", "range": "m 80+8*lvl" }
+          { "id": 208, "link": "AusbauerregelnMagie/Zauber/Verbannung", "text": "Verbannung", "duration": "-", "range": "m 5+lvl/2" },
+          { "id": 235, "link": "Grundregelwerk/Zauber/Ebenenwechsel", "text": "Ebenenwechsel", "duration": "-", "range": "B" },
+          { "id": 235, "link": "Grundregelwerk/Zauber/Energiekäfig", "text": "Energiekäfig (500 GM)", "duration": "rd1*lvl", "range": "m 5+lvl/2" },
+          { "id": 235, "link": "Grundregelwerk/Zauber/MonsterherbeizaubernVII", "text": "Monster herbeizaubern VII", "duration": "rd1*lvl", "range": "m 5+lvl/2" },
+          { "id": 235, "link": "Grundregelwerk/Zauber/MächtigesTeleportieren", "text": "Mächtiges Teleportieren", "duration": "-", "range": "PB" },
+          { "id": 235, "link": "Grundregelwerk/Zauber/Regenbogenspiel", "text": "Regenbogenspiel", "duration": "-", "range": "m 18" },
+          { "id": 235, "link": "AusbauregelnIIKampf/Zauber/ArkaneKanone", "text": "Arkane Kanone", "duration": "rd1*lvl", "range": "m 5+lvl/2" }
         ]
       };
     </script>
@@ -385,58 +418,18 @@
           <tr id="level1" class="head" onclick="lock(this)"><th colspan="2">6</th></tr>
           <tr id="level2" class="head" onclick="lock(this)"><th colspan="2">6</th></tr>
           <tr id="level3" class="head" onclick="lock(this)"><th colspan="2">6</th></tr>
-<!--
-x B Explosive Runen - Fremdkosten
-x B Illusionsschrift - Fremdkosten
-x B Flammenpfeil - Fremdkosten
-==
-9 h, 270 GM
--->
           <tr id="level4" class="head" onclick="lock(this)"><th colspan="2">5</th></tr>
-<!--
-x B Dimensionsanker
-==
-4 h, 240 GM
--->
           <tr id="level5" class="head" onclick="lock(this)"><th colspan="2">4</th></tr>
-<!--
-x E Feuerschlange
-  E Planare Anpassung
-x 1 Blitzbogen
-x B Des Magiers Treuer Hund
-x B Monster festhalten
-x 1 Säuresprühregen
-x B Feuerfalle - Fremdkosten
-x 2 Feindseliger Austausch
-x 3 Höllenpforte
-x 7 Pergamentschwarm
-x 2 Klingenkranz
-x B Überlandflug - Fremdkosten
-  B Des Magiers Privates Heiligtum
-==
-55h, 2750 GM - 250 GM
--->
           <tr id="level6" class="head" onclick="lock(this)"><th colspan="2">3</th></tr>
 <!--
-  B Abstoßung
-x B Mächtige Magie bannen - Fremdkosten
-  B Notfall
-  B Schattenreise
-  B Todeskreis
-  B Umwandlung
   B Auflösung
   B Fleisch zu Stein
-  B Geas
   B Großer Heldenmut
-  B Kugel der Unverwundbarkeit
   E Fleischkeule
   E Flucht
   E Flüssige Gestalt
   E Scirocco
   E Unwilliger Schild
-  2 Arkane Kanone
-  7 Telepathie
-  8 Des Magiers Mitteilung
   8 Tückisches Teleportieren
 ==
 6h, 360 GM
@@ -446,19 +439,14 @@ x B Mächtige Magie bannen - Fremdkosten
   B Begrenzter Wunsch
   B Des Magiers herrliches Herrenhaus
   B Des Magiers Schwert
-x B Ebenenwechsel - Fremdkosten
-  B Energiekäfig
   B Spätzündender Feuerball
   B Gegenstand teleportieren
-  B Monster herbeizaubern VII
   B Mächtige Ausspähung
   B Mächtiger Arkaner Blick
-  B Mächtiges Teleportieren
   B Wetterkontrolle
   B Zauber zurückwerfen
   B Ätherischer Ausflug
   B Äthertor
-  B Regenbogenspiel
   B Simulakrum
   E Angriff zurückwerfen
   E Massen-Planare Anpassung
