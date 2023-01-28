@@ -52,6 +52,7 @@
       function lock(el) {
         if (el.locked === undefined) el.locked = 0;
         el.locked = (el.locked + 2) % 3;
+        el.firstElementChild.innerHTML =  el.firstElementChild.innerHTML.slice(0,-5) + (el.locked == 0 ? "All  " : (el.locked == 1 ? "Daily" : "Avail"));
         redo();
       }
       function drtoggle() {
@@ -103,7 +104,8 @@
           if (header[p].startsWith("level")) {
             var th = parent.firstElementChild;
             var ll = parseInt(header[p].slice(-1));
-            th.innerHTML += " Zauber der Stufe " + ll + " (" + list.length + " Zauber = " + (list.length * Math.max(ll,1)) + " Seiten, Σ " + sum(ll) + " Seiten)";
+            th.innerHTML += " Zauber der Stufe " + ll + " (" + list.length + " Zauber = " + (list.length * Math.max(ll,1)) + " Seiten, Σ " + sum(ll) + " Seiten)"
+              + "&nbsp;&nbsp;&nbsp;All  ";
           }
           for (var i in list) {
             if (idx % 2 == 0) {
@@ -151,12 +153,18 @@
           }
         }
       }
-      var lastId = 273;
+      var lastId = 279;
       var lvl = 13;
       var dr = false;
       var content = {
         "magicItems" : [
           { "id": 199, "link": "Grundregelwerk/Zauber/LeichteWundenheilen", "text": "Trank: 3w8+5 heilen" },
+          { "id": 274, "link": "Grundregelwerk/Zauber/Magiebannen", "text": "Scherbe: Magie bannen" },
+          { "id": 275, "link": "Grundregelwerk/Zauber/Frage", "text": "Flüstermünze: Frage" },
+          { "id": 276, "link": "Grundregelwerk/Zauber/Befehl", "text": "Helm: Befehl" },
+          { "id": 277, "link": "Grundregelwerk/MagischeGegenstaende/MetamagischesZepterZaubereffektmaximieren", "text": "Zauberzepter: Maximum" },
+          { "id": 278, "link": "Grundregelwerk/MagischeGegenstaende/MetamagischesZepterZauberausdehnen", "text": "Zauberzepter: Ausdehnen" },
+          { "id": 279, "link": "Grundregelwerk/MagischeGegenstaende/MagischeGegenstaende/MetamagischesZepterschnellzaubern", "text": "Zauberzepter: Schnell" },
           { "id": 104, "link": "Grundregelwerk/Zauber/Dimensionstuer", "text": "Zauberstab: Dimensionstür" },
           { "id": 100, "link": "Grundregelwerk/Zauber/Geheimtuerenentdecken", "text": "Zauberstab: Geheimtüren entdecken" }
         ],
@@ -455,8 +463,8 @@
           <tr id="level7" class="head" onclick="lock(this)"><th colspan="2">2</th></tr>
 <!-- Level 8, Flammende Wolke GRW - Fremdkosten -->
 <!-- Level 9, Meteoritenschwarm GRW - Fremdkosten -->
-          <tr id="special" class="head" onclick="lock(this)"><th colspan="2">Dailies / Fokus</th></tr>
-          <tr id="magicItems" class="head" onclick="lock(this)"><th colspan="2">Magische Gegenstände</th></tr>
+          <tr id="special" class="head" onclick="lock(this)"><th colspan="2">Dailies / Fokus&nbsp;&nbsp;&nbsp;All  </th></tr>
+          <tr id="magicItems" class="head" onclick="lock(this)"><th colspan="2">Magische Gegenstände&nbsp;&nbsp;&nbsp;All  </th></tr>
         </table>
       </div>
     </div>
