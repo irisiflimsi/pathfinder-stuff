@@ -31,10 +31,13 @@
         padding: 0 6px; float: right;
       }
       span.range {
-        display: none; font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2em; border-right: 1px dotted #999187;
+        font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2em; border-right: 1px dotted #999187;
       }
       span.duration {
-        font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2em; border-right: 1px dotted #999187;
+        display: none; font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2em; border-right: 1px dotted #999187;
+      }
+      span.components {
+        display: none; font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2em; border-right: 1px dotted #999187;
       }
     </style>
     <script type="text/javascript">
@@ -56,10 +59,15 @@
         redo();
       }
       function drtoggle() {
-        dr = !dr;
-        var el = document.querySelectorAll('.duration, .range');
+        dr = (dr + 1) % 3;
+        var el = document.querySelectorAll('.duration, .range, .components');
+      console.log(el.length);
         for (var i = 0; i < el.length; i++) {
-          el[i].style.display = (el[i].className === (dr ? "range" : "duration") ) ? "none" : "initial";
+			    switch (dr) {
+			      case 0: el[i].style.display = el[i].className !== "range" ? "none" : "initial"; break;
+			      case 1: el[i].style.display = el[i].className !== "duration" ? "none" : "initial"; break;
+			      default: el[i].style.display = el[i].className !== "components" ? "none" : "initial"; break;
+			    }
         }
       }
       function getPrevHead(el) {
@@ -137,17 +145,23 @@
             var span2 = document.createElement("span");
              span2.onclick = function() { drtoggle(); };
              span2.className = "duration";
-             var d = obj["duration"] ? obj["d"] : "";
+             var d = obj["d"] ? obj["d"] : "";
              span2.innerHTML = (d.length < 3) ? d : eval("Math.floor(" + d.substring(2) + ")") + " " + d.substring(0,2);
             var span3 = document.createElement("span");
              span3.onclick = function() { drtoggle(); };
              span3.className = "range";
-             var r = obj["range"] ? obj["r"] : "";
+             var r = obj["r"] ? obj["r"] : "";
              span3.innerHTML = (r.length < 3) ? r : eval("Math.floor(" + r.substring(2) + ")*1.5") + " " + r.substring(0,2);
+            var span4 = document.createElement("span");
+             span4.onclick = function() { drtoggle(); };
+             span4.className = "components";
+             var c = obj["c"] ? obj["c"] : "";
+             span4.innerHTML = c;
             td.appendChild(a);
             td.appendChild(span1);
             td.appendChild(span2);
             td.appendChild(span3);
+            td.appendChild(span4);
             parent.appendChild(td);
             idx++;
           }
@@ -166,7 +180,7 @@
       }
       var lastId = 281;
       var lvl = 13;
-      var dr = false;
+      var dr = 0;
       var content = {
         "magicItems" : [
           { "l": "/G/Z/Frage", "t": "Flüstermünze: Frage" },
@@ -187,67 +201,67 @@
           { "l": "/G/Klassen/Magier/ArkaneSchulen/AllgemeineSchule", "t": "Metamagische Meisterschaft" }
         ],
         "level0" : [
-          { "l": "/G/Z/Arkanes Siegel", "t": "Arkanes Siegel", "d": "∞", "r": "B" },
-          { "l": "/G/Z/Aufblitzen", "t": "Aufblitzen", "d": "-", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Ausbessern", "t": "Ausbessern", "d": "-", "r": "m 2" },
-          { "l": "/G/Z/Ausbluten", "t": "Ausbluten", "d": "-", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Benommenheit", "t": "Benommenheit", "d": "rd1", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Botschaft", "t": "Botschaft", "d": "m 10*lvl", "r": "m 20+2*lvl" },
-          { "l": "/G/Z/Erschöpfende Berührung", "t": "Erschöpf. Berührung", "d": "rd1*lvl", "r": "B" },
-          { "l": "/G/Z/Geisterhaftes Geräusch", "t": "Geisterh. Geräusch", "d": "rd1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Gift entdecken", "t": "Gift entdecken", "d": "-", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Kältestrahl", "t": "Kältestrahl", "d": "-", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Licht", "t": "Licht", "d": "m 10*lvl", "r": "B" },
-          { "l": "/G/Z/Magie entdecken", "t": "Magie entdecken", "d": "mc1*lvl", "r": "m 12" },
-          { "l": "/G/Z/Magie lesen", "t": "Magie lesen", "d": "m 10*lvl", "r": "P" },
-          { "l": "/G/Z/Magierhand", "t": "Magierhand", "d": "c", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/ÖffnenSchließen", "t": "Öffnen/Schließen", "d": "-", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Resistenz", "t": "Resistenz", "d": "m 1", "r": "B" },
-          { "l": "/G/Z/Säurespritzer", "t": "Säurespritzer", "d": "-", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Tanzende Lichter", "t": "Tanzende Lichter", "d": "m 1", "r": "m 20+2*lvl" },
-          { "l": "/G/Z/Untote schwächen", "t": "Untote schwächen", "d": "-", "r": "m 5+lvl/2" },
-          { "l": "/2/Z/VerstoerendeFeenerscheinung", "t": "Verst. Feenerscheinung", "d": "rd1*lvl", "r": "P" },
-          { "l": "/G/Z/Zaubertrick", "t": "Zaubertrick", "d": "h 1", "r": "m 2" }
+          { "l": "/G/Z/Arkanes Siegel", "t": "Arkanes Siegel", "d": "∞", "r": "B", "c": "VG" },
+          { "l": "/G/Z/Aufblitzen", "t": "Aufblitzen", "d": "-", "r": "m 5+lvl/2", "c": "V" },
+          { "l": "/G/Z/Ausbessern", "t": "Ausbessern", "d": "-", "r": "m 2", "c": "VG" },
+          { "l": "/G/Z/Ausbluten", "t": "Ausbluten", "d": "-", "r": "m 5+lvl/2", "c": "VG" },
+          { "l": "/G/Z/Benommenheit", "t": "Benommenheit", "d": "rd1", "r": "m 5+lvl/2", "c": "VGM" },
+          { "l": "/G/Z/Botschaft", "t": "Botschaft", "d": "m 10*lvl", "r": "m 20+2*lvl", "c": "VGF" },
+          { "l": "/G/Z/Erschöpfende Berührung", "t": "Erschöpf. Berührung", "d": "rd1*lvl", "r": "B", "c": "VGM" },
+          { "l": "/G/Z/Geisterhaftes Geräusch", "t": "Geisterh. Geräusch", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM" },
+          { "l": "/G/Z/Gift entdecken", "t": "Gift entdecken", "d": "-", "r": "m 5+lvl/2", "c": "VG" },
+          { "l": "/G/Z/Kältestrahl", "t": "Kältestrahl", "d": "-", "r": "m 5+lvl/2", "c": "VG" },
+          { "l": "/G/Z/Licht", "t": "Licht", "d": "m 10*lvl", "r": "B", "c": "VM" },
+          { "l": "/G/Z/Magie entdecken", "t": "Magie entdecken", "d": "mc1*lvl", "r": "m 12", "c": "VG" },
+          { "l": "/G/Z/Magie lesen", "t": "Magie lesen", "d": "m 10*lvl", "r": "P", "c": "VGF" },
+          { "l": "/G/Z/Magierhand", "t": "Magierhand", "d": "c", "r": "m 5+lvl/2", "c": "VG" },
+          { "l": "/G/Z/ÖffnenSchließen", "t": "Öffnen/Schließen", "d": "-", "r": "m 5+lvl/2", "c": "VGF" },
+          { "l": "/G/Z/Resistenz", "t": "Resistenz", "d": "m 1", "r": "B", "c": "VGM" },
+          { "l": "/G/Z/Säurespritzer", "t": "Säurespritzer", "d": "-", "r": "m 5+lvl/2", "c": "VG" },
+          { "l": "/G/Z/Tanzende Lichter", "t": "Tanzende Lichter", "d": "m 1", "r": "m 20+2*lvl", "c": "VG" },
+          { "l": "/G/Z/Untote schwächen", "t": "Untote schwächen", "d": "-", "r": "m 5+lvl/2", "c": "VG" },
+          { "l": "/2/Z/VerstoerendeFeenerscheinung", "t": "Verst. Feenerscheinung", "d": "rd1*lvl", "r": "P", "c": "G" },
+          { "l": "/G/Z/Zaubertrick", "t": "Zaubertrick", "d": "h 1", "r": "m 2", "c": "VG" }
         ],
         "level1" : [
-          { "l": "/6/Z/Affenfisch", "t": "Affenfisch", "d": "m 1*lvl", "r": "B" },
-          { "l": "/G/Z/Alarm", "t": "Alarm", "d": "h 2*lvl", "r": "m 5+lvl/2" },
-          { "l": "/2/Z/Befreiender Befehl", "t": "Befreiender Befehl", "d": "-", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Brennende Hände", "t": "Brennende Hände", "d": "-", "r": "m 3" },
-          { "l": "/2/Z/Dringlicher Schritt", "t": "Dringlicher Schritt", "d": "rd1*lvl", "r": "P" },
-          { "l": "/G/Z/Elementen trotzen", "t": "Elementen trotzen", "d": "h 24", "r": "B" },
-          { "l": "/1/Z/Erzwungene Stille", "t": "Erzwungene Stille", "d": "rd1*lvl", "r": "m 20+2*lvl" },
-          { "l": "/G/Z/Federfall", "t": "Federfall", "d": "rd1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Furcht auslösen", "t": "Furcht auslösen", "d": "sp", "r": "m 5+lvl/2" },
-          { "l": "/E/Z/Hauch der See", "t": "Hauch der See", "d": "m 1*lvl", "r": "B" },
-          { "l": "/G/Z/Hypnose", "t": "Hypnose", "d": "sp", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Identifizieren", "t": "Identifizieren", "d": "rd3*lvl", "r": "m 12" },
-          { "l": "/2/Z/Luftblase", "t": "Luftblase", "d": "m 1*lvl", "r": "B" },
-          { "l": "/G/Z/Magierrüstung", "t": "Magierrüstung", "d": "h 1*lvl", "r": "B" },
-          { "l": "/G/Z/Magische Waffe", "t": "Magische Waffe", "d": "m 1*lvl", "r": "B" },
-          { "l": "/G/Z/Magisches Geschoss", "t": "Magisches Geschoss", "d": "-", "r": "m 20+2*lvl" },
-          { "l": "/G/Z/MonsterherbeizaubernI", "t": "Monster herbeizaubern I", "d": "rd1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/A/Z/Nachtwache", "t": "Nachtwache", "d": "h 8", "r": "B" },
-          { "l": "/3/Z/Netzgeschoss", "t": "Netzgeschoss", "d": "m 1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Person bezaubern", "t": "Person bezaubern", "d": "h 1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Personvergroessern", "t": "Person vergrößern", "d": "m 1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Personverkleinern", "t": "Person verkleinern", "d": "m 1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Pforte zuhalten", "t": "Pforte zuhalten", "d": "m 1*lvl", "r": "m 20+2*lvl" },
-          { "l": "/G/Z/Rascher Rückzug", "t": "Rascher Rückzug", "d": "m 1*lvl", "r": "P" },
-          { "l": "/G/Z/Reittier", "t": "Reittier", "d": "h 2*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Schild", "t": "Schild", "d": "m 1*lvl", "r": "P" },
-          { "l": "/G/Z/Schlaf", "t": "Schlaf", "d": "m 1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Schmieren", "t": "Schmieren", "d": "m 1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Schockgriff", "t": "Schockgriff", "d": "-", "r": "B" },
-          { "l": "/G/Z/Schwaechestrahl", "t": "Schwächestrahl", "d": "rd1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/SchwebendeScheibe", "t": "Schwebende Scheibe", "d": "h 1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Sprachenverstehen", "t": "Sprachen verstehen", "d": "m 10*lvl", "r": "P" },
-          { "l": "/G/Z/Unauffälliger Diener", "t": "Unauffälliger Diener", "d": "h 1*lvl", "r": "m 5+lvl/2" },
-          { "l": "/G/Z/Verhüllender Nebel", "t": "Verhüllender Nebel", "d": "m 1*lvl", "r": "m 4" },
-          { "l": "/E/Z/Verschwinden", "t": "Verschwinden", "d": "rdMath.max(5,1*lvl)", "r": "B" },
-          { "l": "/2/Z/Weiter Schuss", "t": "Weiter Schuss", "d": "m 1*lvl", "r": "P" },
-          { "l": "/8/Z/Wurfhaken", "t": "Wurfhaken", "d": "m 1*lvl", "r": "B" },
-          { "l": "/G/Z/Zielsicherer Schlag", "t": "Zielsicherer Schlag", "d": "sp", "r": "P" }
+          { "l": "/6/Z/Affenfisch", "t": "Affenfisch", "d": "m 1*lvl", "r": "B", "c": "VG" },
+          { "l": "/G/Z/Alarm", "t": "Alarm", "d": "h 2*lvl", "r": "m 5+lvl/2", "c": "VGF" },
+          { "l": "/2/Z/Befreiender Befehl", "t": "Befreiender Befehl", "d": "-", "r": "m 5+lvl/2", "c": "V" },
+          { "l": "/G/Z/Brennende Hände", "t": "Brennende Hände", "d": "-", "r": "m 3", "c": "VG" },
+          { "l": "/2/Z/Dringlicher Schritt", "t": "Dringlicher Schritt", "d": "rd1*lvl", "r": "P", "c": "VGM" },
+          { "l": "/G/Z/Elementen trotzen", "t": "Elementen trotzen", "d": "h 24", "r": "B", "c": "VG" },
+          { "l": "/1/Z/Erzwungene Stille", "t": "Erzwungene Stille", "d": "rd1*lvl", "r": "m 20+2*lvl", "c": "G" },
+          { "l": "/G/Z/Federfall", "t": "Federfall", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "V" },
+          { "l": "/G/Z/Furcht auslösen", "t": "Furcht auslösen", "d": "sp", "r": "m 5+lvl/2", "c": "VG" },
+          { "l": "/E/Z/Hauch der See", "t": "Hauch der See", "d": "m 1*lvl", "r": "B", "c": "VGM" },
+          { "l": "/G/Z/Hypnose", "t": "Hypnose", "d": "sp", "r": "m 5+lvl/2", "c": "VG" },
+          { "l": "/G/Z/Identifizieren", "t": "Identifizieren", "d": "rd3*lvl", "r": "m 12", "c": "VGM" },
+          { "l": "/2/Z/Luftblase", "t": "Luftblase", "d": "m 1*lvl", "r": "B", "c": "GM" },
+          { "l": "/G/Z/Magierrüstung", "t": "Magierrüstung", "d": "h 1*lvl", "r": "B", "c": "VGF" },
+          { "l": "/G/Z/Magische Waffe", "t": "Magische Waffe", "d": "m 1*lvl", "r": "B", "c": "VGF" },
+          { "l": "/G/Z/Magisches Geschoss", "t": "Magisches Geschoss", "d": "-", "r": "m 20+2*lvl", "c": "VG" },
+          { "l": "/G/Z/MonsterherbeizaubernI", "t": "Monster herbeizaubern I", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGF" },
+          { "l": "/A/Z/Nachtwache", "t": "Nachtwache", "d": "h 8", "r": "B", "c": "VG" },
+          { "l": "/3/Z/Netzgeschoss", "t": "Netzgeschoss", "d": "m 1*lvl", "r": "m 5+lvl/2", "c": "VG" },
+          { "l": "/G/Z/Person bezaubern", "t": "Person bezaubern", "d": "h 1*lvl", "r": "m 5+lvl/2", "c": "VG" },
+          { "l": "/G/Z/Personvergroessern", "t": "Person vergrößern", "d": "m 1*lvl", "r": "m 5+lvl/2", "c": "VGM" },
+          { "l": "/G/Z/Personverkleinern", "t": "Person verkleinern", "d": "m 1*lvl", "r": "m 5+lvl/2", "c": "VGM" },
+          { "l": "/G/Z/Pforte zuhalten", "t": "Pforte zuhalten", "d": "m 1*lvl", "r": "m 20+2*lvl", "c": "V" },
+          { "l": "/G/Z/Rascher Rückzug", "t": "Rascher Rückzug", "d": "m 1*lvl", "r": "P", "c": "VG" },
+          { "l": "/G/Z/Reittier", "t": "Reittier", "d": "h 2*lvl", "r": "m 5+lvl/2", "c": "VGM" },
+          { "l": "/G/Z/Schild", "t": "Schild", "d": "m 1*lvl", "r": "P", "c": "VG" },
+          { "l": "/G/Z/Schlaf", "t": "Schlaf", "d": "m 1*lvl", "r": "m 5+lvl/2", "c": "VGM" },
+          { "l": "/G/Z/Schmieren", "t": "Schmieren", "d": "m 1*lvl", "r": "m 5+lvl/2", "c": "VGM" },
+          { "l": "/G/Z/Schockgriff", "t": "Schockgriff", "d": "-", "r": "B", "c": "VG" },
+          { "l": "/G/Z/Schwaechestrahl", "t": "Schwächestrahl", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VG" },
+          { "l": "/G/Z/SchwebendeScheibe", "t": "Schwebende Scheibe", "d": "h 1*lvl", "r": "m 5+lvl/2", "c": "VGM" },
+          { "l": "/G/Z/Sprachenverstehen", "t": "Sprachen verstehen", "d": "m 10*lvl", "r": "P", "c": "VGM" },
+          { "l": "/G/Z/Unauffälliger Diener", "t": "Unauffälliger Diener", "d": "h 1*lvl", "r": "m 5+lvl/2", "c": "VGM" },
+          { "l": "/G/Z/Verhüllender Nebel", "t": "Verhüllender Nebel", "d": "m 1*lvl", "r": "m 4", "c": "VG" },
+          { "l": "/E/Z/Verschwinden", "t": "Verschwinden", "d": "rdMath.max(5,1*lvl)", "r": "B", "c": "VG" },
+          { "l": "/2/Z/Weiter Schuss", "t": "Weiter Schuss", "d": "m 1*lvl", "r": "P", "c": "VGM" },
+          { "l": "/8/Z/Wurfhaken", "t": "Wurfhaken", "d": "m 1*lvl", "r": "B", "c": "VGM" },
+          { "l": "/G/Z/Zielsicherer Schlag", "t": "Zielsicherer Schlag", "d": "sp", "r": "P", "c": "VF" }
         ],
         "level2" : [
           { "l": "/3/Z/Abolethen-Lunge", "t": "Abolethen-Lunge", "d": "h 1*lvl", "r": "B" },
