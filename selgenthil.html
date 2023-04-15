@@ -39,6 +39,9 @@
       span.components {
         display: none; font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2.5em; border-right: 1px dotted #999187;
       }
+      span.save {
+        display: none; font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2.5em; border-right: 1px dotted #999187;
+      }
     </style>
     <script type="text/javascript">
       /* Show with locked: 0 all, 1 max > 0, 2 avail > 0 */
@@ -59,15 +62,15 @@
         redo();
       }
       function drtoggle() {
-        dr = (dr + 1) % 3;
-        var el = document.querySelectorAll('.duration, .range, .components');
-      console.log(el.length);
+        dr = (dr + 1) % 4;
+        var el = document.querySelectorAll('.duration, .range, .components, .save');
         for (var i = 0; i < el.length; i++) {
-			    switch (dr) {
-			      case 0: el[i].style.display = el[i].className !== "range" ? "none" : "initial"; break;
-			      case 1: el[i].style.display = el[i].className !== "duration" ? "none" : "initial"; break;
-			      default: el[i].style.display = el[i].className !== "components" ? "none" : "initial"; break;
-			    }
+          switch (dr) {
+            case 0: el[i].style.display = el[i].className !== "range" ? "none" : "initial"; break;
+            case 1: el[i].style.display = el[i].className !== "duration" ? "none" : "initial"; break;
+            case 2: el[i].style.display = el[i].className !== "components" ? "none" : "initial"; break;
+            default: el[i].style.display = el[i].className !== "save" ? "none" : "initial"; break;
+          }
         }
       }
       function getPrevHead(el) {
@@ -157,11 +160,17 @@
              span4.className = "components";
              var c = obj["c"] ? obj["c"] : "";
              span4.innerHTML = c;
+            var span5 = document.createElement("span");
+             span5.onclick = function() { drtoggle(); };
+             span5.className = "save";
+             var s = obj["s"] ? obj["s"] : "";
+             span5.innerHTML = c;
             td.appendChild(a);
             td.appendChild(span1);
             td.appendChild(span2);
             td.appendChild(span3);
             td.appendChild(span4);
+            td.appendChild(span5);
             parent.appendChild(td);
             idx++;
           }
@@ -201,9 +210,9 @@
           { "l": "/G/Klassen/Magier/ArkaneSchulen/AllgemeineSchule", "t": "Metamagische Meisterschaft" }
         ],
         "level0" : [
-          { "l": "/G/Z/Arkanes Siegel", "t": "Arkanes Siegel", "d": "∞", "r": "B", "c": "VG" },
-          { "l": "/G/Z/Aufblitzen", "t": "Aufblitzen", "d": "-", "r": "m 5+lvl/2", "c": "V" },
-          { "l": "/G/Z/Ausbessern", "t": "Ausbessern", "d": "-", "r": "m 2", "c": "VG" },
+          { "l": "/G/Z/Arkanes Siegel", "t": "Arkanes Siegel", "d": "∞", "r": "B", "c": "VG", "s": "-/-" },
+          { "l": "/G/Z/Aufblitzen", "t": "Aufblitzen", "d": "-", "r": "m 5+lvl/2", "c": "V", "s": "Z/✓" },
+          { "l": "/G/Z/Ausbessern", "t": "Ausbessern", "d": "-", "r": "m 2", "c": "VG", "s": "W/✓" },
           { "l": "/G/Z/Ausbluten", "t": "Ausbluten", "d": "-", "r": "m 5+lvl/2", "c": "VG" },
           { "l": "/G/Z/Benommenheit", "t": "Benommenheit", "d": "rd1", "r": "m 5+lvl/2", "c": "VGM" },
           { "l": "/G/Z/Botschaft", "t": "Botschaft", "d": "m 10*lvl", "r": "m 20+2*lvl", "c": "VGF" },
