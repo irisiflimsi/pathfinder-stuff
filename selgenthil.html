@@ -15,17 +15,14 @@
       div.fg {
         width: 90%; margin: auto; font-family: "Smythe", sans-serif;
       }
-      table {
-        width: 100%; border-collapse: separate; border-spacing: 6px; font-size: 24px;
+      div.box {
+        width: 100%; border-collapse: separate; border-spacing: 6px; font-size: 24px; display: flex; flex-wrap: wrap;
       }
-      td, th {
-        width: 50%; padding: 6px; text-align: center; border: 1px solid #33302d; background-color: #e6daca80;
+      div.box > * {
+        width: 50%; padding: 6px; margin: 3px; text-align: center; border: 1px solid #33302d; background-color: #e6daca80; flex: 0 1 calc(50% - 20px);
       }
-      tr.head {
-        padding: 12px; color: #e6daca; text-align: center;
-      }
-      tr.head th {
-        background-color: #33302d;
+      div.head {
+        color: #e6daca; background-color: #33302d; flex: 1 1 100%; font-weight: bold;
       }
       span {
         padding: 0 6px; float: right;
@@ -46,7 +43,7 @@
     <script type="text/javascript">
       /* Show with locked: 0 all, 1 max > 0, 2 avail > 0 */
       function cycle(o) {
-        switch (getPrevHead(o.parentElement).locked) {
+        switch (o.parentElement.parentElement.firstElementChild.locked) {
           case 1: case 2:
             o.avail = Math.max(0, o.avail - 1); break;
           default:
@@ -58,7 +55,7 @@
       function lock(el) {
         if (el.locked === undefined) el.locked = 0;
         el.locked = (el.locked + 2) % 3;
-        el.firstElementChild.innerHTML =  el.firstElementChild.innerHTML.slice(0,-5) + (el.locked == 0 ? "All  " : (el.locked == 1 ? "Daily" : "Avail"));
+        el.innerHTML =  el.innerHTML.slice(0,-5) + (el.locked == 0 ? "All  " : (el.locked == 1 ? "Daily" : "Avail"));
         redo();
       }
       function drtoggle() {
@@ -73,33 +70,17 @@
           }
         }
       }
-      function getPrevHead(el) {
-        var sib = el.parentElement;
-        while (sib) {
-          if (sib.firstElementChild.tagName === "TH") return sib;
-          sib = sib.previousElementSibling;
-        }
-      }
       function redo() {
         for (const i of Object.entries(content).flatMap(k => k[1].flatMap(m => m["t"]))) {
           var el = document.getElementById(i);
           if (el) {
-            var td = el.parentElement;
-            switch (getPrevHead(td).locked) {
-              case 2: td.style.display = el.avail == 0 ? "none": "table-cell"; break;
-              case 1: td.style.display = el.maxavail == 0 ? "none": "table-cell"; break;
-              default: td.style.display = "table-cell";
+            var div = el.parentElement;
+            switch (div.parentElement.firstElementChild.locked) {
+              case 2: div.style.display = el.avail == 0 ? "none": "initial"; break;
+              case 1: div.style.display = el.maxavail == 0 ? "none": "initial"; break;
+              default: div.style.display = "initial";
             }
             localStorage["id" + i] = el.avail + 100 * el.maxavail;
-            if (td.previousElementSibling) {
-              td.parentElement.style.display = (td.previousElementSibling.style.display == "none" && td.style.display == "none") ? "none" : "table-row";
-            }
-            else if (td.nextElementSibling) {
-              td.parentElement.style.display = (td.nextElementSibling.style.display == "none" && td.style.display == "none") ? "none" : "table-row";
-            }
-            else {
-              td.parentElement.style.display = (td.style.display == "none") ? "none" : "table-row";
-            }
           }
         }
       }
@@ -111,21 +92,14 @@
         for (var p in header) {
           var list = content[header[p]];
           var parent = document.getElementById(header[p]);
-          var idx = 0;
           if (header[p].startsWith("level")) {
-            var th = parent.firstElementChild;
             var ll = parseInt(header[p].slice(-1));
-            th.innerHTML += " Zauber der Stufe " + ll + " (" + list.length + " Zauber = " + (list.length * Math.max(ll,1)) + " Seiten, Σ " + sum(ll) + " Seiten)"
+            parent.firstElementChild.innerHTML += " Zauber der Stufe " + ll + " (" + list.length + " Zauber = " + (list.length * Math.max(ll,1)) + " Seiten, Σ " + sum(ll) + " Seiten)"
               + "&nbsp;&nbsp;&nbsp;All  ";
           }
           for (var i in list) {
-            if (idx % 2 == 0) {
-              var tr = document.createElement("tr");
-              parent.parentElement.insertBefore(tr, parent.nextSibling);
-              parent = tr;
-            }
             var obj = list[i];
-            var td = document.createElement("td");
+            var div = document.createElement("div");
             var a = document.createElement("a");
              a.href = "http://prd.5footstep.de/" + obj["l"]
               .replace("/1/", "AusbauregelnMagie/")
@@ -165,14 +139,13 @@
              span5.className = "save";
              var s = obj["s"] ? obj["s"] : "";
              span5.innerHTML = s;
-            td.appendChild(a);
-            td.appendChild(span1);
-            td.appendChild(span2);
-            td.appendChild(span3);
-            td.appendChild(span4);
-            td.appendChild(span5);
-            parent.appendChild(td);
-            idx++;
+            div.appendChild(a);
+            div.appendChild(span1);
+            div.appendChild(span2);
+            div.appendChild(span3);
+            div.appendChild(span4);
+            div.appendChild(span5);
+            parent.appendChild(div);
           }
         }
         for (const i of Object.entries(content).flatMap(k => k[1].flatMap(m => m["t"]))) {
@@ -509,22 +482,19 @@
   </head>
   <body onload="doload()">
     <div class="bg"></div>
-      <div class="fg">
-        <table id="table">
-          <tr id="level0" class="head" onclick="lock(this)"><th colspan="2">4</th></tr>
-          <tr id="level1" class="head" onclick="lock(this)"><th colspan="2">6</th></tr>
-          <tr id="level2" class="head" onclick="lock(this)"><th colspan="2">6</th></tr>
-          <tr id="level3" class="head" onclick="lock(this)"><th colspan="2">6</th></tr>
-          <tr id="level4" class="head" onclick="lock(this)"><th colspan="2">6</th></tr>
-          <tr id="level5" class="head" onclick="lock(this)"><th colspan="2">4</th></tr>
-          <tr id="level6" class="head" onclick="lock(this)"><th colspan="2">4</th></tr>
-          <tr id="level7" class="head" onclick="lock(this)"><th colspan="2">3</th></tr>
+    <div class="fg">
+      <div class="box" id="level0"><div class="head" onclick="lock(this)"></div></div>
+      <div class="box" id="level1"><div class="head" onclick="lock(this)"></div></div>
+      <div class="box" id="level2"><div class="head" onclick="lock(this)"></div></div>
+      <div class="box" id="level3"><div class="head" onclick="lock(this)"></div></div>
+      <div class="box" id="level4"><div class="head" onclick="lock(this)"></div></div>
+      <div class="box" id="level5"><div class="head" onclick="lock(this)"></div></div>
+      <div class="box" id="level6"><div class="head" onclick="lock(this)"></div></div>
+      <div class="box" id="level7"><div class="head" onclick="lock(this)"></div></div>
 <!-- Level 8, Flammende Wolke GRW - Fremdkosten -->
 <!-- Level 9, Meteoritenschwarm GRW - Fremdkosten -->
-          <tr id="special" class="head" onclick="lock(this)"><th colspan="2">Dailies / Fokus&nbsp;&nbsp;&nbsp;All  </th></tr>
-          <tr id="magicItems" class="head" onclick="lock(this)"><th colspan="2">Magische Gegenstände&nbsp;&nbsp;&nbsp;All  </th></tr>
-        </table>
-      </div>
+      <div class="box" id="special"><div class="head" onclick="lock(this)">Dailies / Fokus&nbsp;&nbsp;&nbsp;All  </div></div>
+      <div class="box" id="magicItems"><div class="head" onclick="lock(this)">Magische Gegenstände&nbsp;&nbsp;&nbsp;All  </div></div>
     </div>
   </body>
 </html>
