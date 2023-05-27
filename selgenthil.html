@@ -219,7 +219,7 @@
           { "l": "/1/Z/Erzwungene Stille", "t": "Erzwungene Stille", "d": "rd1*lvl", "r": "m 20+2*lvl", "c": "G", "s": "W/✓" },
           { "l": "/G/Z/Federfall", "t": "Federfall", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "V", "s": "W/✓" },
           { "l": "/G/Z/Furcht auslösen", "t": "Furcht auslösen", "d": "sp", "r": "m 5+lvl/2", "c": "VG", "s": "W/✓" },
-// G Geheimtüren entdecken
+          { "l": "/G/Z/GeheimtuerenEntdecken", "t": "Geheimtüren entdecken", "d": "m 1*lvl", "r": "m 18", "c": "VG", "s": "-/-" },
           { "l": "/E/Z/Hauch der See", "t": "Hauch der See", "d": "m 1*lvl", "r": "B", "c": "VGM", "s": "Z/✓" },
           { "l": "/G/Z/Hypnose", "t": "Hypnose", "d": "sp", "r": "m 5+lvl/2", "c": "VG", "s": "W/✓" },
           { "l": "/G/Z/Identifizieren", "t": "Identifizieren", "d": "rd3*lvl", "r": "m 12", "c": "VGM", "s": "-/-" },
@@ -335,7 +335,7 @@
           { "l": "/1/Z/Vernarrtheit", "t": "Vernarrtheit", "d": "d 1*lvl", "r": "m 5+lvl/2", "c": "VG", "s": "W/✓" },
           { "l": "/E/Z/Vielseitige Waffe", "t": "Vielseitige Waffe", "d": "m 1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "W/✓" },
           { "l": "/G/Z/Wasser atmen", "t": "Wasser atmen", "d": "h 2*lvl", "r": "B", "c": "VGM", "s": "W/✓" },
-// G Windwall
+          { "l": "/G/Z/Windwall", "t": "Windwall", "d": "rd1*lvl", "r": "m 20+2*lvl", "c": "VGMGF", "s": "-/✓" },
           { "l": "/G/Z/Winzige Huette", "t": "Winzige Hütte", "d": "h 2*lvl", "r": "m 4", "c": "VGM", "s": "-/-" },
           { "l": "/G/Z/Wut", "t": "Wut", "d": "sp", "r": "m 20+2*lvl", "c": "VG", "s": "-/✓" },
           { "l": "/G/Z/Zungen", "t": "Zungen", "d": "m 10*lvl", "r": "B", "c": "VM", "s": "W/✓" }
@@ -396,7 +396,7 @@
           { "l": "/E/Z/HungrigeGrube", "t": "Hungrige Grube (10 F)", "d": "rd1+1*lvl", "r": "m 20+2*lvl", "c": "VGF", "s": "R/-" },
           { "l": "/G/Z/Kaeltekegel", "t": "Kältekegel", "d": "-", "r": "m 12", "c": "VGM", "s": "R/✓" },
           { "l": "/2/Z/Klingenkranz", "t": "Klingenkranz (2008 F)", "d": "rd1*lvl", "r": "P", "c": "VGF", "s": "R/✓" },
-// 8 Mächtiges Friedenssiegel
+          { "l": "/8/Z/FriedenssiegelMaechtiges", "t": "Mächtiges Friedenssiegel", "d": "rd1*lvl", "r": "m 20+2*lvl", "c": "G", "s": "W/✓" },
           { "l": "/G/Z/Monsterfesthalten", "t": "Monster festhalten", "d": "rd1*lvl", "r": "m 20+2*lvl", "c": "VGM", "s": "W/✓" },
           { "l": "/G/Z/MonsterherbeizaubernV", "t": "Monster herbeizaubern V", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGF", "s": "-/-" },
           { "l": "/7/Z/Pergamentschwarm", "t": "Pergamentschwarm", "d": "-", "r": "m 5+lvl/2", "c": "GM", "s": "R/✓" },
@@ -442,8 +442,8 @@
           { "l": "/G/Z/Todeskreis", "t": "Todeskreis (500)", "d": "-", "r": "m 20+2*lvl", "c": "VGM", "s": "Z/✓" },
           { "l": "/8/Z/TückischesTeleportieren", "t": "Tückisches Teleportieren", "d": "-", "r": "B", "c": "V", "s": "W/✓" },
           { "l": "/G/Z/Umwandlung", "t": "Umwandlung (...)", "d": "rd1*lvl", "r": "P", "c": "VGM", "s": "-/-" },
-          { "l": "/E/Z/UnwilligerSchild", "t": "Unwilliger Schild (250)", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "W/✓" }
-// G Wahrer Blick
+          { "l": "/E/Z/UnwilligerSchild", "t": "Unwilliger Schild (250)", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "W/✓" },
+          { "l": "/G/Z/WahrerBlick", "t": "Wahrer Blick (250)", "d": "m 1*lvl", "r": "B", "c": "VGM", "s": "W/✓" }
         ],
         "level7" : [
           { "l": "/E/Z/Angriffzurückwerfen", "t": "Angriff zurückwerfen", "d": "rd1*lvl", "r": "P", "c": "VGM", "s": "-/-" },
@@ -476,6 +476,27 @@
           { "l": "/G/Z/Verbannung", "t": "Verbannung", "d": "-", "r": "m 5+lvl/2", "c": "VG", "s": "W/✓" },
           { "l": "/G/Z/Wetterkontrolle", "t": "Wetterkontrolle", "d": "sp", "r": "km2", "c": "VG", "s": "-/-" },
           { "l": "/G/Z/Zauberzurückwerfen", "t": "Zauber zurückwerfen", "d": "m 10*lvl", "r": "P", "c": "VGM", "s": "-/-" }
+        ],
+        "level8" : [
+//   G http://prd.5footstep.de/Grundregelwerk/Zauber/Aufforderung
+//   G http://prd.5footstep.de/Grundregelwerk/Zauber/Aufspueren
+//   G http://prd.5footstep.de/Grundregelwerk/Zauber/Beliebigesverwandeln
+//   E http://prd.5footstep.de/Expertenregeln/Zauber/Blitzgewitter
+//   G http://prd.5footstep.de/Grundregelwerk/Zauber/Dimensionsschloss
+//   G http://prd.5footstep.de/Grundregelwerk/Zauber/FlammendeWolke- Fremdkosten
+            { "l": "/E/Z/FroehlicheGelassenheit", "t": "Fröhliche Gelassenheit", "d": "rd1*lvl", "r": "B", "c": "VGMGF", "s": "sp/✓" },
+// x G http://prd.5footstep.de/Grundregelwerk/Zauber/Gedankenleere
+//   1 http://prd.5footstep.de/AusbauregelnMagie/Zauber/Halbebeneerschaffen
+//   G http://prd.5footstep.de/Grundregelwerk/Zauber/Klon
+// x 1 http://prd.5footstep.de/AusbauregelnMagie/Zauber/KugelderLeere
+// x E http://prd.5footstep.de/Expertenregeln/Zauber/Lavawand
+            { "l": "/G/Z/MomentderEingebung", "t": "Moment der Eingebung", "d": "h 1*lvl", "r": "P", "c": "VG", "s": "-/-" }
+//   E http://prd.5footstep.de/Expertenregeln/Zauber/MantelderSee
+//   G http://prd.5footstep.de/Grundregelwerk/Zauber/MonsterherbeizaubernVIII
+//   G http://prd.5footstep.de/Grundregelwerk/Zauber/MaechtigeAusspaehendeAugen
+// x G http://prd.5footstep.de/Grundregelwerk/Zauber/SchutzvorZaubern
+// x G http://prd.5footstep.de/Grundregelwerk/Zauber/Sonnenfeuer
+// x G http://prd.5footstep.de/Grundregelwerk/Zauber/Telekinesesphaere
         ]
       };
     </script>
@@ -488,10 +509,10 @@
       <div class="box" id="level2"><div class="head" onclick="lock(this)">6</div></div>
       <div class="box" id="level3"><div class="head" onclick="lock(this)">6</div></div>
       <div class="box" id="level4"><div class="head" onclick="lock(this)">6</div></div>
-      <div class="box" id="level5"><div class="head" onclick="lock(this)">4</div></div>
+      <div class="box" id="level5"><div class="head" onclick="lock(this)">5</div></div>
       <div class="box" id="level6"><div class="head" onclick="lock(this)">4</div></div>
       <div class="box" id="level7"><div class="head" onclick="lock(this)">3</div></div>
-<!-- Level 8, Flammende Wolke GRW - Fremdkosten -->
+      <div class="box" id="level8"><div class="head" onclick="lock(this)">2</div></div>
 <!-- Level 9, Meteoritenschwarm GRW - Fremdkosten -->
       <div class="box" id="special"><div class="head" onclick="lock(this)">Dailies / Fokus&nbsp;&nbsp;&nbsp;All  </div></div>
       <div class="box" id="magicItems"><div class="head" onclick="lock(this)">Magische Gegenstände&nbsp;&nbsp;&nbsp;All  </div></div>
