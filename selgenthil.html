@@ -211,7 +211,7 @@
         "level1" : [
           { "l": "/6/Z/Affenfisch", "t": "Affenfisch", "d": "m 1*lvl", "r": "B", "c": "VG", "s": "-/-" },
           { "l": "/G/Z/Alarm", "t": "Alarm", "d": "h 2*lvl", "r": "m 5+lvl/2", "c": "VGF", "s": "-/-" },
-// G Austilgen
+          { "l": "/G/Z/Austilgen", "t": "Austilgen", "d": "-", "r": "m 5+lvl/2", "c": "VG", "s": "sp/-" },
           { "l": "/2/Z/Befreiender Befehl", "t": "Befreiender Befehl", "d": "-", "r": "m 5+lvl/2", "c": "V", "s": "W/✓" },
           { "l": "/G/Z/Brennende Hände", "t": "Brennende Hände", "d": "-", "r": "m 3", "c": "VG", "s": "R/✓" },
           { "l": "/2/Z/Dringlicher Schritt", "t": "Dringlicher Schritt", "d": "rd1*lvl", "r": "P", "c": "VGM", "s": "-/-" },
@@ -292,8 +292,8 @@
           { "l": "/G/Z/Verschwimmen", "t": "Verschwimmen", "d": "m 1*lvl", "r": "B", "c": "V", "s": "W/✓" },
           { "l": "/G/Z/WeisheitderEule", "t": "Weisheit der Eule", "d": "m 1*lvl", "r": "B", "c": "VGM", "s": "W/✓" },
           { "l": "/1/Z/Wildheit des Dachses", "t": "Wildheit des Dachses", "d": "c", "r": "m 5+lvl/2", "c": "VG", "s": "W/✓" },
-          { "l": "/G/Z/Windgefluester", "t": "Windgeflüster", "d": "h 1*lvl", "r": "km1*lvl", "c": "VG", "s": "-/-" }
-// G Zerbersten
+          { "l": "/G/Z/Windgefluester", "t": "Windgeflüster", "d": "h 1*lvl", "r": "km1*lvl", "c": "VG", "s": "-/-" },
+          { "l": "/G/Z/Zerbersten", "t": "Zerbersten", "d": "-", "r": "m 5+lvl/2", "c": "VGMGF", "s": "WZ/✓" }
         ],
         "level3" : [
           { "l": "/7/Z/AnsteckenderEifer", "t": "Ansteckender Eifer", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VG", "s": "W/✓" },
@@ -305,7 +305,7 @@
           { "l": "/G/Z/Feuerball", "t": "Feuerball", "d": "-", "r": "m 80+8*lvl", "c": "VGM", "s": "R/✓" },
           { "l": "/G/Z/Flammenpfeil", "t": "Flammenpfeil", "d": "m 10*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "-/-" },
           { "l": "/G/Z/Fliegen", "t": "Fliegen", "d": "m 1*lvl", "r": "B", "c": "VGF", "s": "W/✓" },
-// 1 Froschschwarm herbeizaubern
+          { "l": "/1/Z/Froschschwarmherbeizaubern", "t": "Froschschwarm herbeizaubern", "d": "sp", "r": "m 5+lvl/2", "c": "VGMGF", "s": "-/-" },
           { "l": "/G/Z/GasfoermigeGestalt", "t": "Gasförmige Gestalt", "d": "m 2*lvl", "r": "B", "c": "GM", "s": "-/-" },
           { "l": "/G/Z/Hast", "t": "Hast", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "Z/✓" },
           { "l": "/G/Z/Heldenmut", "t": "Heldenmut", "d": "m 10*lvl", "r": "B", "c": "VG", "s": "W/✓" },
@@ -331,15 +331,15 @@
           { "l": "/G/Z/Tiefschlaf", "t": "Tiefschlaf", "d": "m 1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "W/✓" },
           { "l": "/G/Z/Vampirgriff", "t": "Vampirgriff", "d": "sp", "r": "B", "c": "VG", "s": "-/✓" },
           { "l": "/G/Z/VerborgeneSeite", "t": "Verborgene Seite", "d": "P", "r": "B", "c": "VGM", "s": "-/-" },
-// G Verlangsamen
+          { "l": "/G/Z/Verlangsamen", "t": "Verlangsamen", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "W/✓" },
           { "l": "/1/Z/Vernarrtheit", "t": "Vernarrtheit", "d": "d 1*lvl", "r": "m 5+lvl/2", "c": "VG", "s": "W/✓" },
           { "l": "/E/Z/Vielseitige Waffe", "t": "Vielseitige Waffe", "d": "m 1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "W/✓" },
           { "l": "/G/Z/Wasser atmen", "t": "Wasser atmen", "d": "h 2*lvl", "r": "B", "c": "VGM", "s": "W/✓" },
           { "l": "/G/Z/Windwall", "t": "Windwall", "d": "rd1*lvl", "r": "m 20+2*lvl", "c": "VGMGF", "s": "-/✓" },
           { "l": "/G/Z/Winzige Huette", "t": "Winzige Hütte", "d": "h 2*lvl", "r": "m 4", "c": "VGM", "s": "-/-" },
           { "l": "/G/Z/Wut", "t": "Wut", "d": "sp", "r": "m 20+2*lvl", "c": "VG", "s": "-/✓" },
-          { "l": "/G/Z/Zungen", "t": "Zungen", "d": "m 10*lvl", "r": "B", "c": "VM", "s": "W/✓" }
-// E Zwielichtsklinge
+          { "l": "/G/Z/Zungen", "t": "Zungen", "d": "m 10*lvl", "r": "B", "c": "VM", "s": "W/✓" },
+          { "l": "/E/Z/Zwielichtsklinge", "t": "Zwielichtsklinge", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGF", "s": "-/✓" }
         ],
         "level4" : [
           { "l": "/G/Z/ArkanesAuge", "t": "Arkanes Auge", "d": "m 1*lvl", "r": "∞", "c": "VGM", "s": "-/-" },
