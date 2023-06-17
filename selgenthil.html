@@ -160,8 +160,7 @@
           }
         }
       }
-      var lastId = 281;
-      var lvl = 14;
+      var lvl = 15;
       var dr = 0;
       var content = {
         "magicItems" : [
@@ -175,7 +174,7 @@
           { "l": "/G/Z/Geheimtuerenentdecken", "t": "Zauberstab: Geheimtüren entdecken" },
           { "l": "/G/M/MetamagischesZepterZauberausdehnen", "t": "Zauberzepter(3): Ausdehnen" },
           { "l": "/G/M/MetamagischesZepterZaubereffektmaximieren", "t": "Zauberzepter(6): Maximum" },
-          { "l": "/G/M/MagischeGegenstaende/MetamagischesZepterschnellzaubern", "t": "Zauberzepter(3): Schnell" },
+          { "l": "/G/M/MetamagischesZepterschnellzaubern", "t": "Zauberzepter(3): Schnell" },
           { "l": "/G/Z/Identifizieren", "t": "Anhänger: Identifizieren" },
           { "l": "/G/MagischeGegenstaende/SchwacherZauberspeicherring", "t": "Zauberspeicherring(3)" },
           { "l": "/G/MagischeGegenstaende/PerlederMacht", "t": "Perle der Macht(5)" }
@@ -258,7 +257,7 @@
           { "l": "/G/Z/Bärenstärke", "t": "Bärenstärke", "d": "m 1*lvl", "r": "B", "c": "VGM", "s": "W/✓" },
           { "l": "/G/Z/Dunkelsicht", "t": "Dunkelsicht", "d": "h 1*lvl", "r": "B", "c": "VGM", "s": "W/✓" },
           { "l": "/G/Z/FalschesLeben", "t": "Falsches Leben", "d": "h 1*lvl", "r": "P", "c": "VGM", "s": "-/-" },
-// G Feuerwerk
+          { "l": "/G/Z/Feuerwerk", "t": "Feuerwerk", "d": "sp", "r": "m 80+8*lvl", "c": "", "s": "sp/sp" },
           { "l": "/G/Z/Flammenkugel", "t": "Flammenkugel", "d": "rd1*lvl", "r": "m 20+2*lvl", "c": "VGM", "s": "R/✓" },
           { "l": "/G/Z/FuerchterlicherLachanfall", "t": "Fürchterlicher Lachanfall", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "W/✓" },
           { "l": "/G/Z/Gedankenwahrnehmen", "t": "Gedanken wahrnehmen", "d": "mc1*lvl", "r": "m 12", "c": "VGF", "s": "W/✓" },
@@ -472,31 +471,31 @@
           { "l": "/G/Z/Simulakrum", "t": "Simulakrum (500/TW)", "d": "-", "r": "0", "c": "VGM", "s": "-/-" },
           { "l": "/G/Z/SpätzündenderFeuerball", "t": "Spätzündender Feuerball", "d": "rd5", "r": "m 80+8*lvl", "c": "VGM", "s": "R/✓" },
           { "l": "/6/Z/StehendeDimensionstuer", "t": "Stehende Dimensionstür", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "W/✓" },
-// E Teleportationfalle
+          { "l": "/A/Z/Teleportationsfalle // E Teleportationfalle
           { "l": "/G/Z/Verbannung", "t": "Verbannung", "d": "-", "r": "m 5+lvl/2", "c": "VG", "s": "W/✓" },
           { "l": "/G/Z/Wetterkontrolle", "t": "Wetterkontrolle", "d": "sp", "r": "km2", "c": "VG", "s": "-/-" },
           { "l": "/G/Z/Zauberzurückwerfen", "t": "Zauber zurückwerfen", "d": "m 10*lvl", "r": "P", "c": "VGM", "s": "-/-" }
         ],
         "level8" : [
-//   G http://prd.5footstep.de/Grundregelwerk/Zauber/Aufforderung
-//   G http://prd.5footstep.de/Grundregelwerk/Zauber/Aufspueren
-//   G http://prd.5footstep.de/Grundregelwerk/Zauber/Beliebigesverwandeln
-//   E http://prd.5footstep.de/Expertenregeln/Zauber/Blitzgewitter
-//   G http://prd.5footstep.de/Grundregelwerk/Zauber/Dimensionsschloss
-//   G http://prd.5footstep.de/Grundregelwerk/Zauber/FlammendeWolke- Fremdkosten
-            { "l": "/E/Z/FroehlicheGelassenheit", "t": "Fröhliche Gelassenheit", "d": "rd1*lvl", "r": "B", "c": "VGMGF", "s": "sp/✓" },
-// x G http://prd.5footstep.de/Grundregelwerk/Zauber/Gedankenleere
-//   1 http://prd.5footstep.de/AusbauregelnMagie/Zauber/Halbebeneerschaffen
-//   G http://prd.5footstep.de/Grundregelwerk/Zauber/Klon
-// x 1 http://prd.5footstep.de/AusbauregelnMagie/Zauber/KugelderLeere
-// x E http://prd.5footstep.de/Expertenregeln/Zauber/Lavawand
-            { "l": "/G/Z/MomentderEingebung", "t": "Moment der Eingebung", "d": "h 1*lvl", "r": "P", "c": "VG", "s": "-/-" }
-//   E http://prd.5footstep.de/Expertenregeln/Zauber/MantelderSee
-//   G http://prd.5footstep.de/Grundregelwerk/Zauber/MonsterherbeizaubernVIII
-//   G http://prd.5footstep.de/Grundregelwerk/Zauber/MaechtigeAusspaehendeAugen
-// x G http://prd.5footstep.de/Grundregelwerk/Zauber/SchutzvorZaubern
-// x G http://prd.5footstep.de/Grundregelwerk/Zauber/Sonnenfeuer
-// x G http://prd.5footstep.de/Grundregelwerk/Zauber/Telekinesesphaere
+          { "l": "/G/Z/Aufforderung", "t": "Aufforderung", "d": "rd1", "r": "sp", "c": "VGMGF", "s": "W/✓" },
+          { "l": "/G/Z/Aufspueren", "t": "Aufspüren", "d": "-", "r": "∞", "c": "VGGF", "s": "-/-" },
+          { "l": "/G/Z/Beliebigesverwandeln", "t": "Beliebiges Verwandeln", "d": "sp", "r": "5+lvl/2", "c": "VGMGF", "s": "Z/✓" },
+          { "l": "/E/Z/Blitzgewitter", "t": "Blitzgewitter", "d": "-", "r": "P", "c": "VGMGF", "s": "Z/✓" },
+          { "l": "/G/Z/Dimensionsschloss", "t": "Dimensionsschloss", "d": "d 1*lvl", "r": "20+2*lvl", "c": "VG", "s": "-/✓" },
+          { "l": "/G/Z/FlammendeWolke", "t": "Flammende Wolke", "d": "", "r": "", "c": "", "s": "" },
+          { "l": "/E/Z/FroehlicheGelassenheit", "t": "Fröhliche Gelassenheit", "d": "rd1*lvl", "r": "B", "c": "VGMGF", "s": "sp/✓" },
+          { "l": "/G/Z/Gedankenleere", "t": "Gedankenleere", "d": "h 24", "r": "5+lvl/2", "c": "VG", "s": "W/✓" },
+          { "l": "/1/Z/Halbebeneerschaffen", "t": "Halbebene erschaffen (500F)", "d": "d 1*lvl", "r": "m 0", "c": "VGF", "s": "-/-" },
+          { "l": "/G/Z/Klon", "t": "Klon (1000,500F)", "d": "-", "r": "B", "c": "VGMF", "s": "-/-" },
+          { "l": "/1/Z/KugelderLeere", "t": "Kugel der Leere (50)", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "Z/✓" },
+          { "l": "/E/Z/Lavawand", "t": "Lavawand", "d": "rd1*lvl", "r": "20+2*lvl", "c": "VGMGF", "s": "sp/-" },
+          { "l": "/G/Z/MomentderEingebung", "t": "Moment der Eingebung", "d": "h 1*lvl", "r": "P", "c": "VG", "s": "-/-" },
+          { "l": "/E/Z/MantelderSee", "t": "Mantel der See", "d": "m 1*lvl", "r": "P", "c": "VGM", "s": "sp/-" },
+          { "l": "/G/Z/MonsterherbeizaubernVIII", "t": "Monster herbeizaubern VIII", "d": "rd1*lvl", "r": "5+lvl/2", "c": "VGF", "s": "-/-" },
+          { "l": "/G/Z/MaechtigeAusspaehendeAugen", "t": "Mächtige auspähende Augen", "d": "h 1*lvl", "r": "m 1500", "c": "VGM", "s": "-/-" },
+          { "l": "/G/Z/SchutzvorZaubern", "t": "Schutz vor Zaubern (500, spF)", "d": "m 10*lvl", "r": "B", "c": "VGMF", "s": "W/✓" },
+          { "l": "/G/Z/Sonnenfeuer", "t": "Sonnenfeuer", "d": "-", "r": "80+8*lvl", "c": "VGMGF", "s": "R/✓" },
+          { "l": "/G/Z/Telekinesesphaere", "t": "Telekinesesphäre", "d": "m 1*lvl", "r": "5+lvl/2", "c": "VGM", "s": "R/✓" }
         ]
       };
     </script>
