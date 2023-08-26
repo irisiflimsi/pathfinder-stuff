@@ -7,5 +7,6 @@ to publish Pathfinder-related stuff.  It serves personal needs.
 Github Page:
  * https://irisiflimsi.github.io/pathfinder-stuff/selgenthil.html
 
-dragon_sw.jpg:
+*.jpg:
  * https://pixabay.com/photos/dragon-golden-dragon-statue-238931/
+ * https://pixabay.com/de/illustrations/ai-generiert-krieger-dorf-rpg-7975511/
