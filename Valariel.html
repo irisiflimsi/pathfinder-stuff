@@ -17,7 +17,7 @@
       table {
         margin: auto; text-align: center; margin-top: 20px;
       }
-      .inner tr:nth-child(4n) {
+      .inner tr:nth-child(3n+1) {
         background-color: #ccc;
       }
       th, td {
@@ -35,7 +35,7 @@
     </style>
     <script>
       var attrs = {
-	  "MU": 14,
+          "MU": 14,
           "KL": 11,
           "IN": 13,
           "CH": 11,
@@ -77,15 +77,20 @@
           { "n": "Willenskraft", "fw": 2 }
       ];
       var kampf = [
-          { "n": "Bögen", "w": 12 },
-          { "n": "Schwerter", "w": 10 },
+          { "n": "Bögen", "fw": 12 },
+          { "n": "Schwerter", "fw": 10 },
       ];
       var zauber = [
-          { "n": "Adlerauge", "w": 4 },
+          { "n": "Adlerauge", "fw": 4 },
+	  { "n": "Armatrutz", "fw": 8 },
+	  { "n": "Balsam Salabunde", "fw": 8 },
+	  { "n": "Flim Flam", "fw": 5 },
+	  { "n": "Visibili", "fw": 3 },
+	  { "n": "Wasseratem", "fw": 4 },
       ];
       function doload() {
           var parent = document.getElementById("attrs");
-	  var keys = Object.keys(attrs);
+          var keys = Object.keys(attrs);
           for (var i in keys) {
               var tr = document.createElement("tr");
               var td0 = document.createElement("td");
@@ -134,20 +139,42 @@
               var skn = kampfattrs[i]["a"].split("/");
               var lw = (skn.length > 1) ? Math.max(parseInt(attrs[skn[0]]), parseInt(attrs[skn[1]])) : parseInt(attrs[skn[0]]);
               var td1 = document.createElement("td");
-              td1.innerHTML = kampf[i]["w"];
+              td1.innerHTML = kampf[i]["fw"];
               tr.append(td1);
               var td2 = document.createElement("td");
-	      td2.innerHTML = kampf[i]["w"] + (attrs["MU"] > 10 ? Math.floor((attrs["MU"] - 8) / 3) : 0);
+              td2.innerHTML = kampf[i]["fw"] + (attrs["MU"] > 10 ? Math.floor((attrs["MU"] - 8) / 3) : 0);
               tr.append(td2);
               var td3 = document.createElement("td");
-	      td3.innerHTML = skn[0] === "FF" ? "-" : Math.round(kampf[i]["w"] / 2) + (lw > 10 ? Math.floor((lw - 8) / 3) : 0);
+              td3.innerHTML = skn[0] === "FF" ? "-" : Math.round(kampf[i]["fw"] / 2) + (lw > 10 ? Math.floor((lw - 8) / 3) : 0);
               tr.append(td3);
               var td4 = document.createElement("td");
               td4.innerHTML = "-";
               tr.append(td4);
               var td5 = document.createElement("td");
-              td5.innerHTML = kampfattrs[i]["stf"] * (kampf[i]["w"] < 11 ? 1 : (kampf[i]["w"] - 10));
+              td5.innerHTML = kampfattrs[i]["stf"] * (kampf[i]["fw"] < 11 ? 1 : (kampf[i]["fw"] - 10));
               tr.append(td5);
+              parent.append(tr);
+          }
+          var parent = document.getElementById("zauber");
+          for (var i in zauber) {
+              var tr = document.createElement("tr");
+              var td0 = document.createElement("td");
+              td0.innerHTML = zauber[i]["n"];
+              td0.className = "c";
+              tr.append(td0);
+              var td1 = document.createElement("td");
+              skn = zauberattrs[i]["a"].split("/");
+              td1.innerHTML = attrs[skn[0]] + "/" + attrs[skn[1]] + "/" + attrs[skn[2]];
+              tr.append(td1);
+              var td2 = document.createElement("td");
+              td2.innerHTML = zauber[i]["fw"];
+              tr.append(td2);
+              var td3 = document.createElement("td");
+              td3.innerHTML = "-";
+              tr.append(td3);
+              var td4 = document.createElement("td");
+              td4.innerHTML = zauberattrs[i]["stf"] * (zauber[i]["fw"] < 11 ? 1 : (zauber[i]["fw"] - 10));
+              tr.append(td4);
               parent.append(tr);
           }
       }
@@ -158,26 +185,29 @@
           inner += (n == 0 || n == 3 ? d20() : w[2]);
           document.getElementById("roll").innerHTML = inner;
           var fr = parseInt(inner.split("/")[0]);
+          var a = document.getElementById("ausw");
+          var v = parseInt(a.previousElementSibling.innerHTML);
+          a.innerHTML = (fr > v ? "+" : "") + (fr - v)
           for (i = 1; i < document.getElementById("skills").children.length; i++) {
               recalcF(inner, document.getElementById("skills").children[i].children);
           }
           for (i = 1; i < document.getElementById("attrs").children.length; i++) {
-	      recalcA(fr, document.getElementById("attrs").children[i].children);
-	      var a = document.getElementById("ausw");
-	      var v = parseInt(a.previousElementSibling.innerHTML);
-	      a.innerHTML = (fr > v ? "+" : "") + (fr - v)
-	  }
+              recalcA(fr, document.getElementById("attrs").children[i].children);
+          }
           for (i = 1; i < document.getElementById("kampf").children.length; i++) {
-	      recalcK(fr, document.getElementById("kampf").children[i].children);
+              recalcK(fr, document.getElementById("kampf").children[i].children);
+          }
+          for (i = 1; i < document.getElementById("zauber").children.length; i++) {
+              recalcF(inner, document.getElementById("zauber").children[i].children);
           }
       }
       function recalcK(r, e) {
-	  e[4].innerHTML = (r > parseInt(e[2].innerHTML) ? "+" : "") + (r - parseInt(e[2].innerHTML)) + "/";
-	  var p = (r > parseInt(e[3].innerHTML) ? "+" : "") + (r - parseInt(e[3].innerHTML));
-	  e[4].innerHTML += isNaN(p) ? "-" : p;
+          e[4].innerHTML = (r > parseInt(e[2].innerHTML) ? "+" : "") + (r - parseInt(e[2].innerHTML)) + "/";
+          var p = (r > parseInt(e[3].innerHTML) ? "+" : "") + (r - parseInt(e[3].innerHTML));
+          e[4].innerHTML += isNaN(p) ? "-" : p;
       }
       function recalcA(r, e) {
-	  var v = parseInt(e[1].innerHTML);
+          var v = parseInt(e[1].innerHTML);
           e[2].innerHTML = (r > v ? "+" : "") + (r - v);
       }
       function recalcF(r, e) {
@@ -192,11 +222,11 @@
           while (fw > 0) {
               fw--;
               if (d[0] == Math.min(d[0], d[1], d[2]))
-	          d[0]++;
+                  d[0]++;
               else if (d[1] == Math.min(d[0], d[1], d[2]))
-        	  d[1]++;
+                  d[1]++;
               else
-	          d[2]++;
+                  d[2]++;
           }
           var dmin = -Math.min(d[0], d[1], d[2]);
           e[3].innerHTML = dmin > 0 ? "+" + dmin : dmin;
@@ -237,11 +267,16 @@
           { "n": "Willenskraft", "a": "MU/IN/CH", "stf": 4 }
       ];
       var kampfattrs = [
-          { "n": "Bögen", "a": "FF", "stf": 3 },	  
+          { "n": "Bögen", "a": "FF", "stf": 3 },
           { "n": "Schwerter", "a": "GE/KK", "stf": 3 },
       ];
       var zauberattrs = [
           { "n": "Adlerauge", "a": "KL/IN/FF", "stf": 2 },
+	  { "n": "Armatrutz", "a": "KL/IN/FF", "stf": 3 },
+	  { "n": "Balsam Salabunde", "a": "KL/IN/FF", "stf": 2 },
+	  { "n": "Flim Flam", "a": "MU/KL/CH", "stf": 1 },
+	  { "n": "Visibili", "a": "KL/IN/KO", "stf": 2 },
+	  { "n": "Wasseratem", "a": "KL/IN/KO", "stf": 2 },
       ];
     </script>
   </head>
@@ -293,9 +328,9 @@
         </tr>
         <tr>
           <td style="border:0">
-            <table class="inner" style="width:100%" id="kampf">
+            <table class="inner" style="width:100%" id="zauber">
               <tr>
-                <th class="c">Fertigkeit</th><th>Attribute</th><th>FW</th><th><th>Erfolg mit</th><th>Steigern</th>
+                <th class="c">Zauber</th><th>Attribute</th><th>FW</th><th>Erfolg mit</th><th>Steigern</th>
               </tr>
             </table>
           </td>
