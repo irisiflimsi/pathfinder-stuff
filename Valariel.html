@@ -1,204 +1,277 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <title>Valariel</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <style>
       body {
-	  margin: 10px 0;
-	  line-height: 1.5;
-	  font-size: 18px;
+        margin: 10px 0; font-size: 18px;
       }
       div.bg {
-          position: fixed;
-	  width: 100%;
-	  height: 100%;
-	  background: url("bgd.jpg") no-repeat;
-	  background-size: cover;
-	  z-index: -1;
+        position: fixed; width: 100%; height: 100%; background: url("bgd.jpg") no-repeat; background-size: cover; z-index: -1;
       }
       div.fg {
-          width: 90%; margin: auto;
+        width: 90%; margin: auto;
       }
       table {
-          margin: auto;
-          text-align: center;
-	  margin-top: 20px;
+        margin: auto; text-align: center; margin-top: 20px;
       }
       tr:nth-child(3n) {
-	  background-color: #ccc;
+        background-color: #ccc;
       }
       th, td {
-	  vertical-align: top;
-	  padding: 3px 6px;
-	  border: 2px solid black;
+        vertical-align: top; padding: 3px 6px; border: 2px solid black;
       }
       .b {
-	  background-color: #aaa;
+        background-color: #aaa;
       }
       .b:hover {
-	  background-color: #ccc;
+        background-color: #ccc;
       }
-      
       .c {
-	  text-align: left;
+        text-align: left;
       }
     </style>
     <script>
       var attrs = {
-	  "MU": 14, "KL": 11, "IN": 13, "CH": 11, "FF": 10, "GE": 13, "KO": 14, "KK": 14
+	  "MU": 14,
+          "KL": 11,
+          "IN": 13,
+          "CH": 11,
+          "FF": 10,
+          "GE": 13,
+          "KO": 14,
+          "KK": 14
       };
       var skills = [
-	  { "n": "Klettern", "fw": 6 },
-	  { "n": "Körperbeherrschung", "fw": 6 },
-	  { "n": "Kraftakt", "fw": 0 },
-	  { "n": "Schwimmen", "fw": 8 },
-	  { "n": "Selbstbeherrschung", "fw": 2 },
-	  { "n": "Sinnesschärfe", "fw": 8 },
-	  { "n": "Verbergen", "fw": 8 },
-	  { "n": "Betören", "fw": 3 },
-	  { "n": "Einschüchtern", "fw": 0 },
-	  { "n": "Gassenwissen", "fw": 0 },
-	  { "n": "Menschenkenntnis", "fw": 0 },
-	  { "n": "Überreden", "fw": 0 },
-	  { "n": "Verkleiden", "fw": 0 },
-	  { "n": "Willenskraft", "fw": 2 },
-	  { "n": "Fährtensuche", "fw": 8 },
-	  { "n": "Orientierung", "fw": 7 },
-	  { "n": "Pflanzenkunde", "fw": 6 },
-	  { "n": "Tierkunde", "fw": 6 },
-	  { "n": "Wildnisleben", "fw": 7 },
-	  { "n": "Geographie", "fw": 2 },
-	  { "n": "Geschichtswissen", "fw": 0 },
-	  { "n": "Götter & Kulte", "fw": 0 },
-	  { "n": "Kriegskunst", "fw": 0 },
-	  { "n": "Magiekunde", "fw": 4 },
-	  { "n": "Sagen & Legenden", "fw": 3 },
-	  { "n": "Alchimie", "fw": 0 },
-	  { "n": "Handel", "fw": 0 },
-	  { "n": "Heilkunde Gift", "fw": 2 },
-	  { "n": "Heilkunde Wunden", "fw": 4 },
-	  { "n": "Schlösserknacken", "fw": 0 }
+          { "n": "Alchimie", "fw": 0 },
+          { "n": "BetÃ¶ren", "fw": 3 },
+          { "n": "EinschÃ¼chtern", "fw": 0 },
+          { "n": "FÃ¤hrtensuche", "fw": 8 },
+          { "n": "Gassenwissen", "fw": 0 },
+          { "n": "Geographie", "fw": 2 },
+          { "n": "Geschichtswissen", "fw": 0 },
+          { "n": "GÃ¶tter & Kulte", "fw": 0 },
+          { "n": "Handel", "fw": 0 },
+          { "n": "Heilkunde Gift", "fw": 2 },
+          { "n": "Heilkunde Wunden", "fw": 4 },
+          { "n": "Klettern", "fw": 6 },
+          { "n": "KÃ¶rperbeherrschung", "fw": 6 },
+          { "n": "Kraftakt", "fw": 0 },
+          { "n": "Kriegskunst", "fw": 0 },
+          { "n": "Magiekunde", "fw": 4 },
+          { "n": "Menschenkenntnis", "fw": 0 },
+          { "n": "Orientierung", "fw": 7 },
+          { "n": "Pflanzenkunde", "fw": 6 },
+          { "n": "Sagen & Legenden", "fw": 3 },
+          { "n": "SchlÃ¶sserknacken", "fw": 0 },
+          { "n": "Schwimmen", "fw": 8 },
+          { "n": "Selbstbeherrschung", "fw": 2 },
+          { "n": "SinnesschÃ¤rfe", "fw": 8 },
+          { "n": "Tierkunde", "fw": 6 },
+          { "n": "Ãœberreden", "fw": 0 },
+          { "n": "Verbergen", "fw": 8 },
+          { "n": "Verkleiden", "fw": 0 },
+          { "n": "Wildnisleben", "fw": 7 },
+          { "n": "Willenskraft", "fw": 2 }
+      ];
+      var kampf = [
+          { "n": "BÃ¶gen", "w": 12 },
+          { "n": "Schwerter", "w": 10 },
       ];
       function doload() {
+          var parent = document.getElementById("attrs");
 	  var keys = Object.keys(attrs);
-	  for (var i in keys) {
-	      document.getElementById(keys[i]).innerHTML = attrs[keys[i]];
-	  }
-	  var parent = document.getElementById("skills");
-	  for (var i in skills) {
-	      var tr = document.createElement("tr");
-	      var td0 = document.createElement("td");
-	      td0.innerHTML = skills[i]["n"];
-	      td0.className = "c";
-	      tr.append(td0);
-	      var td1 = document.createElement("td");
-	      skn = skillattrs[i]["a"].split("/");
-	      td1.innerHTML = attrs[skn[0]] + "/" + attrs[skn[1]] + "/" + attrs[skn[2]];
-	      tr.append(td1);
-	      var td2 = document.createElement("td");
-	      td2.innerHTML = skills[i]["fw"];
-	      tr.append(td2);
-	      var td3 = document.createElement("td");
-	      td3.innerHTML = "-";
-	      tr.append(td3);
-	      parent.append(tr);
-	  }
+          for (var i in keys) {
+              var tr = document.createElement("tr");
+              var td0 = document.createElement("td");
+              td0.innerHTML = keys[i];
+              tr.append(td0);
+              var td1 = document.createElement("td");
+              td1.innerHTML = attrs[keys[i]];
+              tr.append(td1);
+              var td2 = document.createElement("td");
+              td2.innerHTML = "-";
+              tr.append(td2);
+              var td3 = document.createElement("td");
+              td3.innerHTML = 15 * ((attrs[keys[i]] < 13) ? 1 : (attrs[keys[i]] - 12));
+              tr.append(td3);
+              parent.append(tr);
+          }
+          var parent = document.getElementById("skills");
+          for (var i in skills) {
+              var tr = document.createElement("tr");
+              var td0 = document.createElement("td");
+              td0.innerHTML = skills[i]["n"];
+              td0.className = "c";
+              tr.append(td0);
+              var td1 = document.createElement("td");
+              skn = skillattrs[i]["a"].split("/");
+              td1.innerHTML = attrs[skn[0]] + "/" + attrs[skn[1]] + "/" + attrs[skn[2]];
+              tr.append(td1);
+              var td2 = document.createElement("td");
+              td2.innerHTML = skills[i]["fw"];
+              tr.append(td2);
+              var td3 = document.createElement("td");
+              td3.innerHTML = "-";
+              tr.append(td3);
+              var td4 = document.createElement("td");
+              td4.innerHTML = skillattrs[i]["stf"] * (skills[i]["fw"] < 11 ? 1 : skills[i]["fw"] - 10);
+              tr.append(td4);
+              parent.append(tr);
+          }
+          var parent = document.getElementById("kampf");
+          for (var i in kampf) {
+              var tr = document.createElement("tr");
+              var td0 = document.createElement("td");
+              td0.innerHTML = kampf[i]["n"];
+              td0.className = "c";
+              tr.append(td0);
+              skn = kampfattrs[i]["a"].split("/");
+              var lw = (skn.length > 1) ? Math.max(parseInt(attrs[skn[0]]), parseInt(attrs[skn[1]])) : attrs[skn[0]]
+              var td1 = document.createElement("td");
+              td1.innerHTML = kampf[i]["w"];
+              tr.append(td1);
+              var td2 = document.createElement("td");
+	      td2.innerHTML = "AT";
+              tr.append(td2);
+              var td3 = document.createElement("td");
+	      td3.innerHTML = "PA";
+              tr.append(td3);
+              var td4 = document.createElement("td");
+              td4.innerHTML = "-";
+              tr.append(td4);
+              var td5 = document.createElement("td");
+              td5.innerHTML = kampfattrs[i]["stf"] * (kampf[i]["w"] < 11 ? 1 : kampf[i]["w"] - 10);
+              tr.append(td5);
+              parent.append(tr);
+          }
       }
       function reroll(n) {
-	  var w = document.getElementById("roll").innerHTML.split("/");
-	  var inner = (n == 0 || n == 1 ? d20() : w[0]) + "/";
-	  inner += (n == 0 || n == 2 ? d20() : w[1]) + "/";
-	  inner += (n == 0 || n == 3 ? d20() : w[2]);
-	  document.getElementById("roll").innerHTML = inner;
-	  for (i = 1; i < document.getElementById("skills").children.length; i++) {
-	      recalc(inner, document.getElementById("skills").children[i].children);
-	  }
+          var w = document.getElementById("roll").innerHTML.split("/");
+          var inner = (n == 0 || n == 1 ? d20() : w[0]) + "/";
+          inner += (n == 0 || n == 2 ? d20() : w[1]) + "/";
+          inner += (n == 0 || n == 3 ? d20() : w[2]);
+          document.getElementById("roll").innerHTML = inner;
+          for (i = 1; i < document.getElementById("skills").children.length; i++) {
+              recalcF(inner, document.getElementById("skills").children[i].children);
+          }
+          for (i = 1; i < document.getElementById("attrs").children.length; i++) {
+              recalcA(parseInt(inner.split("/")[0]), document.getElementById("attrs").children[i].children);
+          }
       }
-      function recalc(r, e) {
-	  var w = r.split("/");
-	  var a = e[1].innerHTML.split("/");
-	  for (var i = 0; i < 3; i++) {
-	      w[i] = parseInt(w[i]);
-	      a[i] = parseInt(a[i]);
-	  }
-	  var d = [ a[0] - w[0], a[1] - w[1], a[2] - w[2] ];
-	  fw = parseInt(e[2].innerHTML);
-	  while (fw > 0) {
-	      fw--;
-	      if (d[0] == Math.min(d[0], d[1], d[2]))
-		  d[0]++;
-	      else if (d[1] == Math.min(d[0], d[1], d[2]))
-		  d[1]++;
-	      else
-		  d[2]++;
-	  }
-	  var dmin = -Math.min(d[0], d[1], d[2]);
-	  e[3].innerHTML = dmin > 0 ? "+" + dmin : dmin;
+      function recalcA(r, e) {
+	  var v = parseInt(e[1].innerHTML);
+          e[2].innerHTML = (r > v ? "+" : "") + (r - v);
+      }
+      function recalcF(r, e) {
+          var w = r.split("/");
+          var a = e[1].innerHTML.split("/");
+          for (var i = 0; i < 3; i++) {
+              w[i] = parseInt(w[i]);
+              a[i] = parseInt(a[i]);
+          }
+          var d = [ a[0] - w[0], a[1] - w[1], a[2] - w[2] ];
+          fw = parseInt(e[2].innerHTML);
+          while (fw > 0) {
+              fw--;
+              if (d[0] == Math.min(d[0], d[1], d[2]))
+	          d[0]++;
+              else if (d[1] == Math.min(d[0], d[1], d[2]))
+        	  d[1]++;
+              else
+	          d[2]++;
+          }
+          var dmin = -Math.min(d[0], d[1], d[2]);
+          e[3].innerHTML = dmin > 0 ? "+" + dmin : dmin;
       }
       function d20() {
-	  return (Math.floor(Math.random() * 20) + 1);
+          return (Math.floor(Math.random() * 20) + 1);
       }
       var skillattrs = [
-	  { "n": "Klettern", "a": "MU/GE/KK" },
-	  { "n": "Körperbeherrschung", "a": "GE/GE/KO" },
-	  { "n": "Kraftakt", "a": "KO/KK/KK" },
-	  { "n": "Schwimmen", "a": "GE/KO/KK" },
-	  { "n": "Selbstbeherrschung", "a": "MU/MU/KO" },
-	  { "n": "Sinnesschärfe", "a": "KL/IN/IN" },
-	  { "n": "Verbergen", "a": "MU/IN/GE" },
-	  { "n": "Betören", "a": "MU/CH/CH" },
-	  { "n": "Einschüchtern", "a": "MU/IN/CH" },
-	  { "n": "Gassenwissen", "a": "KL/IN/CH" },
-	  { "n": "Menschenkenntnis", "a": "KL/IN/CH" },
-	  { "n": "Überreden", "a": "MU/IN/CH" },
-	  { "n": "Verkleiden", "a": "IN/CH/GE" },
-	  { "n": "Willenskraft", "a": "MU/IN/CH" },
-	  { "n": "Fährtensuche", "a": "MU/IN/CH" },
-	  { "n": "Orientierung", "a": "KL/IN/IN" },
-	  { "n": "Pflanzenkunde", "a": "KL/FF/KO" },
-	  { "n": "Tierkunde", "a": "MU/MU/CH" },
-	  { "n": "Wildnisleben", "a": "KL/GE/KO" },
-	  { "n": "Geographie", "a": "KL/KL/IN" },
-	  { "n": "Geschichtswissen", "a": "KL/KL/IN" },
-	  { "n": "Götter & Kulte", "a": "KL/KL/IN" },
-	  { "n": "Kriegskunst", "a": "MU/KL/IN" },
-	  { "n": "Magiekunde", "a": "KL/KL/IN" },
-	  { "n": "Sagen & Legenden", "a": "KL/KL/IN" },
-	  { "n": "Alchimie", "a": "MU/KL/FF" },
-	  { "n": "Handel", "a": "KL/IN/CH" },
-	  { "n": "Heilkunde Gift", "a": "MU/KL/IN" },
-	  { "n": "Heilkunde Wunden", "a": "KL/FF/FF" },
-	  { "n": "Schlösserknacken", "a": "IN/FF/FF" }
+          { "n": "Alchimie", "a": "MU/KL/FF", "stf": 3 },
+          { "n": "BetÃ¶ren", "a": "MU/CH/CH", "stf": 2 },
+          { "n": "EinschÃ¼chtern", "a": "MU/IN/CH", "stf": 2 },
+          { "n": "FÃ¤hrtensuche", "a": "MU/IN/CH", "stf": 3 },
+          { "n": "Gassenwissen", "a": "KL/IN/CH", "stf": 3 },
+          { "n": "Geographie", "a": "KL/KL/IN", "stf": 2 },
+          { "n": "Geschichtswissen", "a": "KL/KL/IN", "stf": 2 },
+          { "n": "GÃ¶tter & Kulte", "a": "KL/KL/IN", "fw": 0, "stf": 2 },
+          { "n": "Handel", "a": "KL/IN/CH", "fw": 0, "stf": 2 },
+          { "n": "Heilkunde Gift", "a": "MU/KL/IN", "stf": 2 },
+          { "n": "Heilkunde Wunden", "a": "KL/FF/FF", "stf": 4 },
+          { "n": "Klettern", "a": "MU/GE/KK", "stf": 2 },
+          { "n": "KÃ¶rperbeherrschung", "a": "GE/GE/KO", "stf": 4 },
+          { "n": "Kraftakt", "a": "KO/KK/KK", "stf": 2 },
+          { "n": "Kriegskunst", "a": "MU/KL/IN", "stf": 2 },
+          { "n": "Magiekunde", "a": "KL/KL/IN", "stf": 3 },
+          { "n": "Menschenkenntnis", "a": "KL/IN/CH", "stf": 3 },
+          { "n": "Orientierung", "a": "KL/IN/IN", "stf": 2 },
+          { "n": "Pflanzenkunde", "a": "KL/FF/KO", "stf": 3 },
+          { "n": "Sagen & Legenden", "a": "KL/KL/IN", "stf": 2 },
+          { "n": "SchlÃ¶sserknacken", "a": "IN/FF/FF", "stf": 3 },
+          { "n": "Schwimmen", "a": "GE/KO/KK", "stf": 2 },
+          { "n": "Selbstbeherrschung", "a": "MU/MU/KO", "stf": 4 },
+          { "n": "SinnesschÃ¤rfe", "a": "KL/IN/IN", "stf": 4 },
+          { "n": "Tierkunde", "a": "MU/MU/CH", "stf": 3 },
+          { "n": "Ãœberreden", "a": "MU/IN/CH", "stf": 3 },
+          { "n": "Verbergen", "a": "MU/IN/GE", "stf": 3 },
+          { "n": "Verkleiden", "a": "IN/CH/GE", "stf": 2 },
+          { "n": "Wildnisleben", "a": "KL/GE/KO", "stf": 3 },
+          { "n": "Willenskraft", "a": "MU/IN/CH", "stf": 4 }
+      ];
+      var kampfattrs = [
+          { "n": "BÃ¶gen", "a": "FF", "stf": 3 },	  
+          { "n": "Schwerter", "a": "GE/KK", "stf": 3 },	  
       ];
     </script>
   </head>
   <body onload="doload()">
     <div class="bg"></div>
     <div class="fg">
-      <table style="width:80%" id="attrs">
-	<tr>
-	  <th>MU</th><td id="MU"></td>
-	  <th>KL</th><td id="KL"></td>
-	  <th>IN</th><td id="IN"></td>
-	  <th>CH</th><td id="CH"></td>
-	</tr>
-	<tr>
-	  <th>FF</th><td id="FF"></td>
-	  <th>GE</th><td id="GE"></td>
-	  <th>KO</th><td id="KO"></td>
-	  <th>KK</th><td id="KK"></td>
-	</tr>
-      </table>
       <table style="width:80%">
 	<tr>
-	  <th class="b" onclick="reroll(0)">Wurf</th>
-	  <td id="roll">0/0/0</td>
-	  <th class="b" onclick="reroll(1)">Schicksalswurf 1</th>
-	  <th class="b" onclick="reroll(2)">Schicksalswurf 2</th>
-	  <th class="b" onclick="reroll(3)">Schicksalswurf 3</th>
+	  <td style="border:0" rowspan="3">
+	    <table style="width:100%" id="skills">
+              <tr>
+	        <th class="c">Fertigkeit</th><th>Attribute</th><th>FW</th><th>Erfolg mit</th><th>Steigern</th>
+              </tr>
+	    </table>
+	  </td>
+	  <td style="border:0">
+	    <table style="width:100%">
+              <tr>
+	        <th class="b" onclick="reroll(0)">Wurf</th>
+	        <td id="roll">0/0/0</td>
+	        <th class="b" onclick="reroll(1)">Schicksalswurf 1</th>
+	        <th class="b" onclick="reroll(2)">Schicksalswurf 2</th>
+	        <th class="b" onclick="reroll(3)">Schicksalswurf 3</th>
+              </tr>
+	      <tr>
+	        <th class="b">AP</th><th>17</th>
+	        <th class="b">Ausweichen</th><th>7</th>
+	      </tr>
+	    </table>
+	  </td>
 	</tr>
-      </table>
-      <table style="width:80%" id="skills">
 	<tr>
-	  <th class="c">Fertigkeit</th><th>Attribute</th><th>FW</th><th>Erfolgreich mit</th>
+	  <td style="border:0">
+	    <table style="width:100%" id="attrs">
+              <tr>
+	        <th class="c">Attribut</th><th>Wert</th><th>Erfolg mit</th><th>Steigern</th>
+              </tr>
+	    </table>
+	  </td>
+	</tr>
+	<tr>
+	  <td style="border:0" rowspan="2">
+	    <table style="width:100%" id="kampf">
+              <tr>
+	        <th class="c">Fertigkeit</th><th>Wert</th><th>AT</th><th>PA</th><th>Erfolg mit</th><th>Steigern</th>
+              </tr>
+	    </table>
+	  </td>
 	</tr>
       </table>
     </div>
