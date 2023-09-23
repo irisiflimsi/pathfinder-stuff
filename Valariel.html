@@ -17,7 +17,7 @@
       table {
         margin: auto; text-align: center; margin-top: 20px;
       }
-      tr:nth-child(4n) {
+      .inner tr:nth-child(4n) {
         background-color: #ccc;
       }
       th, td {
@@ -40,7 +40,7 @@
           "IN": 13,
           "CH": 11,
           "FF": 10,
-          "GE": 13,
+          "GE": 14,
           "KO": 14,
           "KK": 14
       };
@@ -80,6 +80,9 @@
           { "n": "Bögen", "w": 12 },
           { "n": "Schwerter", "w": 10 },
       ];
+      var zauber = [
+          { "n": "Adlerauge", "w": 4 },
+      ];
       function doload() {
           var parent = document.getElementById("attrs");
 	  var keys = Object.keys(attrs);
@@ -117,7 +120,7 @@
               td3.innerHTML = "-";
               tr.append(td3);
               var td4 = document.createElement("td");
-              td4.innerHTML = skillattrs[i]["stf"] * (skills[i]["fw"] < 11 ? 1 : skills[i]["fw"] - 10);
+              td4.innerHTML = skillattrs[i]["stf"] * (skills[i]["fw"] < 11 ? 1 : (skills[i]["fw"] - 10));
               tr.append(td4);
               parent.append(tr);
           }
@@ -128,22 +131,22 @@
               td0.innerHTML = kampf[i]["n"];
               td0.className = "c";
               tr.append(td0);
-              skn = kampfattrs[i]["a"].split("/");
-              var lw = (skn.length > 1) ? Math.max(parseInt(attrs[skn[0]]), parseInt(attrs[skn[1]])) : attrs[skn[0]]
+              var skn = kampfattrs[i]["a"].split("/");
+              var lw = (skn.length > 1) ? Math.max(parseInt(attrs[skn[0]]), parseInt(attrs[skn[1]])) : parseInt(attrs[skn[0]]);
               var td1 = document.createElement("td");
               td1.innerHTML = kampf[i]["w"];
               tr.append(td1);
               var td2 = document.createElement("td");
-	      td2.innerHTML = "AT";
+	      td2.innerHTML = kampf[i]["w"] + (attrs["MU"] > 10 ? Math.floor((attrs["MU"] - 8) / 3) : 0);
               tr.append(td2);
               var td3 = document.createElement("td");
-	      td3.innerHTML = "PA";
+	      td3.innerHTML = skn[0] === "FF" ? "-" : Math.round(kampf[i]["w"] / 2) + (lw > 10 ? Math.floor((lw - 8) / 3) : 0);
               tr.append(td3);
               var td4 = document.createElement("td");
               td4.innerHTML = "-";
               tr.append(td4);
               var td5 = document.createElement("td");
-              td5.innerHTML = kampfattrs[i]["stf"] * (kampf[i]["w"] < 11 ? 1 : kampf[i]["w"] - 10);
+              td5.innerHTML = kampfattrs[i]["stf"] * (kampf[i]["w"] < 11 ? 1 : (kampf[i]["w"] - 10));
               tr.append(td5);
               parent.append(tr);
           }
@@ -154,12 +157,24 @@
           inner += (n == 0 || n == 2 ? d20() : w[1]) + "/";
           inner += (n == 0 || n == 3 ? d20() : w[2]);
           document.getElementById("roll").innerHTML = inner;
+          var fr = parseInt(inner.split("/")[0]);
           for (i = 1; i < document.getElementById("skills").children.length; i++) {
               recalcF(inner, document.getElementById("skills").children[i].children);
           }
           for (i = 1; i < document.getElementById("attrs").children.length; i++) {
-              recalcA(parseInt(inner.split("/")[0]), document.getElementById("attrs").children[i].children);
+	      recalcA(fr, document.getElementById("attrs").children[i].children);
+	      var a = document.getElementById("ausw");
+	      var v = parseInt(a.previousElementSibling.innerHTML);
+	      a.innerHTML = (fr > v ? "+" : "") + (fr - v)
+	  }
+          for (i = 1; i < document.getElementById("kampf").children.length; i++) {
+	      recalcK(fr, document.getElementById("kampf").children[i].children);
           }
+      }
+      function recalcK(r, e) {
+	  e[4].innerHTML = (r > parseInt(e[2].innerHTML) ? "+" : "") + (r - parseInt(e[2].innerHTML)) + "/";
+	  var p = (r > parseInt(e[3].innerHTML) ? "+" : "") + (r - parseInt(e[3].innerHTML));
+	  e[4].innerHTML += isNaN(p) ? "-" : p;
       }
       function recalcA(r, e) {
 	  var v = parseInt(e[1].innerHTML);
@@ -223,7 +238,10 @@
       ];
       var kampfattrs = [
           { "n": "Bögen", "a": "FF", "stf": 3 },	  
-          { "n": "Schwerter", "a": "GE/KK", "stf": 3 },	  
+          { "n": "Schwerter", "a": "GE/KK", "stf": 3 },
+      ];
+      var zauberattrs = [
+          { "n": "Adlerauge", "a": "KL/IN/FF", "stf": 2 },
       ];
     </script>
   </head>
@@ -231,48 +249,57 @@
     <div class="bg"></div>
     <div class="fg">
       <table style="width:80%">
-	<tr>
-	  <td style="border:0" rowspan="3">
-	    <table style="width:100%" id="skills">
+        <tr>
+          <td style="border:0" rowspan="4">
+            <table class="inner" style="width:100%" id="skills">
               <tr>
-	        <th class="c">Fertigkeit</th><th>Attribute</th><th>FW</th><th>Erfolg mit</th><th>Steigern</th>
+                <th class="c">Fertigkeit</th><th>Attribute</th><th>FW</th><th>Erfolg mit</th><th>Steigern</th>
               </tr>
-	    </table>
-	  </td>
-	  <td style="border:0">
-	    <table style="width:100%">
+            </table>
+          </td>
+          <td style="height:100%;border:0">
+            <table class="inner" style="width:100%">
               <tr>
-	        <th class="b" onclick="reroll(0)">Wurf</th>
-	        <td id="roll">0/0/0</td>
-	        <th class="b" onclick="reroll(1)">Schicksalswurf 1</th>
-	        <th class="b" onclick="reroll(2)">Schicksalswurf 2</th>
-	        <th class="b" onclick="reroll(3)">Schicksalswurf 3</th>
+                <th class="b" onclick="reroll(0)">Wurf</th>
+                <td id="roll">0/0/0</td>
+                <th class="b" onclick="reroll(1)">Schicksalswurf 1</th>
+                <th class="b" onclick="reroll(2)">Schicksalswurf 2</th>
+                <th class="b" onclick="reroll(3)">Schicksalswurf 3</th>
               </tr>
-	      <tr>
-	        <th>AP</th><td>17</td>
-	        <th>Ausweichen</th><td>7</td>
-	      </tr>
-	    </table>
-	  </td>
-	</tr>
-	<tr>
-	  <td style="border:0">
-	    <table style="width:100%" id="attrs">
               <tr>
-	        <th class="c">Attribut</th><th>Wert</th><th>Erfolg mit</th><th>Steigern</th>
+                <th>AP</th><td>17</td>
+                <th>Ausweichen</th><td>7</td><td id="ausw">-</td>
               </tr>
-	    </table>
-	  </td>
-	</tr>
-	<tr>
-	  <td style="border:0">
-	    <table style="width:100%" id="kampf">
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td class="inner" style="height:100%;border:0">
+            <table style="width:100%" id="attrs">
               <tr>
-	        <th class="c">Fertigkeit</th><th>Wert</th><th>AT</th><th>PA</th><th>Erfolg mit</th><th>Steigern</th>
+                <th class="c">Attribut</th><th>Wert</th><th>Erfolg mit</th><th>Steigern</th>
               </tr>
-	    </table>
-	  </td>
-	</tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="height:100%;border:0">
+            <table class="inner" style="width:100%" id="kampf">
+              <tr>
+                <th class="c">Fertigkeit</th><th>Wert</th><th>AT</th><th>PA</th><th>Erfolg mit</th><th>Steigern</th>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="border:0">
+            <table class="inner" style="width:100%" id="kampf">
+              <tr>
+                <th class="c">Fertigkeit</th><th>Attribute</th><th>FW</th><th><th>Erfolg mit</th><th>Steigern</th>
+              </tr>
+            </table>
+          </td>
+        </tr>
       </table>
     </div>
   </body>
