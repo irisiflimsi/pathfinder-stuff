@@ -28,16 +28,16 @@
         padding: 0 6px; float: right;
       }
       span.range {
-        font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2em; border-right: 1px dotted #999187;
+        font-size: 80%; padding: 0 2px; float: left; text-align: center; width: 2.5em; border-right: 1px dotted #999187;
       }
       span.duration {
-        display: none; font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2em; border-right: 1px dotted #999187;
+        display: none; font-size: 80%; padding: 0 2px; float: left; text-align: center; width: 2.5em; border-right: 1px dotted #999187;
       }
       span.components {
-        display: none; font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2em; border-right: 1px dotted #999187;
+        display: none; font-size: 80%; padding: 0 2px; float: left; text-align: center; width: 2.5em; border-right: 1px dotted #999187;
       }
       span.save {
-        display: none; font-size: 85%; padding: 0 2px; float: left; text-align: center; width: 2em; border-right: 1px dotted #999187;
+        display: none; font-size: 80%; padding: 0 2px; float: left; text-align: center; width: 2.5em; border-right: 1px dotted #999187;
       }
     </style>
     <script type="text/javascript">
@@ -200,20 +200,20 @@
           }
         }
       }
-      var lvl = 16;
+      var lvl = 19;
       var dr = 0;
       var content = {
         "magicItems" : [
           { "l": "/G/Z/Frage", "t": "Flüstermünze: Frage" },
           { "l": "/G/MagischeGegenstaende/Gluecksklinge", "t": "Glückklinge: Reroll" },
           { "l": "/G/Z/Wunsch", "t": "Glücksklinge: Wunsch" },
-          { "l": "/G/Z/Befehl", "t": "Helm: Befehl" },
           { "l": "/G/Z/SchwereWundenheilen", "t": "Trank: 3w8+5 heilen" },
-          { "l": "/G/Z/Dimensionstuer", "t": "Zauberstab: Dimensionstür" },
           { "l": "/G/M/MetamagischesZepterZauberausdehnen", "t": "Zauberzepter(3): Ausdehnen" },
+          { "l": "/E/M/MetamagischZepterZauberverschärfendes", "t": "Zauberzepter(6): +5 Würfel" },
           { "l": "/G/M/MetamagischesZepterZaubereffektmaximieren", "t": "Zauberzepter(6): Maximum" },
           { "l": "/G/M/MetamagischesZepterschnellzaubern", "t": "Zauberzepter(3): Schnell" },
           { "l": "/G/Z/Identifizieren", "t": "Anhänger: Identifizieren" },
+          { "l": "/G/Z/Magiebannen", "t": "Chaoskugel: Magie bannen/Beistand" },
           { "l": "/G/MagischeGegenstaende/SchwacherZauberspeicherring", "t": "Zauberspeicherring(3)" },
           { "l": "/G/MagischeGegenstaende/PerlederMacht", "t": "Perle der Macht(5)" }
         ],
@@ -482,7 +482,7 @@
           { "l": "/G/Z/Umwandlung", "t": "Umwandlung (...)", "d": "rd1*lvl", "r": "P", "c": "VGM", "s": "-/-" },
           { "l": "/E/Z/UnwilligerSchild", "t": "Unwilliger Schild (250)", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "W/✓" },
           { "l": "/G/Z/WahrerBlick", "t": "Wahrer Blick (250)", "d": "m 1*lvl", "r": "B", "c": "VGM", "s": "W/✓" },
-          { "l": "/G/Z/Wasserkontrollieren", "t": "Wasser kontrollieren", "d": "m 10*lvl", "r": "80+8*lvl", "c": "VGMGF", "s": "-/-" }
+          { "l": "/G/Z/Wasserkontrollieren", "t": "Wasser kontrollieren", "d": "m 10*lvl", "r": "m 80+8*lvl", "c": "VGMGF", "s": "-/-" }
         ],
         "level7" : [
           { "l": "/E/Z/Angriffzurückwerfen", "t": "Angriff zurückwerfen", "d": "rd1*lvl", "r": "P", "c": "VGM", "s": "-/-" },
@@ -495,6 +495,7 @@
           { "l": "/G/Z/Ebenenwechsel", "t": "Ebenenwechsel", "d": "-", "r": "B", "c": "VGF", "s": "W/✓" },
           { "l": "/G/Z/Energiekäfig", "t": "Energiekäfig (500)", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "R/✓" },
           { "l": "/G/Z/Gegenstandteleportieren", "t": "Gegenstand teleportieren", "d": "-", "r": "B", "c": "V", "s": "W/✓" },
+          { "l": "/1/Z/KleineHalbebeneerschaffen", "t": "Kleine Halbebene erschaffen (500F)", "d": "d 1*lvl", "r": "m 0", "c": "VGF", "s": "-/-" },
           { "l": "/1/Z/Ki-Schrei", "t": "Ki-Schrei", "d": "-", "r": "m 5+lvl/2", "c": "VG", "s": "Z/✓" },
           { "l": "/1/Z/Konstruktkontrollieren", "t": "Konstrukt kontrollieren", "d": "c", "r": "m 5+lvl/2", "c": "VG", "s": "-/-" },
           { "l": "/G/Z/MächtigerArkanerBlick", "t": "Mächtiger Arkaner Blick", "d": "m 1*lvl", "r": "P", "c": "VG", "s": "-/-" },
@@ -539,8 +540,19 @@
           { "l": "/G/Z/Telekinesesphaere", "t": "Telekinesesphäre", "d": "m 1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "R/✓" }
         ],
         "level9" : [
+          { "l": "/G/Z/AetherischeGestalten", "t": "Ätherische Gestalten", "d": "m 1*lvl", "r": "B", "c": "VG", "s": "-/✓" },
+          { "l": "/G/Z/AstraleProjektion", "t": "Astrale Projektion (1000)", "d": "sp", "r": "B", "c": "VGM", "s": "-/✓" },
+          { "l": "/G/Z/Einkerkerung", "t": "Einkerkerung", "d": "-", "r": "B", "c": "VG", "s": "W/✓" },
           { "l": "/2/Z/GemeinschaftlicheGedankenleere", "t": "Gemeinschaftliche Gedankenleere", "d": "sp", "r": "sp", "c": "VG", "s": "W/✓" },
-          { "l": "/E/Z/Massen-Ersticken", "t": "Massen-Ersticken", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "Z/✓" }
+          { "l": "/1/Z/GrosseHalbebeneerschaffen", "t": "Große Halbebene erschaffen (500F)", "d": "d 1*lvl", "r": "m 0", "c": "VGF", "s": "-/-" },
+          { "l": "/G/Z/KreisderTeleportation", "t": "Kreis der Teleportation (1000)", "d": "m 10*lvl", "r": "0", "c": "VM", "s": "-/✓" },
+          { "l": "/E/Z/Massen-Ersticken", "t": "Massen-Ersticken", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGM", "s": "Z/✓" },
+          { "l": "/G/Z/Meteoritenschwarm", "t": "Meteoritenschwarm", "d": "-", "r": "m 80+8*lvl", "c": "VG", "s": "-/✓" },
+          { "l": "/G/Z/Monsterbeherrschen", "t": "Monster beherrschen", "d": "d 1*lvl", "r": "m 5+lvl/2", "c": "VG", "s": "W/✓" },
+          { "l": "/G/Z/MonsterherbeizaubernIX", "t": "Monster herbeizaubern IX", "d": "rd1*lvl", "r": "m 5+lvl/2", "c": "VGF", "s": "-/-" },
+          { "l": "/G/Z/Tor", "t": "Tor", "d": "rd1*lvl", "r": "m20+2*lvl", "c": "VGM", "s": "-/-" },
+          { "l": "/G/Z/WehgeschreiderTodesfee", "t": "Wehgeschrei der Todesfee", "d": "-", "r": "m 5+lvl/2", "c": "V", "s": "Z/✓" },
+          { "l": "/E/Z/ZerschmetterndeFelsen", "t": "Zerschmetternde Felsen", "d": "-", "r": "m 80+8*lvl", "c": "VG", "s": "R/✓" }
         ]
       };
     </script>
@@ -555,15 +567,11 @@
       <div class="box" id="level4"><div class="head" onclick="lock(this)">6<span onclick="upgrade(this,4)">0/0/0</span></div></div>
       <div class="box" id="level5"><div class="head" onclick="lock(this)">6<span onclick="upgrade(this,5)">0/0/0</span></div></div>
       <div class="box" id="level6"><div class="head" onclick="lock(this)">5<span onclick="upgrade(this,6)">0/0/0</span></div></div>
-      <div class="box" id="level7"><div class="head" onclick="lock(this)">4<span onclick="upgrade(this,7)">0/0/0</span></div></div>
+      <div class="box" id="level7"><div class="head" onclick="lock(this)">5<span onclick="upgrade(this,7)">0/0/0</span></div></div>
 <!--
       1 Kleine Halbebene erschaffen
 -->
-      <div class="box" id="level8"><div class="head" onclick="lock(this)">3<span onclick="upgrade(this,8)">0/0/0</span></div></div>
-<!--
-      1 Halbebene erschaffen
--->
-      <div class="box" id="level9"><div class="head" onclick="lock(this)">2<span onclick="upgrade(this,9)">0/0/0</span></div></div>
+      <div class="box" id="level8"><div class="head" onclick="lock(this)">4<span onclick="upgrade(this,8)">0/0/0</span></div></div>
 <!--
       G Astrale Projektion
       G Einkerkerung
@@ -572,14 +580,13 @@
       G Monster beherrschen
       G Monster herbeizaubern IX
       G Tor
+-->
+      <div class="box" id="level9"><div class="head" onclick="lock(this)">4<span onclick="upgrade(this,9)">0/0/0</span></div></div>
+<!--
       G Wort der Macht: Tod
       G Wunsch
       G Zeitstopp
-      G Ätherische Gestalten
       E Winde der Vergeltung
-      E Zerschmetternde Felsen
-      1 Große Halbebene erschaffen
-          { "l": "/G/Z/WehgeschreiderTodesfee", "t": "Wehgeschrei der Todesfee", "d": "-", "r": "m 5+lvl/2", "c": "V", "s": "Z/✓" },
 -->
       <div class="box" id="special"><div class="head" onclick="lock(this)">Dailies / Fokus&nbsp;&nbsp;&nbsp;All  </div></div>
       <div class="box" id="magicItems"><div class="head" onclick="lock(this)">Magische Gegenstände&nbsp;&nbsp;&nbsp;All  </div></div>
