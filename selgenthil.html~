@@ -58,16 +58,6 @@
         el.innerHTML =  el.innerHTML.slice(0,-5) + (el.locked == 0 ? "All  " : (el.locked == 1 ? "Daily" : "Avail"));
         redo();
       }
-      function upgrade(el,idx) {
-        var i = el.innerHTML.split("/");
-        switch(el.parentElement.locked) {
-          case 1: i[0] = (parseInt(i[0]) + 1) % (content["level" + idx].length + 1); break;
-          case 2: i[1] = (parseInt(i[1]) + 1) % (content["level" + idx].length + 1); break;
-          default: i[2] = (parseInt(i[2]) + 1) % (content["level" + idx].length + 1); break;
-        }
-        el.innerHTML = i[0] + "/" + i[1] + "/" + i[2];
-        event.stopPropagation();
-      }
       function drtoggle() {
         dr = (dr + 1) % 4;
         var el = document.querySelectorAll('.duration, .range, .components, .save');
@@ -93,35 +83,6 @@
             localStorage["id" + i] = el.avail + 100 * el.maxavail;
           }
         }
-        for (const i in [0,1,2,3,4,5,6,7,8,9]) {
-          var parent = document.getElementById("level" + i);
-          var list = content["level" + i];
-          var sum = 0;
-          for (var j in list) {
-            sum += document.getElementById(list[j]["t"]).maxavail;
-          }
-          var up = parent.firstElementChild.firstElementChild.innerHTML.split("/").map(x => parseInt(x));
-          if (up[0] != 0) sum = sum - 1;
-          if (up[1] != 0 && up[0] != up[1]) sum = sum - 1;
-          if (up[2] != 0 && up[0] != up[2] && up[1] != up[2]) sum = sum - 1;
-          if (i > 0) {
-            up = parent.previousElementSibling.firstElementChild.firstElementChild.innerHTML.split("/").map(x => parseInt(x));
-            if (up[0] != 0 && up[0] != up[1] && up[0] != up[2]) sum = sum + 1;
-            if (up[1] != 0 && up[1] != up[0] && up[1] != up[2]) sum = sum + 1;
-            if (up[2] != 0 && up[2] != up[0] && up[2] != up[1]) sum = sum + 1;
-          }
-          if (i > 1) {
-            up = parent.previousElementSibling.previousElementSibling.firstElementChild.firstElementChild.innerHTML.split("/").map(x => parseInt(x));
-            if (up[0] != 0 && up[0] == up[1] && up[0] != up[2]) sum = sum + 1;
-            if (up[0] != 0 && up[0] != up[1] && up[0] == up[2]) sum = sum + 1;
-            if (up[1] != 0 && up[1] == up[2] && up[0] != up[1]) sum = sum + 1;
-          }
-          if (i > 2) {
-            up = parent.previousElementSibling.previousElementSibling.previousElementSibling.firstElementChild.firstElementChild.innerHTML.split("/").map(x => parseInt(x));
-            if (up[0] != 0 && up[0] == up[1] && up[0] == up[2]) sum = sum + 1;
-          }
-          parent.firstElementChild.innerHTML = Math.max(0,sum) + parent.firstElementChild.innerHTML.substring(1);
-        }
       }
       function sum(i) {
         return (i == -1 ? 0 : sum(i - 1) + Math.max(i,1) * content["level" + i].length);
@@ -133,9 +94,8 @@
           var parent = document.getElementById(header[p]);
           if (header[p].startsWith("level")) {
             var ll = parseInt(header[p].slice(-1));
-            parent.firstElementChild.innerHTML = "0/" +
-              parent.firstElementChild.innerHTML +
-              " Zauber der Stufe " + ll + " (" + list.length + " Zauber = " + (list.length * Math.max(ll,1)) + " Seiten, Σ " + sum(ll) + " Seiten)&nbsp;&nbsp;&nbsp;All  ";
+            parent.firstElementChild.innerHTML += " Zauber der Stufe " + ll + " (" + list.length + " Zauber = " + (list.length * Math.max(ll,1)) + " Seiten, Σ " + sum(ll) + " Seiten)"
+              + "&nbsp;&nbsp;&nbsp;All  ";
           }
           for (var i in list) {
             var obj = list[i];
@@ -548,22 +508,22 @@
   <body onload="doload()">
     <div class="bg"></div>
     <div class="fg">
-      <div class="box" id="level0"><div class="head" onclick="lock(this)">4<span onclick="upgrade(this,0)">0/0/0</span></div></div>
-      <div class="box" id="level1"><div class="head" onclick="lock(this)">6<span onclick="upgrade(this,1)">0/0/0</span></div></div>
-      <div class="box" id="level2"><div class="head" onclick="lock(this)">6<span onclick="upgrade(this,2)">0/0/0</span></div></div>
-      <div class="box" id="level3"><div class="head" onclick="lock(this)">6<span onclick="upgrade(this,3)">0/0/0</span></div></div>
-      <div class="box" id="level4"><div class="head" onclick="lock(this)">6<span onclick="upgrade(this,4)">0/0/0</span></div></div>
-      <div class="box" id="level5"><div class="head" onclick="lock(this)">6<span onclick="upgrade(this,5)">0/0/0</span></div></div>
-      <div class="box" id="level6"><div class="head" onclick="lock(this)">5<span onclick="upgrade(this,6)">0/0/0</span></div></div>
-      <div class="box" id="level7"><div class="head" onclick="lock(this)">4<span onclick="upgrade(this,7)">0/0/0</span></div></div>
+      <div class="box" id="level0"><div class="head" onclick="lock(this)">4</div></div>
+      <div class="box" id="level1"><div class="head" onclick="lock(this)">6</div></div>
+      <div class="box" id="level2"><div class="head" onclick="lock(this)">6</div></div>
+      <div class="box" id="level3"><div class="head" onclick="lock(this)">6</div></div>
+      <div class="box" id="level4"><div class="head" onclick="lock(this)">6</div></div>
+      <div class="box" id="level5"><div class="head" onclick="lock(this)">6</div></div>
+      <div class="box" id="level6"><div class="head" onclick="lock(this)">5</div></div>
+      <div class="box" id="level7"><div class="head" onclick="lock(this)">4</div></div>
 <!--
       1 Kleine Halbebene erschaffen
 -->
-      <div class="box" id="level8"><div class="head" onclick="lock(this)">3<span onclick="upgrade(this,8)">0/0/0</span></div></div>
+      <div class="box" id="level8"><div class="head" onclick="lock(this)">3</div></div>
 <!--
       1 Halbebene erschaffen
 -->
-      <div class="box" id="level9"><div class="head" onclick="lock(this)">2<span onclick="upgrade(this,9)">0/0/0</span></div></div>
+      <div class="box" id="level9"><div class="head" onclick="lock(this)">2</div></div>
 <!--
       G Astrale Projektion
       G Einkerkerung
